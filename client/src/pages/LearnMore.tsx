@@ -123,14 +123,36 @@ export default function LearnMore() {
     {
       title: "In Game Evaluation",
       content: (
-        <div className="space-y-4">
-          <p>Our tournaments track your performance through multiple factors:</p>
-          <ul className="list-disc list-inside space-y-2">
-            <li><span className="font-semibold">Eliminations:</span> Every opponent you eliminate earns you ₹10</li>
-            <li><span className="font-semibold">Match Victory:</span> Achieving Booyah (winning the match) earns you an additional ₹10 bonus</li>
-            <li><span className="font-semibold">Gameplay Monitoring:</span> All matches are monitored to ensure fair play</li>
-            <li><span className="font-semibold">Performance Tracking:</span> We keep detailed statistics of your performance across all tournaments</li>
-          </ul>
+        <div className="space-y-6">
+          <p className="text-lg">We use a transparent and fair evaluation system to determine winners.</p>
+          
+          <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
+            <h4 className="text-lg font-orbitron text-primary mb-3">Rules & Expectations</h4>
+            <ul className="list-disc list-inside space-y-2 pl-2">
+              <li>Only Solo mode for now (Duo and Squad coming soon!)</li>
+              <li>Strictly no teaming, hacking, or unfair behavior</li>
+              <li>Join the custom room 5–10 minutes before the match</li>
+              <li>Cheating = permanent ban</li>
+            </ul>
+          </div>
+          
+          <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
+            <h4 className="text-lg font-orbitron text-primary mb-3">Performance Evaluation</h4>
+            <div className="space-y-3">
+              <p>Each player must send a screenshot of their match result from history after the game.</p>
+              <p className="text-secondary italic">(This helps us verify kills and position in case of bugs or disconnection.)</p>
+              <p>We also monitor gameplay & results from our side for cross-checking.</p>
+            </div>
+          </div>
+          
+          <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
+            <h4 className="text-lg font-orbitron text-primary mb-3">Reward Calculation</h4>
+            <ul className="list-disc list-inside space-y-2 pl-2">
+              <li><span className="font-semibold">Eliminations:</span> Every opponent you eliminate earns you ₹10</li>
+              <li><span className="font-semibold">Match Victory:</span> Achieving Booyah (winning the match) earns you an additional ₹10 bonus</li>
+              <li><span className="font-semibold">Performance Tracking:</span> We keep detailed statistics of your performance across all tournaments</li>
+            </ul>
+          </div>
         </div>
       )
     },
