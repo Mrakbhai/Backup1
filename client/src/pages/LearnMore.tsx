@@ -159,34 +159,50 @@ export default function LearnMore() {
     {
       title: "Reward System",
       content: (
-        <div className="space-y-4">
-          <p>Our reward system is straightforward and performance-based:</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="space-y-6">
+          <p className="text-lg">Our reward system is straightforward and performance-based:</p>
+          
+          <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
+            <h4 className="text-lg font-orbitron text-primary mb-3">Earnings Breakdown</h4>
+            <ul className="list-disc list-inside space-y-2 pl-2">
+              <li>₹10 per confirmed kill</li>
+              <li>₹10 bonus for getting Booyah (1st place)</li>
+            </ul>
+          </div>
+          
+          <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
+            <h4 className="text-lg font-orbitron text-primary mb-3">Reward Delivery</h4>
             <div className="space-y-3">
-              <div className="flex justify-between items-center border-b border-muted pb-1">
-                <span>Entry Fee</span>
-                <span className="text-primary font-semibold">₹30</span>
-              </div>
-              <div className="flex justify-between items-center border-b border-muted pb-1">
-                <span>Kill Reward</span>
-                <span className="text-primary font-semibold">₹10 per elimination</span>
-              </div>
-              <div className="flex justify-between items-center border-b border-muted pb-1">
-                <span>Booyah Bonus</span>
-                <span className="text-primary font-semibold">₹10 additional</span>
-              </div>
-            </div>
-            <div className="bg-card bg-opacity-40 p-4 rounded">
-              <p className="font-semibold mb-2">Example:</p>
-              <p>If you eliminate 5 players and win the match, you earn:</p>
-              <ul className="list-inside">
-                <li>₹50 from eliminations (5 × ₹10)</li>
-                <li>₹10 bonus for Booyah</li>
-                <li>Total: ₹60</li>
+              <p>Processed within 24 hours after match verification</p>
+              <p className="mb-2">Delivered via:</p>
+              <ul className="list-disc list-inside space-y-2 pl-2">
+                <li>UPI Transfer (Recommended)</li>
+                <li>Gift Cards (Amazon / Flipkart / Google Play – optional)</li>
               </ul>
             </div>
           </div>
-          <p className="text-secondary font-semibold mt-2">The more you eliminate and the better you perform, the more you earn!</p>
+          
+          <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-secondary border-opacity-20">
+            <h4 className="text-lg font-orbitron text-secondary mb-3">Important Notes</h4>
+            <div className="space-y-3">
+              <p><span className="font-semibold">Gift card users:</span> redeem as soon as received. We are not liable for delays or if a code is marked as already used after delivery.</p>
+              <p><span className="font-semibold">False screenshots or tampering attempts</span> = immediate ban</p>
+            </div>
+          </div>
+          
+          <div className="bg-card bg-opacity-40 p-4 rounded-lg">
+            <p className="font-semibold mb-2">Example Calculation:</p>
+            <p>If you eliminate 5 players and win the match, you earn:</p>
+            <ul className="list-inside space-y-1">
+              <li>₹50 from eliminations (5 × ₹10)</li>
+              <li>₹10 bonus for Booyah</li>
+              <li>Total: <span className="text-primary font-bold">₹60</span></li>
+            </ul>
+          </div>
+          
+          <p className="text-secondary font-semibold text-center mt-2">
+            The more you eliminate and the better you perform, the more you earn!
+          </p>
         </div>
       )
     },
