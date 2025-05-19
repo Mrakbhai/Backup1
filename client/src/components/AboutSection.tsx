@@ -34,8 +34,8 @@ export default function AboutSection() {
             },
             {
               icon: <Users className="w-8 h-8" />,
-              title: "TEAMS",
-              description: "Form your squad of 4 players and battle against 12 other teams in intense matches across multiple stages and maps."
+              title: "PARTICIPATION",
+              description: "Join as a solo player, duo, or squad. Solo players will be matched with others to form balanced teams for the tournament."
             },
             {
               icon: <Calendar className="w-8 h-8" />,

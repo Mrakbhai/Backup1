@@ -1,32 +1,9 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
+import { UsersIcon, UserIcon, Users2Icon } from 'lucide-react';
 
 export default function RegistrationSection() {
-  const [formData, setFormData] = useState({
-    teamName: '',
-    teamCaptain: '',
-    email: '',
-    teamMembers: '',
-    termsAgreed: false
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { id, value } = e.target;
-    setFormData(prev => ({ ...prev, [id]: value }));
-  };
-
-  const handleCheckboxChange = (checked: boolean) => {
-    setFormData(prev => ({ ...prev, termsAgreed: checked }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission logic here
+  const handleSoloRegistration = () => {
+    window.open('https://forms.gle/nGSrDTdrKkgH1yH37', '_blank');
   };
 
   return (
@@ -51,89 +28,85 @@ export default function RegistrationSection() {
         >
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-5xl font-orbitron font-bold mb-4">
-              <span className="text-primary">REGISTER</span>{" "}
-              <span className="text-foreground">YOUR TEAM</span>
+              <span className="text-primary">JOIN</span>{" "}
+              <span className="text-foreground">THE TOURNAMENT</span>
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
             <p className="text-lg text-foreground opacity-90">
-              Secure your spot in the FF Max Pro League and begin your journey to glory
+              Choose how you want to participate in the FF Max Pro League and begin your journey to glory
             </p>
           </div>
           
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <Label htmlFor="teamName" className="text-foreground opacity-90">Team Name</Label>
-                <Input 
-                  type="text" 
-                  id="teamName" 
-                  className="w-full bg-background border border-primary border-opacity-30 rounded px-4 py-3 text-foreground focus:border-secondary" 
-                  placeholder="Enter your team name"
-                  value={formData.teamName}
-                  onChange={handleInputChange}
-                />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+            {/* Solo Registration Option */}
+            <motion.div
+              className="bg-background rounded-lg p-6 border border-primary border-opacity-30 flex flex-col items-center text-center hover:shadow-lg hover:border-primary transition-all duration-300"
+              whileHover={{ y: -5 }}
+            >
+              <div className="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-4">
+                <UserIcon className="w-8 h-8 text-primary" />
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="teamCaptain" className="text-foreground opacity-90">Team Captain</Label>
-                <Input 
-                  type="text" 
-                  id="teamCaptain" 
-                  className="w-full bg-background border border-primary border-opacity-30 rounded px-4 py-3 text-foreground focus:border-secondary" 
-                  placeholder="Captain's name"
-                  value={formData.teamCaptain}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
-            
-            <div className="space-y-2">
-              <Label htmlFor="email" className="text-foreground opacity-90">Contact Email</Label>
-              <Input 
-                type="email" 
-                id="email" 
-                className="w-full bg-background border border-primary border-opacity-30 rounded px-4 py-3 text-foreground focus:border-secondary" 
-                placeholder="Your email address"
-                value={formData.email}
-                onChange={handleInputChange}
-              />
-            </div>
-            
-            <div className="space-y-2">
-              <Label htmlFor="teamMembers" className="text-foreground opacity-90">Team Members (In-Game IDs)</Label>
-              <Textarea 
-                id="teamMembers" 
-                className="w-full bg-background border border-primary border-opacity-30 rounded px-4 py-3 text-foreground focus:border-secondary h-32" 
-                placeholder="Enter in-game IDs for all 4 team members"
-                value={formData.teamMembers}
-                onChange={handleInputChange}
-              />
-            </div>
-            
-            <div className="flex items-center space-x-3">
-              <Checkbox 
-                id="terms" 
-                checked={formData.termsAgreed}
-                onCheckedChange={handleCheckboxChange}
-                className="w-5 h-5 data-[state=checked]:bg-primary"
-              />
-              <label htmlFor="terms" className="text-foreground opacity-90">
-                I agree to the <a href="#" className="text-secondary hover:underline">tournament rules</a> and <a href="#" className="text-secondary hover:underline">terms of service</a>
-              </label>
-            </div>
-            
-            <div className="text-center">
+              <h3 className="text-xl font-orbitron font-bold mb-2">SOLO</h3>
+              <p className="text-foreground opacity-80 mb-6">
+                Register as an individual player and showcase your skills
+              </p>
               <button 
-                type="submit" 
-                className="bg-primary text-primary-foreground py-3 px-12 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn text-lg"
-                disabled={!formData.termsAgreed}
+                onClick={handleSoloRegistration}
+                className="mt-auto bg-primary text-primary-foreground py-3 px-6 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn w-full"
               >
-                Register Now
+                Register Solo
               </button>
-            </div>
-          </form>
+            </motion.div>
+            
+            {/* Duo Registration Option (Coming Soon) */}
+            <motion.div
+              className="bg-background rounded-lg p-6 border border-muted border-opacity-30 flex flex-col items-center text-center opacity-70"
+              whileHover={{ y: -2 }}
+            >
+              <div className="w-16 h-16 rounded-full bg-muted bg-opacity-10 flex items-center justify-center mb-4">
+                <Users2Icon className="w-8 h-8 text-muted-foreground" />
+              </div>
+              <h3 className="text-xl font-orbitron font-bold mb-2">DUO</h3>
+              <p className="text-foreground opacity-80 mb-6">
+                Team up with a friend and dominate the battlefield
+              </p>
+              <button 
+                disabled
+                className="mt-auto bg-muted text-muted-foreground py-3 px-6 rounded font-orbitron font-bold uppercase tracking-wider w-full cursor-not-allowed"
+              >
+                Coming Soon
+              </button>
+            </motion.div>
+            
+            {/* Squad Registration Option (Coming Soon) */}
+            <motion.div
+              className="bg-background rounded-lg p-6 border border-muted border-opacity-30 flex flex-col items-center text-center opacity-70"
+              whileHover={{ y: -2 }}
+            >
+              <div className="w-16 h-16 rounded-full bg-muted bg-opacity-10 flex items-center justify-center mb-4">
+                <UsersIcon className="w-8 h-8 text-muted-foreground" />
+              </div>
+              <h3 className="text-xl font-orbitron font-bold mb-2">SQUAD</h3>
+              <p className="text-foreground opacity-80 mb-6">
+                Form a 4-player squad and compete for the championship
+              </p>
+              <button 
+                disabled
+                className="mt-auto bg-muted text-muted-foreground py-3 px-6 rounded font-orbitron font-bold uppercase tracking-wider w-full cursor-not-allowed"
+              >
+                Coming Soon
+              </button>
+            </motion.div>
+          </div>
           
-          <div className="mt-8 text-center text-foreground opacity-80 text-sm">
-            <p>Registration closes on June 10, 2023 at 11:59 PM GMT</p>
+          <div className="mt-10 p-6 bg-background bg-opacity-40 rounded-lg border border-secondary border-opacity-20">
+            <h4 className="text-lg font-orbitron font-bold mb-2 text-secondary">Registration Information</h4>
+            <ul className="list-disc list-inside space-y-1 text-foreground opacity-90">
+              <li>Registration closes on June 10, 2023 at 11:59 PM GMT</li>
+              <li>You can register as a solo player now, with duo and squad options coming soon</li>
+              <li>Solo players may be matched with other participants to form balanced teams</li>
+              <li>All participants must be at least 16 years old to register</li>
+            </ul>
           </div>
         </motion.div>
       </div>

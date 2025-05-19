@@ -80,7 +80,10 @@ export default function NavBar() {
             </a>
           ))}
           
-          <button className="bg-primary text-primary-foreground py-2 px-6 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn">
+          <button 
+            onClick={() => handleNavLinkClick('register')}
+            className="bg-primary text-primary-foreground py-2 px-6 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn"
+          >
             Join Now
           </button>
         </div>
@@ -134,7 +137,10 @@ export default function NavBar() {
               </a>
             ))}
             
-            <button className="mt-4 bg-primary text-primary-foreground py-3 px-6 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn">
+            <button 
+              onClick={() => handleNavLinkClick('register')}
+              className="mt-4 bg-primary text-primary-foreground py-3 px-6 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn"
+            >
               Join Now
             </button>
           </div>
