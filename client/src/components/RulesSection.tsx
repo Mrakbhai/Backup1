@@ -46,9 +46,9 @@ export default function RulesSection() {
             
             <div className="space-y-6">
               <div>
-                <h4 className="text-lg font-orbitron text-secondary mb-2">Team Composition</h4>
+                <h4 className="text-lg font-orbitron text-secondary mb-2">Participation Options</h4>
                 <p className="text-foreground opacity-90">
-                  Teams must consist of exactly 4 players, with an optional substitute. All players must be at least 16 years of age at the time of registration.
+                  Players can participate as solo contestants. All participants must be at least 16 years of age at the time of registration. Duo and squad options will be available soon.
                 </p>
               </div>
               
@@ -86,38 +86,35 @@ export default function RulesSection() {
             
             <div className="space-y-6">
               <div>
-                <h4 className="text-lg font-orbitron text-secondary mb-2">Placement Points</h4>
+                <h4 className="text-lg font-orbitron text-secondary mb-2">Rewards & Prizes</h4>
                 <ul className="text-foreground opacity-90 space-y-2">
-                  <li><span className="text-primary font-semibold">1st Place:</span> 20 points</li>
-                  <li><span className="text-primary font-semibold">2nd Place:</span> 14 points</li>
-                  <li><span className="text-primary font-semibold">3rd Place:</span> 10 points</li>
-                  <li><span className="text-primary font-semibold">4th-5th Place:</span> 7 points</li>
-                  <li><span className="text-primary font-semibold">6th-8th Place:</span> 4 points</li>
-                  <li><span className="text-primary font-semibold">9th-12th Place:</span> 2 points</li>
+                  <li><span className="text-primary font-semibold">Entry Fee:</span> ₹30 per participant</li>
+                  <li><span className="text-primary font-semibold">Kill Reward:</span> ₹10 per elimination</li>
+                  <li><span className="text-primary font-semibold">Booyah Bonus:</span> ₹10 additional for winning a match</li>
                 </ul>
               </div>
               
               <div>
-                <h4 className="text-lg font-orbitron text-secondary mb-2">Kill Points</h4>
+                <h4 className="text-lg font-orbitron text-secondary mb-2">Match Format</h4>
                 <p className="text-foreground opacity-90">
-                  Each elimination awards 1 point to the team. Bonus points for multi-kills:
+                  Tournament will be conducted in standard Free Fire battle royale format:
                 </p>
                 <ul className="text-foreground opacity-90 space-y-2 mt-2">
-                  <li><span className="text-primary font-semibold">3+ kills in a row:</span> +1 bonus point</li>
-                  <li><span className="text-primary font-semibold">Team wipe:</span> +2 bonus points</li>
+                  <li><span className="text-primary font-semibold">Match Duration:</span> Approximately 20 minutes per game</li>
+                  <li><span className="text-primary font-semibold">Map Rotation:</span> Bermuda, Kalahari, and Purgatory</li>
                 </ul>
               </div>
               
               <div>
-                <h4 className="text-lg font-orbitron text-secondary mb-2">Tiebreakers</h4>
+                <h4 className="text-lg font-orbitron text-secondary mb-2">Tournament Structure</h4>
                 <p className="text-foreground opacity-90">
-                  In case of a tie in total points, the following tiebreakers will be applied in order:
+                  The tournament will be conducted in multiple stages:
                 </p>
                 <ol className="text-foreground opacity-90 space-y-2 mt-2 list-decimal list-inside">
-                  <li>Total number of Booyahs (1st place finishes)</li>
-                  <li>Total elimination points</li>
-                  <li>Highest single-match score</li>
-                  <li>Head-to-head performance</li>
+                  <li>Qualification Round: Open to all registered participants</li>
+                  <li>Quarter-Finals: Top performers from qualification round</li>
+                  <li>Semi-Finals: Top performers from quarter-finals</li>
+                  <li>Grand Finals: Final showdown with the best players</li>
                 </ol>
               </div>
             </div>
