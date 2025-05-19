@@ -1,0 +1,226 @@
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
+import { Link } from 'wouter';
+import { Helmet } from 'react-helmet';
+import NavBar from '@/components/NavBar';
+import Footer from '@/components/Footer';
+
+interface AccordionItemProps {
+  title: string;
+  content: React.ReactNode;
+  index: number;
+  activeIndex: number | null;
+  setActiveIndex: (index: number | null) => void;
+}
+
+const AccordionItem = ({ title, content, index, activeIndex, setActiveIndex }: AccordionItemProps) => {
+  const isActive = activeIndex === index;
+  
+  const toggleAccordion = () => {
+    setActiveIndex(isActive ? null : index);
+  };
+  
+  return (
+    <div className="mb-4 rounded-lg overflow-hidden border border-primary border-opacity-20">
+      <div 
+        className="flex items-center justify-between p-4 bg-card cursor-pointer hover:bg-opacity-90 transition-colors duration-300"
+        onClick={toggleAccordion}
+      >
+        <h3 className="text-xl font-orbitron font-bold text-foreground flex items-center">
+          <span 
+            className={`mr-3 transition-transform duration-300 transform ${isActive ? 'rotate-180' : ''}`}
+          >
+            <ChevronDown size={20} className="text-primary" />
+          </span>
+          {title}
+        </h3>
+      </div>
+      <div 
+        className={`
+          overflow-hidden transition-all duration-500 bg-background 
+          ${isActive ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}
+        `}
+      >
+        <div className="p-6 text-foreground">
+          {content}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function LearnMore() {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  
+  const accordionData = [
+    {
+      title: "What Are These Tournaments?",
+      content: (
+        <div className="space-y-4">
+          <p>
+            We organize skill-based Free Fire tournaments where players compete in private matches to earn money based on 
+            performance — not just rank. These tournaments are perfect for players looking to turn their gameplay into real cash rewards.
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Currently, we host Solo mode tournaments.</li>
+            <li>Duo and Squad tournaments are coming soon!</li>
+            <li>Stay connected through our WhatsApp channel for updates.</li>
+          </ul>
+        </div>
+      )
+    },
+    {
+      title: "Registration Process",
+      content: (
+        <div className="space-y-4">
+          <p>Registration is simple and straightforward:</p>
+          <ol className="list-decimal list-inside space-y-2">
+            <li>Click the "Join Tournament" button on our homepage</li>
+            <li>Select "Solo" registration option</li>
+            <li>Fill out the Google Form with your details</li>
+            <li>Pay the ₹30 entry fee through the provided payment options</li>
+            <li>Once confirmed, you'll receive match details via WhatsApp</li>
+          </ol>
+          <p className="mt-4 text-primary font-semibold">Note: All participants must be at least 16 years old to register and compete.</p>
+        </div>
+      )
+    },
+    {
+      title: "In Game Evaluation",
+      content: (
+        <div className="space-y-4">
+          <p>Our tournaments track your performance through multiple factors:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><span className="font-semibold">Eliminations:</span> Every opponent you eliminate earns you ₹10</li>
+            <li><span className="font-semibold">Match Victory:</span> Achieving Booyah (winning the match) earns you an additional ₹10 bonus</li>
+            <li><span className="font-semibold">Gameplay Monitoring:</span> All matches are monitored to ensure fair play</li>
+            <li><span className="font-semibold">Performance Tracking:</span> We keep detailed statistics of your performance across all tournaments</li>
+          </ul>
+        </div>
+      )
+    },
+    {
+      title: "Reward System",
+      content: (
+        <div className="space-y-4">
+          <p>Our reward system is straightforward and performance-based:</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-3">
+              <div className="flex justify-between items-center border-b border-muted pb-1">
+                <span>Entry Fee</span>
+                <span className="text-primary font-semibold">₹30</span>
+              </div>
+              <div className="flex justify-between items-center border-b border-muted pb-1">
+                <span>Kill Reward</span>
+                <span className="text-primary font-semibold">₹10 per elimination</span>
+              </div>
+              <div className="flex justify-between items-center border-b border-muted pb-1">
+                <span>Booyah Bonus</span>
+                <span className="text-primary font-semibold">₹10 additional</span>
+              </div>
+            </div>
+            <div className="bg-card bg-opacity-40 p-4 rounded">
+              <p className="font-semibold mb-2">Example:</p>
+              <p>If you eliminate 5 players and win the match, you earn:</p>
+              <ul className="list-inside">
+                <li>₹50 from eliminations (5 × ₹10)</li>
+                <li>₹10 bonus for Booyah</li>
+                <li>Total: ₹60</li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-secondary font-semibold mt-2">The more you eliminate and the better you perform, the more you earn!</p>
+        </div>
+      )
+    },
+    {
+      title: "Why Choose Us",
+      content: (
+        <div className="space-y-4">
+          <p>There are many reasons to participate in our tournaments:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><span className="font-semibold">Fair Reward System:</span> Get paid for your skill, not just for winning</li>
+            <li><span className="font-semibold">Professional Organization:</span> Smoothly run tournaments with clear rules</li>
+            <li><span className="font-semibold">Community:</span> Connect with other competitive players</li>
+            <li><span className="font-semibold">Immediate Rewards:</span> Payments processed quickly after tournament completion</li>
+            <li><span className="font-semibold">Regular Events:</span> Consistent tournament schedule so you can always participate</li>
+            <li><span className="font-semibold">Growth Opportunities:</span> Build your reputation as a skilled Free Fire player</li>
+          </ul>
+        </div>
+      )
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Learn More About FF Max Pro League Tournaments</title>
+        <meta name="description" content="Discover everything you need to know about our Free Fire tournaments, including registration process, rewards system, and more." />
+      </Helmet>
+      
+      <div className="flex flex-col min-h-screen">
+        <NavBar />
+        
+        <main className="flex-grow pt-24 pb-16">
+          <div className="container mx-auto px-4">
+            <div 
+              className="max-w-4xl mx-auto bg-card bg-opacity-90 p-8 rounded-lg border border-primary border-opacity-30 shadow-xl"
+              style={{
+                backgroundImage: "linear-gradient(to bottom, rgba(15,15,15,0.7), rgba(20,20,20,0.9))"
+              }}
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-center mb-10"
+              >
+                <h1 className="text-3xl md:text-5xl font-orbitron font-bold mb-4">
+                  <span className="text-primary">LEARN MORE</span>{" "}
+                  <span className="text-secondary">ABOUT OUR TOURNAMENTS</span>
+                </h1>
+                <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p className="text-lg text-foreground opacity-90 mb-8">
+                  Click on a section below to expand and learn more about our Free Fire tournaments.
+                </p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                {accordionData.map((item, index) => (
+                  <AccordionItem
+                    key={index}
+                    title={item.title}
+                    content={item.content}
+                    index={index}
+                    activeIndex={activeIndex}
+                    setActiveIndex={setActiveIndex}
+                  />
+                ))}
+              </motion.div>
+              
+              <div className="mt-10 text-center">
+                <Link href="/">
+                  <a className="inline-block bg-primary text-primary-foreground py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn mr-4">
+                    Back to Home
+                  </a>
+                </Link>
+                <Link href="/register">
+                  <a className="inline-block bg-transparent border-2 border-secondary text-secondary py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-secondary hover:bg-opacity-10 transition-all duration-300 glow-btn-cyan">
+                    Register Now
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </main>
+        
+        <Footer />
+      </div>
+    </>
+  );
+}
