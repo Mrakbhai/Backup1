@@ -1,0 +1,8 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#121212"/>
+  <path d="M960 540C960 585.228 923.228 622 878 622C832.772 622 796 585.228 796 540C796 494.772 832.772 458 878 458C923.228 458 960 494.772 960 540Z" fill="#FF5722"/>
+  <path d="M1124 540C1124 585.228 1087.23 622 1042 622C996.772 622 960 585.228 960 540C960 494.772 996.772 458 1042 458C1087.23 458 1124 494.772 1124 540Z" fill="#00E5FF"/>
+  <rect x="686" y="380" width="548" height="320" rx="20" stroke="#333333" stroke-width="4"/>
+  <text x="960" y="700" font-family="Arial" font-size="48" fill="#FFFFFF" text-anchor="middle">FF MAX PRO LEAGUE</text>
+  <text x="960" y="760" font-family="Arial" font-size="32" fill="#888888" text-anchor="middle">Video Loading...</text>
+</svg>
