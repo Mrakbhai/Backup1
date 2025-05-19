@@ -209,16 +209,48 @@ export default function LearnMore() {
     {
       title: "Why Choose Us",
       content: (
-        <div className="space-y-4">
-          <p>There are many reasons to participate in our tournaments:</p>
-          <ul className="list-disc list-inside space-y-2">
-            <li><span className="font-semibold">Fair Reward System:</span> Get paid for your skill, not just for winning</li>
-            <li><span className="font-semibold">Professional Organization:</span> Smoothly run tournaments with clear rules</li>
-            <li><span className="font-semibold">Community:</span> Connect with other competitive players</li>
-            <li><span className="font-semibold">Immediate Rewards:</span> Payments processed quickly after tournament completion</li>
-            <li><span className="font-semibold">Regular Events:</span> Consistent tournament schedule so you can always participate</li>
-            <li><span className="font-semibold">Growth Opportunities:</span> Build your reputation as a skilled Free Fire player</li>
-          </ul>
+        <div className="space-y-6">
+          <p className="text-lg">Join our tournaments for a premium gaming experience:</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20 flex flex-col">
+              <h4 className="text-lg font-orbitron text-primary mb-3">Trusted Process</h4>
+              <p className="flex-grow">We manually review all applications and verifications to ensure a fair and secure tournament experience for everyone.</p>
+              <div className="w-full h-1 bg-primary bg-opacity-30 mt-4"></div>
+            </div>
+            
+            <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20 flex flex-col">
+              <h4 className="text-lg font-orbitron text-primary mb-3">Fast & Fair Rewards</h4>
+              <p className="flex-grow">Our performance-based reward system ensures you get paid for your skills within 24 hours after match verification.</p>
+              <div className="w-full h-1 bg-primary bg-opacity-30 mt-4"></div>
+            </div>
+            
+            <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20 flex flex-col">
+              <h4 className="text-lg font-orbitron text-primary mb-3">Expanding Modes</h4>
+              <p className="flex-grow">Currently supporting Solo mode with Duo and Squad tournaments coming soon to offer more ways to compete and win.</p>
+              <div className="w-full h-1 bg-primary bg-opacity-30 mt-4"></div>
+            </div>
+            
+            <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20 flex flex-col">
+              <h4 className="text-lg font-orbitron text-primary mb-3">Growing Community</h4>
+              <p className="flex-grow">Join our expanding competitive Free Fire community of skilled players looking to test their abilities and earn rewards.</p>
+              <div className="w-full h-1 bg-primary bg-opacity-30 mt-4"></div>
+            </div>
+          </div>
+          
+          <div className="bg-card bg-opacity-50 p-5 rounded-lg border border-secondary border-opacity-20 mt-4">
+            <h4 className="text-lg font-orbitron text-secondary mb-3 text-center">Coming Soon</h4>
+            <p className="text-center">Upcoming features: personal dashboard, referral earnings, and more!</p>
+          </div>
+          
+          <div className="text-center mt-6">
+            <button 
+              onClick={() => window.location.href = '/#register'} 
+              className="inline-block bg-primary text-primary-foreground py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn"
+            >
+              Join Our Community Today
+            </button>
+          </div>
         </div>
       )
     }
