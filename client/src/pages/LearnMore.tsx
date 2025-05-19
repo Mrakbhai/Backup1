@@ -73,16 +73,50 @@ export default function LearnMore() {
     {
       title: "Registration Process",
       content: (
-        <div className="space-y-4">
-          <p>Registration is simple and straightforward:</p>
-          <ol className="list-decimal list-inside space-y-2">
-            <li>Click the "Join Tournament" button on our homepage</li>
-            <li>Select "Solo" registration option</li>
-            <li>Fill out the Google Form with your details</li>
-            <li>Pay the ₹30 entry fee through the provided payment options</li>
-            <li>Once confirmed, you'll receive match details via WhatsApp</li>
-          </ol>
-          <p className="mt-4 text-primary font-semibold">Note: All participants must be at least 16 years old to register and compete.</p>
+        <div className="space-y-6">
+          <p className="text-lg">Follow these steps to register for our tournaments:</p>
+          
+          <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
+            <h4 className="text-lg font-orbitron text-primary mb-3">1. Fill the Registration Form</h4>
+            <p className="mb-2">You'll be asked to provide:</p>
+            <ul className="list-disc list-inside space-y-1 pl-2">
+              <li>Full Name & In-Game Name</li>
+              <li>Free Fire UID</li>
+              <li>UPI ID (for payment verification & rewards)</li>
+              <li>Email Address & WhatsApp Number</li>
+              <li>Game Profile Screenshot</li>
+              <li>Select your payment method (Online/Offline)</li>
+              <li>Select how you want to receive rewards (UPI / Gift Card)</li>
+            </ul>
+          </div>
+          
+          <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
+            <h4 className="text-lg font-orbitron text-primary mb-3">2. Pay the Entry Fee</h4>
+            <ul className="list-disc list-inside space-y-1 pl-2">
+              <li>₹30 per player</li>
+              <li>Upload proof of payment or enter transaction ID</li>
+            </ul>
+          </div>
+          
+          <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
+            <h4 className="text-lg font-orbitron text-primary mb-3">3. Application Review</h4>
+            <ul className="list-disc list-inside space-y-1 pl-2">
+              <li>We manually verify your payment & details</li>
+              <li>Once approved, you'll receive a confirmation via WhatsApp/email</li>
+            </ul>
+          </div>
+          
+          <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
+            <h4 className="text-lg font-orbitron text-primary mb-3">4. Match Announcement & Room Code</h4>
+            <ul className="list-disc list-inside space-y-1 pl-2">
+              <li>We will announce the date and time of the matches. Most likely the matches will be held on Sundays</li>
+              <li>You'll get personal room code & match info via WhatsApp or email (not on the public channel)</li>
+            </ul>
+          </div>
+          
+          <p className="mt-4 text-secondary font-semibold text-center">
+            Ready to join? Click the "Join Tournament" button below to start the registration process!
+          </p>
         </div>
       )
     },
