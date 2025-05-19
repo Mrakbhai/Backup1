@@ -42,7 +42,18 @@ export default function NavBar() {
 
   const handleNavLinkClick = (id: string) => {
     setIsMenuOpen(false);
-    scrollToElement(id);
+    
+    // If we're not on the home page, navigate to home page first and then scroll
+    if (location !== '/') {
+      window.location.href = `/#${id}`;
+    } else {
+      scrollToElement(id);
+    }
+  };
+  
+  const navigateToLearnMore = () => {
+    setIsMenuOpen(false);
+    window.location.href = '/learn-more';
   };
 
   return (
@@ -81,6 +92,14 @@ export default function NavBar() {
               {item.label}
             </a>
           ))}
+          
+          <a 
+            href="/learn-more"
+            className="nav-link text-foreground hover:text-secondary transition-colors duration-300"
+            onClick={(e) => { e.preventDefault(); navigateToLearnMore(); }}
+          >
+            Learn More
+          </a>
           
           <button 
             onClick={() => handleNavLinkClick('register')}
@@ -138,6 +157,14 @@ export default function NavBar() {
                 {item.label}
               </a>
             ))}
+            
+            <a 
+              href="/learn-more"
+              className="text-xl font-orbitron text-foreground hover:text-secondary transition-colors duration-300 border-b border-muted pb-2"
+              onClick={(e) => { e.preventDefault(); navigateToLearnMore(); }}
+            >
+              Learn More
+            </a>
             
             <button 
               onClick={() => handleNavLinkClick('register')}
