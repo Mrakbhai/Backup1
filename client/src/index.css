@@ -93,6 +93,25 @@
     box-shadow: 0 0 10px hsla(var(--secondary) / 0.9), 0 0 20px hsla(var(--secondary) / 0.7), 0 0 30px hsla(var(--secondary) / 0.5);
   }
   
+  /* Custom scrollbar styling */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--card));
+    border-radius: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--secondary));
+  }
+  
   .video-container {
     @apply relative w-full h-screen overflow-hidden;
   }

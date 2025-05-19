@@ -43,7 +43,9 @@ const AccordionItem = ({ title, content, index, activeIndex, setActiveIndex }: A
         `}
       >
         <div className="p-6 text-foreground">
-          {content}
+          <div className="max-h-[350px] overflow-y-auto custom-scrollbar pr-2">
+            {content}
+          </div>
         </div>
       </div>
     </div>
@@ -308,16 +310,18 @@ export default function LearnMore() {
               </motion.div>
               
               <div className="mt-10 text-center">
-                <Link href="/">
-                  <a className="inline-block bg-primary text-primary-foreground py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn mr-4">
-                    Back to Home
-                  </a>
-                </Link>
-                <Link href="/register">
-                  <a className="inline-block bg-transparent border-2 border-secondary text-secondary py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-secondary hover:bg-opacity-10 transition-all duration-300 glow-btn-cyan">
-                    Register Now
-                  </a>
-                </Link>
+                <button 
+                  onClick={() => window.location.href = '/'}
+                  className="inline-block bg-primary text-primary-foreground py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn mr-4"
+                >
+                  Back to Home
+                </button>
+                <button 
+                  onClick={() => window.location.href = '/#register'}
+                  className="inline-block bg-transparent border-2 border-secondary text-secondary py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-secondary hover:bg-opacity-10 transition-all duration-300 glow-btn-cyan"
+                >
+                  Register Now
+                </button>
               </div>
             </div>
           </div>

@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { useScrollThreshold } from '@/hooks/use-scroll';
 import { scrollToElement } from '@/lib/utils';
+import { useLocation } from 'wouter';
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isScrolled = useScrollThreshold(50);
+  const [location] = useLocation();
 
   // Close menu when clicking outside
   useEffect(() => {
