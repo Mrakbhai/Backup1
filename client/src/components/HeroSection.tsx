@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'wouter';
 import { scrollToElement } from '@/lib/utils';
 import videoPlaceholder from '@/assets/video-placeholder.svg';
 import { ChevronDown } from 'lucide-react';
@@ -75,12 +76,13 @@ export default function HeroSection() {
           >
             Join Tournament
           </button>
-          <button 
-            className="bg-transparent border-2 border-secondary text-secondary py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-secondary hover:bg-opacity-10 transition-all duration-300 glow-btn-cyan text-lg"
-            onClick={() => window.location.href = '/learn-more'}
-          >
-            Learn More
-          </button>
+          <Link href="/learn-more">
+            <button 
+              className="bg-transparent border-2 border-secondary text-secondary py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-secondary hover:bg-opacity-10 transition-all duration-300 glow-btn-cyan text-lg"
+            >
+              Learn More
+            </button>
+          </Link>
         </motion.div>
         
         <motion.div 
