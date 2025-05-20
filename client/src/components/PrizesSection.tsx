@@ -12,7 +12,7 @@ export default function PrizesSection() {
   };
 
   const backgroundStyle = {
-    backgroundImage: 'url("/bg-texture-rules.jpg")',
+    backgroundImage: 'url("https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/eca997db8be14cf1f096225ffc905697.jpg")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',

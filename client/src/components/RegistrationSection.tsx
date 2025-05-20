@@ -7,7 +7,7 @@ export default function RegistrationSection() {
   };
 
   const backgroundStyle = {
-    backgroundImage: "url('https://images.unsplash.com/photo-1559300214-d9301317954f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080')",
+    backgroundImage: "url('https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/5c208e875e7f0bc2f5aa6f10758dc959.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundAttachment: "fixed",

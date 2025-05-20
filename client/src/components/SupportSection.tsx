@@ -11,6 +11,7 @@ import {
   SelectValue 
 } from '@/components/ui/select';
 import { RectangleEllipsis, Headset, Clock, MessageSquare } from 'lucide-react';
+import { db, collection, addDoc, serverTimestamp } from "../../../server/firebase";
 
 export default function SupportSection() {
   const [contactForm, setContactForm] = useState({
@@ -29,12 +30,26 @@ export default function SupportSection() {
     setContactForm(prev => ({ ...prev, subject: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', contactForm);
-    // Handle form submission logic here
+    try {
+      await addDoc(collection(db, "supportMessages"), {
+        ...contactForm,
+        timestamp: serverTimestamp(),
+      });
+      alert("Message sent successfully!");
+      setContactForm({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    } catch (err) {
+      console.error("Error submitting message:", err);
+      alert("Submission failed. Please try again.");
+    }
   };
-
+  
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -47,19 +62,19 @@ export default function SupportSection() {
   const faqItems = [
     {
       question: "When is the registration deadline?",
-      answer: "Registration closes on June 10, 2023 at 11:59 PM GMT. No late registrations will be accepted."
+      answer: "You will be able to register until the tournament day starts. Keep an eye on our social media for updates."
     },
     {
       question: "Is there an age requirement?",
-      answer: "All participants must be at least 16 years of age. Players under 18 will need parental consent forms submitted."
+      answer: "All participants must be at least 11 years of age. Players under 11 will need parental consent forms submitted."
     },
     {
       question: "How do I claim my prize if I win?",
-      answer: "Prize distribution details will be sent to team captains via email. You'll need to provide payment information and complete verification."
+      answer: "Prize distribution details will be sent to each registered player via email. You'll need to provide payment information and complete verification."
     },
     {
       question: "Can I use an emulator?",
-      answer: "Emulators are permitted during qualifiers only. The main tournament requires mobile devices only."
+      answer: "Emulators are allowed in the tournamens."
     }
   ];
 
@@ -83,7 +98,7 @@ export default function SupportSection() {
   ];
 
   const backgroundStyle = {
-    backgroundImage: 'url("/images/bg-texture.png")',
+    backgroundImage: 'url("https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/b256367962c4dd22384c89a73c6de3d5.jpg")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.7)', // Adjust the overlay opacity as needed

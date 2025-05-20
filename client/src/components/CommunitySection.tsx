@@ -51,7 +51,7 @@ export default function CommunitySection() {
   ];
 
     const backgroundStyle = {
-        backgroundImage: 'url("/images/bg-texture-dark.png")',
+        backgroundImage: 'url("https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/9271bbc5450e84687d0697343a001d49.jpg")',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',

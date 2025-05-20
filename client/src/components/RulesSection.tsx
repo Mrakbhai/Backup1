@@ -15,7 +15,7 @@ export default function RulesSection() {
       id="rules" 
       className="py-20 bg-card section-reveal" 
       style={{
-        backgroundImage: "url('https://news.ultimatebattle.in/wp-content/uploads/2022/01/Garena-Free-Fire-New.jpg",
+        backgroundImage: "url('https://news.ultimatebattle.in/wp-content/uploads/2022/01/Garena-Free-Fire-New.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundBlendMode: "overlay",
