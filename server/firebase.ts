@@ -5,6 +5,7 @@ import {
   collection,
   addDoc,
   serverTimestamp,
+  type Firestore
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -16,7 +17,7 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
-let db;
+let db: Firestore;
 
 try {
   const app = initializeApp(firebaseConfig);
