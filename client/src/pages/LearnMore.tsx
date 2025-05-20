@@ -16,11 +16,11 @@ interface AccordionItemProps {
 
 const AccordionItem = ({ title, content, index, activeIndex, setActiveIndex }: AccordionItemProps) => {
   const isActive = activeIndex === index;
-  
+
   const toggleAccordion = () => {
     setActiveIndex(isActive ? null : index);
   };
-  
+
   return (
     <div className="mb-4 rounded-lg overflow-hidden border border-primary border-opacity-20">
       <div 
@@ -54,7 +54,14 @@ const AccordionItem = ({ title, content, index, activeIndex, setActiveIndex }: A
 
 export default function LearnMore() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  
+
+    const backgroundStyle = {
+        backgroundImage: "url('/images/bg-texture-rules.webp')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+    };
+
   const accordionData = [
     {
       title: "What Are These Tournaments?",
@@ -77,7 +84,7 @@ export default function LearnMore() {
       content: (
         <div className="space-y-6">
           <p className="text-lg">Follow these steps to register for our tournaments:</p>
-          
+
           <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
             <h4 className="text-lg font-orbitron text-primary mb-3">1. Fill the Registration Form</h4>
             <p className="mb-2">You'll be asked to provide:</p>
@@ -91,7 +98,7 @@ export default function LearnMore() {
               <li>Select how you want to receive rewards (UPI / Gift Card)</li>
             </ul>
           </div>
-          
+
           <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
             <h4 className="text-lg font-orbitron text-primary mb-3">2. Pay the Entry Fee</h4>
             <ul className="list-disc list-inside space-y-1 pl-2">
@@ -99,7 +106,7 @@ export default function LearnMore() {
               <li>Upload proof of payment or enter transaction ID</li>
             </ul>
           </div>
-          
+
           <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
             <h4 className="text-lg font-orbitron text-primary mb-3">3. Application Review</h4>
             <ul className="list-disc list-inside space-y-1 pl-2">
@@ -107,7 +114,7 @@ export default function LearnMore() {
               <li>Once approved, you'll receive a confirmation via WhatsApp/email</li>
             </ul>
           </div>
-          
+
           <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
             <h4 className="text-lg font-orbitron text-primary mb-3">4. Match Announcement & Room Code</h4>
             <ul className="list-disc list-inside space-y-1 pl-2">
@@ -115,7 +122,7 @@ export default function LearnMore() {
               <li>You'll get personal room code & match info via WhatsApp or email (not on the public channel)</li>
             </ul>
           </div>
-          
+
           <p className="mt-4 text-secondary font-semibold text-center">
             Ready to join? Click the "Join Tournament" button below to start the registration process!
           </p>
@@ -127,7 +134,7 @@ export default function LearnMore() {
       content: (
         <div className="space-y-6">
           <p className="text-lg">We use a transparent and fair evaluation system to determine winners.</p>
-          
+
           <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
             <h4 className="text-lg font-orbitron text-primary mb-3">Rules & Expectations</h4>
             <ul className="list-disc list-inside space-y-2 pl-2">
@@ -137,7 +144,7 @@ export default function LearnMore() {
               <li>Cheating = permanent ban</li>
             </ul>
           </div>
-          
+
           <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
             <h4 className="text-lg font-orbitron text-primary mb-3">Performance Evaluation</h4>
             <div className="space-y-3">
@@ -146,7 +153,7 @@ export default function LearnMore() {
               <p>We also monitor gameplay & results from our side for cross-checking.</p>
             </div>
           </div>
-          
+
           <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
             <h4 className="text-lg font-orbitron text-primary mb-3">Reward Calculation</h4>
             <ul className="list-disc list-inside space-y-2 pl-2">
@@ -163,7 +170,7 @@ export default function LearnMore() {
       content: (
         <div className="space-y-6">
           <p className="text-lg">Our reward system is straightforward and performance-based:</p>
-          
+
           <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
             <h4 className="text-lg font-orbitron text-primary mb-3">Earnings Breakdown</h4>
             <ul className="list-disc list-inside space-y-2 pl-2">
@@ -171,7 +178,7 @@ export default function LearnMore() {
               <li>₹10 bonus for getting Booyah (1st place)</li>
             </ul>
           </div>
-          
+
           <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
             <h4 className="text-lg font-orbitron text-primary mb-3">Reward Delivery</h4>
             <div className="space-y-3">
@@ -183,7 +190,7 @@ export default function LearnMore() {
               </ul>
             </div>
           </div>
-          
+
           <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-secondary border-opacity-20">
             <h4 className="text-lg font-orbitron text-secondary mb-3">Important Notes</h4>
             <div className="space-y-3">
@@ -191,7 +198,7 @@ export default function LearnMore() {
               <p><span className="font-semibold">False screenshots or tampering attempts</span> = immediate ban</p>
             </div>
           </div>
-          
+
           <div className="bg-card bg-opacity-40 p-4 rounded-lg">
             <p className="font-semibold mb-2">Example Calculation:</p>
             <p>If you eliminate 5 players and win the match, you earn:</p>
@@ -201,7 +208,7 @@ export default function LearnMore() {
               <li>Total: <span className="text-primary font-bold">₹60</span></li>
             </ul>
           </div>
-          
+
           <p className="text-secondary font-semibold text-center mt-2">
             The more you eliminate and the better you perform, the more you earn!
           </p>
@@ -213,38 +220,38 @@ export default function LearnMore() {
       content: (
         <div className="space-y-6">
           <p className="text-lg">Join our tournaments for a premium gaming experience:</p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20 flex flex-col">
               <h4 className="text-lg font-orbitron text-primary mb-3">Trusted Process</h4>
               <p className="flex-grow">We manually review all applications and verifications to ensure a fair and secure tournament experience for everyone.</p>
               <div className="w-full h-1 bg-primary bg-opacity-30 mt-4"></div>
             </div>
-            
+
             <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20 flex flex-col">
               <h4 className="text-lg font-orbitron text-primary mb-3">Fast & Fair Rewards</h4>
               <p className="flex-grow">Our performance-based reward system ensures you get paid for your skills within 24 hours after match verification.</p>
               <div className="w-full h-1 bg-primary bg-opacity-30 mt-4"></div>
             </div>
-            
+
             <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20 flex flex-col">
               <h4 className="text-lg font-orbitron text-primary mb-3">Expanding Modes</h4>
               <p className="flex-grow">Currently supporting Solo mode with Duo and Squad tournaments coming soon to offer more ways to compete and win.</p>
               <div className="w-full h-1 bg-primary bg-opacity-30 mt-4"></div>
             </div>
-            
+
             <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20 flex flex-col">
               <h4 className="text-lg font-orbitron text-primary mb-3">Growing Community</h4>
               <p className="flex-grow">Join our expanding competitive Free Fire community of skilled players looking to test their abilities and earn rewards.</p>
               <div className="w-full h-1 bg-primary bg-opacity-30 mt-4"></div>
             </div>
           </div>
-          
+
           <div className="bg-card bg-opacity-50 p-5 rounded-lg border border-secondary border-opacity-20 mt-4">
             <h4 className="text-lg font-orbitron text-secondary mb-3 text-center">Coming Soon</h4>
             <p className="text-center">Upcoming features: personal dashboard, referral earnings, and more!</p>
           </div>
-          
+
           <div className="text-center mt-6">
             <button 
               onClick={() => window.location.href = '/#register'} 
@@ -264,11 +271,11 @@ export default function LearnMore() {
         <title>Learn More About FF Max Pro League Tournaments</title>
         <meta name="description" content="Discover everything you need to know about our Free Fire tournaments, including registration process, rewards system, and more." />
       </Helmet>
-      
+
       <div className="flex flex-col min-h-screen">
         <NavBar />
-        
-        <main className="flex-grow pt-24 pb-16">
+
+        <main className="flex-grow pt-24 pb-16" style={backgroundStyle}>
           <div className="container mx-auto px-4">
             <div 
               className="max-w-4xl mx-auto bg-card bg-opacity-90 p-8 rounded-lg border border-primary border-opacity-30 shadow-xl"
@@ -291,7 +298,7 @@ export default function LearnMore() {
                   Click on a section below to expand and learn more about our Free Fire tournaments.
                 </p>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -308,7 +315,7 @@ export default function LearnMore() {
                   />
                 ))}
               </motion.div>
-              
+
               <div className="mt-10 text-center">
                 <button 
                   onClick={() => window.location.href = '/'}
@@ -326,7 +333,7 @@ export default function LearnMore() {
             </div>
           </div>
         </main>
-        
+
         <Footer />
       </div>
     </>

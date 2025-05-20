@@ -82,8 +82,16 @@ export default function SupportSection() {
     }
   ];
 
+  const backgroundStyle = {
+    backgroundImage: 'url("/images/bg-texture.png")',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.7)', // Adjust the overlay opacity as needed
+    backgroundBlendMode: 'overlay',
+  };
+
   return (
-    <section id="support" className="py-20 bg-card section-reveal">
+    <section id="support" className="py-20 section-reveal" style={backgroundStyle}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-orbitron font-bold mb-4">
@@ -94,7 +102,7 @@ export default function SupportSection() {
             Need help? Our support team is ready to assist you
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-10">
           <motion.div 
             className="bg-background rounded-lg p-8 border border-primary border-opacity-20"
@@ -104,7 +112,7 @@ export default function SupportSection() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">CONTACT US</h3>
-            
+
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-foreground opacity-90">Your Name</Label>
@@ -117,7 +125,7 @@ export default function SupportSection() {
                   onChange={handleInputChange}
                 />
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-foreground opacity-90">Email Address</Label>
                 <Input 
@@ -129,7 +137,7 @@ export default function SupportSection() {
                   onChange={handleInputChange}
                 />
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="subject" className="text-foreground opacity-90">Subject</Label>
                 <Select onValueChange={handleSelectChange}>
@@ -145,7 +153,7 @@ export default function SupportSection() {
                   </SelectContent>
                 </Select>
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="message" className="text-foreground opacity-90">Message</Label>
                 <Textarea 
@@ -156,7 +164,7 @@ export default function SupportSection() {
                   onChange={handleInputChange}
                 />
               </div>
-              
+
               <div className="text-center">
                 <button 
                   type="submit" 
@@ -167,7 +175,7 @@ export default function SupportSection() {
               </div>
             </form>
           </motion.div>
-          
+
           <div>
             <motion.div 
               className="bg-background rounded-lg p-8 border border-primary border-opacity-20 mb-8"
@@ -177,7 +185,7 @@ export default function SupportSection() {
               viewport={{ once: true, margin: "-100px" }}
             >
               <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">FAQ</h3>
-              
+
               <div className="space-y-6">
                 {faqItems.map((item, index) => (
                   <div key={index}>
@@ -188,7 +196,7 @@ export default function SupportSection() {
                   </div>
                 ))}
               </div>
-              
+
               <div className="mt-6">
                 <a href="#" className="text-secondary hover:underline flex items-center">
                   <span>View all FAQs</span>
@@ -198,7 +206,7 @@ export default function SupportSection() {
                 </a>
               </div>
             </motion.div>
-            
+
             <motion.div 
               className="bg-background rounded-lg p-8 border border-primary border-opacity-20"
               variants={fadeInUp}
@@ -207,7 +215,7 @@ export default function SupportSection() {
               viewport={{ once: true, margin: "-100px" }}
             >
               <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">CONTACT INFO</h3>
-              
+
               <div className="space-y-4">
                 {contactInfo.map((item, index) => (
                   <div key={index} className="flex items-start">

@@ -50,8 +50,15 @@ export default function CommunitySection() {
     }
   ];
 
+    const backgroundStyle = {
+        backgroundImage: 'url("/images/bg-texture-dark.png")',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+    };
+
   return (
-    <section id="community" className="py-20 bg-gradient-to-b from-card to-background section-reveal">
+    <section id="community" className="py-20 section-reveal" style={backgroundStyle}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-orbitron font-bold mb-4">
@@ -62,7 +69,7 @@ export default function CommunitySection() {
             Connect with fellow gamers and stay updated with the latest tournament news
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
           {socialTiles.map((tile, index) => (
             <motion.div
@@ -96,7 +103,7 @@ export default function CommunitySection() {
             </motion.div>
           ))}
         </div>
-        
+
         <div className="text-center mt-12">
           <p className="text-lg font-rajdhani text-foreground italic">
             "Discover the latest events in our radar here"

@@ -6,17 +6,19 @@ export default function RegistrationSection() {
     window.open('https://forms.gle/nGSrDTdrKkgH1yH37', '_blank');
   };
 
+  const backgroundStyle = {
+    backgroundImage: "url('https://images.unsplash.com/photo-1559300214-d9301317954f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundAttachment: "fixed",
+    backgroundBlendMode: "overlay"
+  };
+
   return (
     <section 
       id="register" 
       className="py-20 bg-card section-reveal" 
-      style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1559300214-d9301317954f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-        backgroundBlendMode: "overlay"
-      }}
+      style={backgroundStyle}
     >
       <div className="container mx-auto px-4">
         <motion.div 
@@ -36,7 +38,7 @@ export default function RegistrationSection() {
               Choose how you want to participate in the FF Max Pro League and begin your journey to glory
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
             {/* Solo Registration Option */}
             <motion.div
@@ -57,7 +59,7 @@ export default function RegistrationSection() {
                 Register Solo
               </button>
             </motion.div>
-            
+
             {/* Duo Registration Option (Coming Soon) */}
             <motion.div
               className="bg-background rounded-lg p-6 border border-muted border-opacity-30 flex flex-col items-center text-center opacity-70"
@@ -77,7 +79,7 @@ export default function RegistrationSection() {
                 Coming Soon
               </button>
             </motion.div>
-            
+
             {/* Squad Registration Option (Coming Soon) */}
             <motion.div
               className="bg-background rounded-lg p-6 border border-muted border-opacity-30 flex flex-col items-center text-center opacity-70"
@@ -98,7 +100,7 @@ export default function RegistrationSection() {
               </button>
             </motion.div>
           </div>
-          
+
           <div className="mt-10 p-6 bg-background bg-opacity-40 rounded-lg border border-secondary border-opacity-20">
             <h4 className="text-lg font-orbitron font-bold mb-2 text-secondary">Registration Information</h4>
             <ul className="list-disc list-inside space-y-1 text-foreground opacity-90">
