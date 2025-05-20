@@ -68,8 +68,8 @@ useEffect(() => {
           style={{ opacity: videoLoaded ? 1 : 0 }}
           onCanPlayThrough={() => setVideoLoaded(true)}
         >
-          <source src="/assets/bg1.mp4" type="video/mp4" />
-          <source src="/assets/bg1.webm" type="video/webm" />
+          <source src={bgVideoMp4} type="video/mp4" />
+          <source src={bgVideoWebm} type="video/webm" />
           {/* If both fail, the <img> remains visible */}
         </video>
         
