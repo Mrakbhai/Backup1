@@ -30,7 +30,7 @@ export default function AboutSection() {
             {
               icon: <Trophy className="w-8 h-8" />,
               title: "PRIZE POOL",
-              description: "Compete for a massive prize pool of $100,000, with the winner taking home $50,000 and the title of FF Max Pro Champion."
+              description: "Register and compete to win 10 rupees per kill you do and win additional 10 rupees for booyah."
             },
             {
               icon: <Users className="w-8 h-8" />,
@@ -40,7 +40,7 @@ export default function AboutSection() {
             {
               icon: <Calendar className="w-8 h-8" />,
               title: "SCHEDULE",
-              description: "Qualifiers start June 15, with the main tournament running July 1-10. Grand Finals will be held live on July 15th."
+              description: "Date and time of the tournament will be announced soon on WhatsApp channel and will also be sent personally to the participant's email or WhatsApp. Stay tuned for updates."
             }
           ].map((card, index) => (
             <motion.div 

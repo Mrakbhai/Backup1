@@ -48,7 +48,7 @@ export default function RulesSection() {
               <div>
                 <h4 className="text-lg font-orbitron text-secondary mb-2">Participation Options</h4>
                 <p className="text-foreground opacity-90">
-                  Players can participate as solo contestants. All participants must be at least 16 years of age at the time of registration. Duo and squad options will be available soon.
+                  Players can participate as solo contestants. All participants must be at least 11 years of age at the time of registration. Duo and squad options will be available soon.
                 </p>
               </div>
               
@@ -62,14 +62,14 @@ export default function RulesSection() {
               <div>
                 <h4 className="text-lg font-orbitron text-secondary mb-2">Match Schedule</h4>
                 <p className="text-foreground opacity-90">
-                  Teams must be ready to play at their scheduled time. A 10-minute grace period will be given, after which penalties or disqualification may occur.
+                  Teams must be ready to play at given scheduled time. A 15-minute grace period will be given, after which penalties or disqualification may occur.
                 </p>
               </div>
               
               <div>
                 <h4 className="text-lg font-orbitron text-secondary mb-2">Device Requirements</h4>
                 <p className="text-foreground opacity-90">
-                  Players may use any mobile device or emulator for qualifiers. For the main tournament, only mobile devices are allowed, and emulators are prohibited.
+                  Players are allowed to use any mobile device or emulator for tournaments. However, using multiple accounts or devices is restricted.
                 </p>
               </div>
             </div>
@@ -111,10 +111,10 @@ export default function RulesSection() {
                   The tournament will be conducted in multiple stages:
                 </p>
                 <ol className="text-foreground opacity-90 space-y-2 mt-2 list-decimal list-inside">
-                  <li>Qualification Round: Open to all registered participants</li>
-                  <li>Quarter-Finals: Top performers from qualification round</li>
-                  <li>Semi-Finals: Top performers from quarter-finals</li>
-                  <li>Grand Finals: Final showdown with the best players</li>
+                  <li>Registration Open: Players can register themeselves to compete in the tournament</li>
+                  <li>Approval And Schedule: Organisers will approve players and then dates will be announced</li>
+                  <li>Match and Evaluation: Matches will be held and organisers will evaluate the reward</li>
+                  <li>Reward: Rewards will be given based on players performance</li>
                 </ol>
               </div>
             </div>

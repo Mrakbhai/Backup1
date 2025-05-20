@@ -102,10 +102,10 @@ export default function RegistrationSection() {
           <div className="mt-10 p-6 bg-background bg-opacity-40 rounded-lg border border-secondary border-opacity-20">
             <h4 className="text-lg font-orbitron font-bold mb-2 text-secondary">Registration Information</h4>
             <ul className="list-disc list-inside space-y-1 text-foreground opacity-90">
-              <li>Registration closes on June 10, 2023 at 11:59 PM GMT</li>
+              <li>Registration forms are open! Register Now</li>
               <li>Entry fee: <span className="text-primary font-semibold">30 rupees</span> per participant</li>
               <li>You can register as a solo player now, with duo and squad options coming soon</li>
-              <li>All participants must be at least 16 years old to register</li>
+              <li>All participants must be at least 11 years old to register</li>
             </ul>
           </div>
         </motion.div>
