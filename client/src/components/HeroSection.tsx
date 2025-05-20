@@ -77,7 +77,7 @@ export default function HeroSection() {
           </button>
           <button 
             className="bg-transparent border-2 border-secondary text-secondary py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-secondary hover:bg-opacity-10 transition-all duration-300 glow-btn-cyan text-lg"
-            onClick={() => location.replace('/learn-more')}
+            onClick={() => window.location.href = '/learn-more'}
           >
             Learn More
           </button>

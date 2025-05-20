@@ -20,6 +20,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Handle client-side routing
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api')) {
+      return next();
+    }
+    res.sendFile(path.join(import.meta.dirname, '../dist/public/index.html'));
+  });
+
   const httpServer = createServer(app);
 
   return httpServer;
