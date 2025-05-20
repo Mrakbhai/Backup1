@@ -20,6 +20,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Serve static files
+  app.use(express.static(path.join(import.meta.dirname, '../dist/public')));
+
   // Handle client-side routing
   app.get('*', (req, res, next) => {
     if (req.path.startsWith('/api')) {
