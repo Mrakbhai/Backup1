@@ -28,7 +28,7 @@ export default function Home() {
     <>
       <Helmet>
         <title>FF Max Pro League - The Ultimate Free Fire Tournament</title>
-        <meta name="description" content="Join the most prestigious Free Fire tournament and compete against the best players from around the world with a prize pool of $100,000." />
+        <meta name="description" content="Join the most prestigious Free Fire tournament and win ₹10 per kill and extra ₹10 for booyah" />
         <meta property="og:title" content="FF Max Pro League - The Ultimate Free Fire Tournament" />
         <meta property="og:description" content="Compete in the ultimate Free Fire tournament experience with professional players from around the world." />
         <meta property="og:type" content="website" />
