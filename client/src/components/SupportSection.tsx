@@ -11,7 +11,8 @@ import {
   SelectValue 
 } from '@/components/ui/select';
 import { RectangleEllipsis, Headset, Clock, MessageSquare } from 'lucide-react';
-import { db, collection, addDoc, serverTimestamp } from "../../../server/firebase";
+import { db } from "../../../server/firebase"; // or relative path if alias not set
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 export default function SupportSection() {
   const [contactForm, setContactForm] = useState({
