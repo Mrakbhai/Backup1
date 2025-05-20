@@ -16,15 +16,16 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
-let db;
-
 try {
   const app = initializeApp(firebaseConfig);
-  db = getFirestore(app);
-  console.log("Firebase initialized successfully");
+  const db = getFirestore(app);
+  
+  // Test Firebase connection
+  const testCollection = collection(db, "test");
+  console.log("Firebase initialized successfully - DB Reference:", testCollection.id);
+  
+  export { db, collection, addDoc, serverTimestamp };
 } catch (error) {
   console.error("Error initializing Firebase:", error);
   throw error;
 }
-
-export { db, collection, addDoc, serverTimestamp };

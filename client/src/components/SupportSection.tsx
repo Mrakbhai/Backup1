@@ -41,11 +41,16 @@ export default function SupportSection() {
 
     try {
       console.log("Attempting to submit form:", contactForm);
-      const docRef = await addDoc(collection(db, "supportMessages"), {
+      const messagesCollection = collection(db, "supportMessages");
+      console.log("Collection reference created:", messagesCollection.id);
+      
+      const docRef = await addDoc(messagesCollection, {
         ...contactForm,
         timestamp: serverTimestamp(),
+        createdAt: new Date().toISOString() // Fallback timestamp
       });
-      console.log("Document written with ID: ", docRef.id);
+      
+      console.log("Document written with ID:", docRef.id);
       alert("Message sent successfully!");
       setContactForm({
         name: '',
