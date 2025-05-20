@@ -32,11 +32,20 @@ export default function SupportSection() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate form
+    if (!contactForm.name || !contactForm.email || !contactForm.subject || !contactForm.message) {
+      alert("Please fill in all fields");
+      return;
+    }
+
     try {
-      await addDoc(collection(db, "supportMessages"), {
+      console.log("Attempting to submit form:", contactForm);
+      const docRef = await addDoc(collection(db, "supportMessages"), {
         ...contactForm,
         timestamp: serverTimestamp(),
       });
+      console.log("Document written with ID: ", docRef.id);
       alert("Message sent successfully!");
       setContactForm({
         name: '',
@@ -46,7 +55,7 @@ export default function SupportSection() {
       });
     } catch (err) {
       console.error("Error submitting message:", err);
-      alert("Submission failed. Please try again.");
+      alert(`Submission failed: ${err.message}`);
     }
   };
   
