@@ -19,7 +19,7 @@ export default function RulesSection() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundBlendMode: "overlay",
-        backgroundColor: "rgba(10,10,10,0.8)"
+        backgroundColor: "rgba(10,10,10,0.8)", maxWidth: '80%', maxHeight: '80%'
       }}
     >
       <div className="container mx-auto px-4">

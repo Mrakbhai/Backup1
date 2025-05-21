@@ -7,7 +7,7 @@ export default function RegistrationSection() {
   };
 
   const backgroundStyle = {
-    backgroundImage: "url('https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/5c208e875e7f0bc2f5aa6f10758dc959.jpg')",
+    backgroundImage: "url('https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/79ea79e6133a1d43367b7e00cd77c6b8.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundAttachment: "fixed",
@@ -18,8 +18,7 @@ export default function RegistrationSection() {
     <section 
       id="register" 
       className="py-20 bg-card section-reveal" 
-      style={backgroundStyle}
-    >
+      style={{...backgroundStyle, maxWidth: '80%', maxHeight: '80%'}}>
       <div className="container mx-auto px-4">
         <motion.div 
           className="max-w-3xl mx-auto bg-card bg-opacity-80 p-8 md:p-12 rounded-lg border border-primary border-opacity-30 backdrop-blur-sm shadow-2xl"

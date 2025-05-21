@@ -55,7 +55,7 @@ useEffect(() => {
           src={randomBgImage}
           alt="FF Max Pro League Tournament" 
           className="w-full h-full object-cover transition-opacity duration-500"
-          style={{ opacity: videoLoaded ? 0 : 1 }}
+          style={{ opacity: videoLoaded ? 0 : 1, maxWidth: '80%', maxHeight: '80%' }}
         />
 
         <video
@@ -64,8 +64,9 @@ useEffect(() => {
           muted={!isAudioOn}
           playsInline
           loop
+          preload="auto"
           className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500"
-          style={{ opacity: videoLoaded ? 1 : 0 }}
+          style={{ opacity: videoLoaded ? 1 : 0, maxWidth: '80%', maxHeight: '80%' }}
           onCanPlayThrough={() => setVideoLoaded(true)}
         >
           <source src={bgVideoMp4} type="video/mp4" />
@@ -79,13 +80,19 @@ useEffect(() => {
       <div className="absolute top-0 left-0 w-full h-full z-10 flex flex-col justify-center items-center text-center px-4">
         <button
   onClick={() => {
-    setIsAudioOn((prev) => !prev);
     if (videoRef.current) {
-      videoRef.current.muted = !isAudioOn;
-      videoRef.current.play(); // Re-trigger autoplay in some browsers
+      const video = videoRef.current;
+      const newMuteState = !isAudioOn;
+      video.muted = !newMuteState;
+
+      if (video.paused) {
+        video.play().catch((err) => console.warn("Autoplay fail:", err));
+      }
+
+      setIsAudioOn(newMuteState);
     }
   }}
-  className="absolute top-6 right-6 z-20 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition"
+  className="absolute top-12 right-6 z-20 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition cursor-pointer"
   aria-label={isAudioOn ? "Mute" : "Unmute"}
 >
   {isAudioOn ? <Volume2 className="w-6 h-6" /> : <VolumeX className="w-6 h-6" />}

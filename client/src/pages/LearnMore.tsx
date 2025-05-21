@@ -275,7 +275,7 @@ export default function LearnMore() {
       <div className="flex flex-col min-h-screen">
         <NavBar />
 
-        <main className="flex-grow pt-24 pb-16" style={backgroundStyle}>
+        <main className="flex-grow pt-24 pb-16" style={{...backgroundStyle, maxWidth: '80%', maxHeight: '80%'}}>
           <div className="container mx-auto px-4">
             <div 
               className="max-w-4xl mx-auto bg-card bg-opacity-90 p-8 rounded-lg border border-primary border-opacity-30 shadow-xl"

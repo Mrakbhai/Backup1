@@ -58,7 +58,7 @@ export default function CommunitySection() {
     };
 
   return (
-    <section id="community" className="py-20 section-reveal" style={backgroundStyle}>
+    <section id="community" className="py-20 section-reveal" style={{...backgroundStyle, maxWidth: '80%', maxHeight: '80%'}}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-orbitron font-bold mb-4">
