@@ -12,13 +12,15 @@ import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { Helmet } from "react-helmet";
 
 export default function Home() {
+  const [location] = useLocation();
+
   useEffect(() => {
-    const scrollTo = sessionStorage.getItem('scrollTo');
+    const params = new URLSearchParams(location.split('?')[1]);
+    const scrollTo = params.get('scrollTo');
     if (scrollTo) {
-      sessionStorage.removeItem('scrollTo');
       scrollToElement(scrollTo);
     }
-  }, []);
+  }, [location]);
 
   // Intersection observer for section animations
   const { observeElements } = useIntersectionObserver({

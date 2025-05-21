@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils';
 import { useScrollThreshold } from '@/hooks/use-scroll';
 import { scrollToElement } from '@/lib/utils';
 import { useLocation } from 'wouter';
+import { Link } from 'wouter';
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +43,7 @@ export default function NavBar() {
 
   const handleNavLinkClick = (id: string) => {
     setIsMenuOpen(false);
-    
+
     // If we're not on the home page, navigate to home page first and then scroll
     if (location !== '/') {
       sessionStorage.setItem('scrollTo', id);
@@ -51,7 +52,7 @@ export default function NavBar() {
       scrollToElement(id);
     }
   };
-  
+
   const navigateToLearnMore = () => {
     setIsMenuOpen(false);
     window.location.href = '/learn-more';
@@ -72,7 +73,7 @@ export default function NavBar() {
             FF MAX <span className="text-secondary">PRO LEAGUE</span>
           </span>
         </a>
-        
+
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-8">
           {[
@@ -93,15 +94,14 @@ export default function NavBar() {
               {item.label}
             </a>
           ))}
-          
-          <a 
-            href="/learn-more"
-            className="nav-link text-foreground hover:text-secondary transition-colors duration-300"
-            onClick={(e) => { e.preventDefault(); navigateToLearnMore(); }}
-          >
-            Learn More
-          </a>
-          
+
+          <Link 
+              href="/learn-more"
+              className="nav-link text-foreground hover:text-secondary transition-colors duration-300"
+            >
+              Learn More
+            </Link>
+
           <button 
             onClick={() => handleNavLinkClick('register')}
             className="bg-primary text-primary-foreground py-2 px-6 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn"
@@ -109,7 +109,7 @@ export default function NavBar() {
             Join Now
           </button>
         </div>
-        
+
         {/* Mobile Hamburger */}
         <button 
           id="mobile-menu-button"
@@ -130,7 +130,7 @@ export default function NavBar() {
             isMenuOpen && "-translate-y-3 -rotate-45"
           )} />
         </button>
-        
+
         {/* Mobile Menu */}
         <div 
           id="mobile-menu"
@@ -158,7 +158,7 @@ export default function NavBar() {
                 {item.label}
               </a>
             ))}
-            
+
             <a 
               href="/learn-more"
               className="text-xl font-orbitron text-foreground hover:text-secondary transition-colors duration-300 border-b border-muted pb-2"
@@ -166,7 +166,7 @@ export default function NavBar() {
             >
               Learn More
             </a>
-            
+
             <button 
               onClick={() => handleNavLinkClick('register')}
               className="mt-4 bg-primary text-primary-foreground py-3 px-6 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn"
@@ -174,7 +174,7 @@ export default function NavBar() {
               Join Now
             </button>
           </div>
-          
+
           <div className="mt-auto">
             <div className="flex items-center justify-start space-x-6 mt-8">
               <a href="#" className="text-foreground hover:text-primary text-2xl transition-colors duration-300">
