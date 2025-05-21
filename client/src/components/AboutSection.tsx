@@ -21,13 +21,13 @@ export default function AboutSection() {
 
 
   return (
-    <section id="about" className="py-20 section-reveal flex justify-center">
-      <div
-    className="w-[80%] h-[80%] bg-cover bg-center bg-blend-multiply"
-    style={{
-      backgroundImage: 'url("https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/5c208e875e7f0bc2f5aa6f10758dc959.jpg")',
-      backgroundColor: 'rgba(0, 0, 0, 0.4)',
-    }} >
+    <section id="about" className="relative py-20 section-reveal overflow-hidden">
+      {/* Background image */}
+      <img
+        src="https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/5c208e875e7f0bc2f5aa6f10758dc959.jpg"
+        alt="background"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[80%] max-h-[80%] object-contain opacity-40 z-0"
+      />
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-orbitron font-bold mb-4">
@@ -77,7 +77,7 @@ export default function AboutSection() {
             </motion.div>
           ))}
         </div>
-      </div>
+      
         {/* Tournament Highlights */}
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
