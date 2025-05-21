@@ -10,6 +10,8 @@ import SupportSection from "@/components/SupportSection";
 import Footer from "@/components/Footer";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { Helmet } from "react-helmet";
+import { scrollToElement } from "@/lib/utils";
+import { useLocation } from "wouter";
 
 export default function Home() {
   const [location] = useLocation();

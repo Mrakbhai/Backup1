@@ -8,7 +8,7 @@ import { Link } from 'wouter';
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isScrolled = useScrollThreshold(50);
-  const [location] = useLocation();
+  const [location, setLocation] = useLocation();
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function NavBar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const [, setLocation] = useLocation();
+
   
   const handleNavLinkClick = (id: string) => {
     setIsMenuOpen(false);
@@ -87,10 +87,12 @@ export default function NavBar() {
             { id: 'support', label: 'Support' }
           ].map(item => (
             <a 
-              key={item.id}
-              href={`#${item.id}`}
+              href={location === '/' ? `#${item.id}` : `/?scrollTo=${item.id}`}
               className="nav-link text-foreground hover:text-primary transition-colors duration-300"
-              onClick={(e) => { e.preventDefault(); handleNavLinkClick(item.id); }}
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavLinkClick(item.id);
+              }}
             >
               {item.label}
             </a>
@@ -151,10 +153,12 @@ export default function NavBar() {
               { id: 'support', label: 'Support' }
             ].map(item => (
               <a 
-                key={item.id}
-                href={`#${item.id}`}
-                className="text-xl font-orbitron text-foreground hover:text-primary transition-colors duration-300 border-b border-muted pb-2"
-                onClick={(e) => { e.preventDefault(); handleNavLinkClick(item.id); }}
+                href={location === '/' ? `#${item.id}` : `/?scrollTo=${item.id}`}
+                className="nav-link text-foreground hover:text-primary transition-colors duration-300"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavLinkClick(item.id);
+                }}
               >
                 {item.label}
               </a>
