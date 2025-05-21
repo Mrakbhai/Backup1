@@ -26,7 +26,14 @@ export default function AboutSection() {
       <img
         src="https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/5c208e875e7f0bc2f5aa6f10758dc959.jpg"
         alt="background"
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[300%] max-h-[300%] object-contain opacity-40 z-0"
+        className="
+    absolute
+    top-0 left-0
+    w-[300%] h-[300%]
+    object-contain
+    -translate-x-[30px] -translate-y-[0px]  // move right and down
+    z-[-1] opacity-40
+  "
       />
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
