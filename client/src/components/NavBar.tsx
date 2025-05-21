@@ -45,7 +45,8 @@ export default function NavBar() {
     
     // If we're not on the home page, navigate to home page first and then scroll
     if (location !== '/') {
-      window.location.href = `/#${id}`;
+      sessionStorage.setItem('scrollTo', id);
+      window.location.href = '/';
     } else {
       scrollToElement(id);
     }

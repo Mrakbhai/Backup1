@@ -324,7 +324,10 @@ export default function LearnMore() {
                   Back to Home
                 </button>
                 <button 
-                  onClick={() => window.location.href = '/#register'}
+                  onClick={() => {
+                    sessionStorage.setItem('scrollTo', 'register');
+                    window.location.href = '/';
+                  }}
                   className="inline-block bg-transparent border-2 border-secondary text-secondary py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-secondary hover:bg-opacity-10 transition-all duration-300 glow-btn-cyan"
                 >
                   Register Now
