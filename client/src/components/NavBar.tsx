@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { useScrollThreshold } from '@/hooks/use-scroll';
 import { scrollToElement } from '@/lib/utils';
-import { useLocation } from 'wouter';
+import { useLocation, useRoute } from 'wouter';
 import { Link } from 'wouter';
 
 export default function NavBar() {
@@ -41,13 +41,14 @@ export default function NavBar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const [, setLocation] = useLocation();
+  
   const handleNavLinkClick = (id: string) => {
     setIsMenuOpen(false);
 
-    // If we're not on the home page, navigate to home page first and then scroll
+    // If we're not on the home page, navigate to home page with query parameter
     if (location !== '/') {
-      sessionStorage.setItem('scrollTo', id);
-      window.location.href = '/';
+      setLocation(`/?scrollTo=${id}`);
     } else {
       scrollToElement(id);
     }
