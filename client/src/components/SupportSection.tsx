@@ -121,7 +121,7 @@ export default function SupportSection() {
   };
 
   return (
-    <section id="support" className="py-20 section-reveal" style={{...backgroundStyle, maxWidth: '80%', maxHeight: '80%'}}>
+    <section id="support" className="py-20 section-reveal" style={backgroundStyle}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-orbitron font-bold mb-4">

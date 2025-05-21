@@ -18,7 +18,7 @@ export default function RegistrationSection() {
     <section 
       id="register" 
       className="py-20 bg-card section-reveal" 
-      style={{...backgroundStyle, maxWidth: '80%', maxHeight: '80%'}}>
+      style={backgroundStyle}>
       <div className="container mx-auto px-4">
         <motion.div 
           className="max-w-3xl mx-auto bg-card bg-opacity-80 p-8 md:p-12 rounded-lg border border-primary border-opacity-30 backdrop-blur-sm shadow-2xl"
