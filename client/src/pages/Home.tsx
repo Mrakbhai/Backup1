@@ -5,9 +5,12 @@ import AboutSection from "@/components/AboutSection";
 import Highlights from "@/components/highlight";
 import RegistrationSection from "@/components/RegistrationSection";
 import RulesSection from "@/components/RulesSection";
+import Scoringsys from "@/components/scoringsys";
 import PrizesSection from "@/components/PrizesSection";
+import Rewardex from "@/components/rewardex";
 import CommunitySection from "@/components/CommunitySection";
 import SupportSection from "@/components/SupportSection";
+import Faqs from "@/components/faq";
 import Footer from "@/components/Footer";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { Helmet } from "react-helmet";
@@ -61,9 +64,12 @@ export default function Home() {
           <Highlights />
           <RegistrationSection />
           <RulesSection />
+          <Scoringsys />
           <PrizesSection />
+          <Rewardex />
           <CommunitySection />
           <SupportSection />
+          <Faqs />
         </main>
         <Footer />
       </div>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Trophy, Users, Calendar, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 export default function Highlights() {
   const fadeInUp = {
