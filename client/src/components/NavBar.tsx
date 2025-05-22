@@ -164,13 +164,13 @@ export default function NavBar() {
               </a>
             ))}
 
-            <a 
-              href="/learn-more"
-              className="text-xl font-orbitron text-foreground hover:text-secondary transition-colors duration-300 border-b border-muted pb-2"
-              onClick={(e) => { e.preventDefault(); navigateToLearnMore(); }}
-            >
-              Learn More
-            </a>
+
+<Link
+  href="/learn-more"
+  className="text-xl font-orbitron text-foreground hover:text-secondary transition-colors duration-300 border-b border-muted pb-2"
+>
+  Learn More
+</Link>
 
             <button 
               onClick={() => handleNavLinkClick('register')}

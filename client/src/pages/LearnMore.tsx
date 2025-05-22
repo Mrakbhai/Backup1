@@ -275,7 +275,7 @@ export default function LearnMore() {
       <div className="flex flex-col min-h-screen">
         <NavBar />
 
-        <main className="flex-grow pt-24 pb-16" style={{...backgroundStyle, maxWidth: '80%', maxHeight: '80%'}}>
+        <main className="flex-grow pt-24 pb-16" style={backgroundStyle}>
           <div className="container mx-auto px-4">
             <div 
               className="max-w-4xl mx-auto bg-card bg-opacity-90 p-8 rounded-lg border border-primary border-opacity-30 shadow-xl"
@@ -317,18 +317,21 @@ export default function LearnMore() {
               </motion.div>
 
               <div className="mt-10 text-center">
-                <button 
-                  onClick={() => window.location.href = '/'}
-                  className="inline-block bg-primary text-primary-foreground py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn mr-4"
-                >
-                  Back to Home
-                </button>
-                <button 
-                  onClick={() => setLocation('/?scrollTo=register')}
-                  className="inline-block bg-transparent border-2 border-secondary text-secondary py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-secondary hover:bg-opacity-10 transition-all duration-300 glow-btn-cyan"
-                >
-                  Register Now
-                </button>
+                <Link href="/">
+                  <button
+                    className="inline-block bg-primary text-primary-foreground py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn mr-4"
+                  >
+                    Back to Home
+                  </button>
+                </Link>
+
+                <Link href="/?scrollTo=register">
+                  <button
+                    className="inline-block bg-transparent border-2 border-secondary text-secondary py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-secondary hover:bg-opacity-10 transition-all duration-300 glow-btn-cyan"
+                  >
+                    Register Now
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

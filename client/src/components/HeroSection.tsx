@@ -55,7 +55,7 @@ useEffect(() => {
           src={randomBgImage}
           alt="FF Max Pro League Tournament" 
           className="w-full h-full object-cover transition-opacity duration-500"
-          style={{ opacity: videoLoaded ? 0 : 1, maxWidth: '80%', maxHeight: '80%' }}
+          style={{opacity: videoLoaded ? 0 : 1}}
         />
 
         <video

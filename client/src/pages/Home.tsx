@@ -17,12 +17,18 @@ export default function Home() {
   const [location] = useLocation();
 
   useEffect(() => {
-    const params = new URLSearchParams(location.split('?')[1]);
-    const scrollTo = params.get('scrollTo');
-    if (scrollTo) {
+  const params = new URLSearchParams(location.split('?')[1]);
+  const scrollTo = params.get('scrollTo');
+
+  if (scrollTo) {
+    // Delay scroll until DOM is fully ready
+    const timeout = setTimeout(() => {
       scrollToElement(scrollTo);
-    }
-  }, [location]);
+    }, 200); // You can adjust delay if needed
+
+    return () => clearTimeout(timeout);
+  }
+}, [location]);
 
   // Intersection observer for section animations
   const { observeElements } = useIntersectionObserver({

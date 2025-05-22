@@ -34,13 +34,15 @@ export function getScrollPosition(): { x: number; y: number } {
 
 export function scrollToElement(id: string, offset = 80): void {
   const element = document.getElementById(id);
-  if (element) {
-    const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - offset;
-    
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth'
-    });
-  }
+  if (!element) return;
+
+  const elementTop = element.getBoundingClientRect().top;
+  const scrollY = window.scrollY ?? window.pageYOffset; // fallback for older browsers
+  const offsetPosition = elementTop + scrollY - offset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: 'smooth',
+  });
 }
+
