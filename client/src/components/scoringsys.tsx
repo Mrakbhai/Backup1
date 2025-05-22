@@ -76,7 +76,9 @@ export default function Scoringsys() {
             Download Full Rulebook
           </a>
         </div>
+        </div>
       </div>
+    
     </section>
   );
 }
