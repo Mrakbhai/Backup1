@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import NavBar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import Highlights from "@/components/highlight";
 import RegistrationSection from "@/components/RegistrationSection";
 import RulesSection from "@/components/RulesSection";
 import PrizesSection from "@/components/PrizesSection";
@@ -57,6 +58,7 @@ export default function Home() {
         <main>
           <HeroSection />
           <AboutSection />
+          <Highlights />
           <RegistrationSection />
           <RulesSection />
           <PrizesSection />

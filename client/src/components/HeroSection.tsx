@@ -66,7 +66,7 @@ useEffect(() => {
           loop
           preload="auto"
           className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500"
-          style={{ opacity: videoLoaded ? 1 : 0, maxWidth: '80%', maxHeight: '80%' }}
+          style={{ opacity: videoLoaded ? 1 : 0}}
           onCanPlayThrough={() => setVideoLoaded(true)}
         >
           <source src={bgVideoMp4} type="video/mp4" />
