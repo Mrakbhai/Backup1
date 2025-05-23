@@ -4,9 +4,9 @@ export default function Scoringsys() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
-      opacity: 1, 
+      opacity: 0.7, 
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.7 }
     }
   };
 
@@ -15,7 +15,7 @@ export default function Scoringsys() {
       id="rules" 
       className="py-20 bg-card section-reveal" 
       style={{
-        backgroundImage: "url('https://news.ultimatebattle.in/wp-content/uploads/2022/01/Garena-Free-Fire-New.jpg')",
+        backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw3spDwhJqFcTkknm0691IzBHToB4aEuMznmGi5jAS29vp5MPxQkWQ7BI&s=10')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundBlendMode: "overlay",

@@ -51,8 +51,9 @@ export default function CommunitySection() {
   ];
 
     const backgroundStyle = {
-        backgroundImage: 'url("https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/9271bbc5450e84687d0697343a001d49.jpg")',
+        backgroundImage: 'url("https://w0.peakpx.com/wallpaper/104/473/HD-wallpaper-criminals-fire-juego.jpg")',
         backgroundSize: 'cover',
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
     };

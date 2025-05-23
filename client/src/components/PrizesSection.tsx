@@ -5,15 +5,16 @@ export default function PrizesSection() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
-      opacity: 1, 
+      opacity: 0.7, 
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.7 }
     }
   };
 
   const backgroundStyle = {
-    backgroundImage: 'url("https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/eca997db8be14cf1f096225ffc905697.jpg")',
+    backgroundImage: 'url("https://i.pinimg.com/736x/d7/81/88/d7818834ac267e98441eb2c5d47e34d7.jpg")',
     backgroundSize: 'cover',
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
   };

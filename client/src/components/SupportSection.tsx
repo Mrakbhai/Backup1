@@ -67,17 +67,17 @@ export default function SupportSection() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
-      opacity: 1, 
+      opacity: 0.7, 
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.7 }
     }
   };
 
   const backgroundStyle = {
-    backgroundImage: 'url("https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/b256367962c4dd22384c89a73c6de3d5.jpg")',
+    backgroundImage: 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Zsjh_nrQPKcRspIvZtPWRCfVk7AbKqzMpM4uoKbJEYtNZXIKcwdpWc2q&s=10")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.7)', // Adjust the overlay opacity as needed
+    backgroundColor: 'rgba(0, 0, 0, 0.8)', // Adjust the overlay opacity as needed
     backgroundBlendMode: 'overlay',
   };
 

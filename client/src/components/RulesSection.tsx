@@ -4,9 +4,9 @@ export default function RulesSection() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
-      opacity: 1, 
+      opacity: 0.7, 
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.7 }
     }
   };
 
@@ -15,7 +15,7 @@ export default function RulesSection() {
       id="rules" 
       className="py-20 bg-card section-reveal" 
       style={{
-        backgroundImage: "url('https://news.ultimatebattle.in/wp-content/uploads/2022/01/Garena-Free-Fire-New.jpg')",
+        backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrNzIUzkM7RlQ-Iqt15fAFmAdPQQbb9Jk6_w&usqp=CAU')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundBlendMode: "overlay",

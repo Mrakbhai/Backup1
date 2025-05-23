@@ -5,17 +5,17 @@ export default function Highlights() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
-      opacity: 1, 
+      opacity: 0.7, 
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.7 }
     }
   };
 
   const backgroundStyle = {
-    backgroundImage: 'url("https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/5c208e875e7f0bc2f5aa6f10758dc959.jpg")',
+    backgroundImage: 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnihbHYJKKg_bAJHMGOjlzhRQWchXQc0EsTg&usqp=CAU")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.4)', // Optional: Darken the image
+    backgroundColor: 'rgba(0, 0, 0, 0.8)', // Optional: Darken the image
     backgroundBlendMode: 'multiply',
   };
 

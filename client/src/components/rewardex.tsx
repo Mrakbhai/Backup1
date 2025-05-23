@@ -4,16 +4,17 @@ export default function Rewardex() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
-      opacity: 1, 
+      opacity: 0.7, 
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.7 }
     }
   };
 
   const backgroundStyle = {
-    backgroundImage: 'url("https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/eca997db8be14cf1f096225ffc905697.jpg")',
+    backgroundImage: 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_CzR2GLHeUTZGU1PK0amwQm7peb1RyOy6eOu_tQdYhI_wefD8SL2i_G0&s=10")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
     backgroundRepeat: 'no-repeat',
   };
 
