@@ -39,8 +39,8 @@ export default function Scoringsys() {
                 <h4 className="text-lg font-orbitron text-secondary mb-2">Rewards & Prizes</h4>
                 <ul className="text-foreground opacity-90 space-y-2">
                   <li><span className="text-primary font-semibold">Entry Fee:</span> ₹30 per participant</li>
-                  <li><span className="text-primary font-semibold">Kill Reward:</span> ₹10 per elimination</li>
-                  <li><span className="text-primary font-semibold">Booyah Bonus:</span> ₹10 additional for winning a match</li>
+                  <li><span className="text-primary font-semibold">Kill Reward:</span> ₹15 per elimination</li>
+                  <li><span className="text-primary font-semibold">Booyah Bonus:</span> ₹40 additional for winning a match</li>
                 </ul>
               </div>
               

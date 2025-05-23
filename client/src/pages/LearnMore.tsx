@@ -56,7 +56,7 @@ export default function LearnMore() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     const backgroundStyle = {
-        backgroundImage: "url('/images/bg-texture-rules.webp')",
+        backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXF00IXWgWt6dzQAfC8MtXoGEyw_U1fOT5-MoFKahABHy9gy15vhSzIX36&s=10')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -140,7 +140,7 @@ export default function LearnMore() {
             <ul className="list-disc list-inside space-y-2 pl-2">
               <li>Only Solo mode for now (Duo and Squad coming soon!)</li>
               <li>Strictly no teaming, hacking, or unfair behavior</li>
-              <li>Join the custom room 5–10 minutes before the match</li>
+              <li>Join the custom room 20 minutes before the match</li>
               <li>Cheating = permanent ban</li>
             </ul>
           </div>
@@ -157,8 +157,8 @@ export default function LearnMore() {
           <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
             <h4 className="text-lg font-orbitron text-primary mb-3">Reward Calculation</h4>
             <ul className="list-disc list-inside space-y-2 pl-2">
-              <li><span className="font-semibold">Eliminations:</span> Every opponent you eliminate earns you ₹10</li>
-              <li><span className="font-semibold">Match Victory:</span> Achieving Booyah (winning the match) earns you an additional ₹10 bonus</li>
+              <li><span className="font-semibold">Eliminations:</span> Every opponent you eliminate earns you ₹15</li>
+              <li><span className="font-semibold">Match Victory:</span> Achieving Booyah (winning the match) earns you an additional ₹40 bonus</li>
               <li><span className="font-semibold">Performance Tracking:</span> We keep detailed statistics of your performance across all tournaments</li>
             </ul>
           </div>
@@ -174,8 +174,8 @@ export default function LearnMore() {
           <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
             <h4 className="text-lg font-orbitron text-primary mb-3">Earnings Breakdown</h4>
             <ul className="list-disc list-inside space-y-2 pl-2">
-              <li>₹10 per confirmed kill</li>
-              <li>₹10 bonus for getting Booyah (1st place)</li>
+              <li>₹15 per confirmed kill</li>
+              <li>₹40 bonus for getting Booyah (1st place)</li>
             </ul>
           </div>
 
@@ -203,9 +203,9 @@ export default function LearnMore() {
             <p className="font-semibold mb-2">Example Calculation:</p>
             <p>If you eliminate 5 players and win the match, you earn:</p>
             <ul className="list-inside space-y-1">
-              <li>₹50 from eliminations (5 × ₹10)</li>
-              <li>₹10 bonus for Booyah</li>
-              <li>Total: <span className="text-primary font-bold">₹60</span></li>
+              <li>₹75 from eliminations (5 × ₹15)</li>
+              <li>₹40 bonus for Booyah</li>
+              <li>Total: <span className="text-primary font-bold">₹115</span></li>
             </ul>
           </div>
 

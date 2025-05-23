@@ -39,12 +39,12 @@ export default function AboutSection() {
             {
               icon: <Trophy className="w-8 h-8" />,
               title: "PRIZE POOL",
-              description: "Register and compete to win 10 rupees per kill you do and win additional 10 rupees for booyah."
+              description: "Register and compete to win 15 rupees per kill you do and win additional 40 rupees for booyah."
             },
             {
               icon: <Users className="w-8 h-8" />,
               title: "PARTICIPATION",
-              description: "Join as a solo player, duo, or squad. Solo players will be matched with others to form balanced teams for the tournament."
+              description: "Join as a solo player or form a team with friends. The more players, the more exciting the competition!"
             },
             {
               icon: <Calendar className="w-8 h-8" />,

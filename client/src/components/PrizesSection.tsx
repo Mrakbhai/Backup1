@@ -75,7 +75,7 @@ export default function PrizesSection() {
                 </div>
                 <div className="p-8 pt-16 text-center">
                   <div className="text-6xl text-primary font-orbitron font-bold">
-                    ₹10
+                    ₹15
                   </div>
                   <div className="text-foreground opacity-90 mt-3">
                     Per elimination during matches
@@ -101,7 +101,7 @@ export default function PrizesSection() {
                 </div>
                 <div className="p-6 pt-14 text-center">
                   <div className="text-5xl text-secondary font-orbitron font-bold">
-                    ₹10
+                    ₹40
                   </div>
                   <div className="text-foreground opacity-90 mt-3">
                     Extra reward for winning a match

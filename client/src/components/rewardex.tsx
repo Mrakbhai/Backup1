@@ -38,21 +38,21 @@ export default function Rewardex() {
                 </div>
                 <div className="flex justify-between items-center border-b border-muted pb-2">
                   <span className="text-foreground opacity-90">5 Eliminations</span>
-                  <span className="text-primary font-bold">₹50</span>
+                  <span className="text-primary font-bold">₹75</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-muted pb-2">
                   <span className="text-foreground opacity-90">1 Booyah</span>
-                  <span className="text-primary font-bold">₹10</span>
+                  <span className="text-primary font-bold">₹40</span>
                 </div>
                 <div className="flex justify-between items-center font-orbitron pt-2">
                   <span className="text-foreground font-bold">Total Earnings</span>
-                  <span className="text-secondary font-bold text-xl">₹60</span>
+                  <span className="text-secondary font-bold text-xl">₹115</span>
                 </div>
               </div>
 
               <div className="bg-background bg-opacity-40 p-4 rounded-lg">
                 <p className="text-foreground opacity-90">
-                  With a ₹30 entry fee, you can earn ₹10 for each elimination and an additional ₹10 bonus for achieving Booyah (victory). In this example, a player with 5 kills and 1 victory would earn ₹60 total!
+                  With a ₹30 entry fee, you can earn ₹15 for each elimination and an additional ₹40 bonus for achieving Booyah (victory). In this example, a player with 5 kills and 1 victory would earn ₹115 total!
                 </p>
               </div>
             </div>
