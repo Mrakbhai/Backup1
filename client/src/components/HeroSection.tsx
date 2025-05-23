@@ -92,7 +92,7 @@ useEffect(() => {
       setIsAudioOn(newMuteState);
     }
   }}
-  className="absolute top-12 right-6 z-20 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition cursor-pointer"
+  className="absolute top-20 right-5 z-20 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition cursor-pointer"
   aria-label={isAudioOn ? "Mute" : "Unmute"}
 >
   {isAudioOn ? <Volume2 className="w-6 h-6" /> : <VolumeX className="w-6 h-6" />}

@@ -7,7 +7,7 @@ export default function CommunitySection() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.7 }
     }
   };
 
@@ -53,7 +53,7 @@ export default function CommunitySection() {
     const backgroundStyle = {
         backgroundImage: 'url("https://w0.peakpx.com/wallpaper/104/473/HD-wallpaper-criminals-fire-juego.jpg")',
         backgroundSize: 'cover',
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
     };
