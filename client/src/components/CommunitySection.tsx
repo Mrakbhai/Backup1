@@ -66,7 +66,7 @@ export default function CommunitySection() {
             <span className="text-primary">COMMUNITY</span>
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto text-foreground opacity-90">
+          <p className="text-lg md:text-xl max-w-3xl mx-auto text-foreground opacity-150">
             Connect with fellow gamers and stay updated with the latest tournament news
           </p>
         </div>

@@ -5,7 +5,7 @@ export default function PrizesSection() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
-      opacity: 0.7, 
+      opacity: 1, 
       y: 0,
       transition: { duration: 0.7 }
     }
@@ -14,7 +14,7 @@ export default function PrizesSection() {
   const backgroundStyle = {
     backgroundImage: 'url("https://i.pinimg.com/736x/d7/81/88/d7818834ac267e98441eb2c5d47e34d7.jpg")',
     backgroundSize: 'cover',
-    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
   };

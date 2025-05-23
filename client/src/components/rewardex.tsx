@@ -4,7 +4,7 @@ export default function Rewardex() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
-      opacity: 0.7, 
+      opacity: 1, 
       y: 0,
       transition: { duration: 0.7 }
     }
@@ -14,7 +14,7 @@ export default function Rewardex() {
     backgroundImage: 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_CzR2GLHeUTZGU1PK0amwQm7peb1RyOy6eOu_tQdYhI_wefD8SL2i_G0&s=10")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
     backgroundRepeat: 'no-repeat',
   };
 

@@ -67,7 +67,7 @@ export default function SupportSection() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
-      opacity: 0.7, 
+      opacity: 1, 
       y: 0,
       transition: { duration: 0.7 }
     }
@@ -77,7 +77,7 @@ export default function SupportSection() {
     backgroundImage: 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Zsjh_nrQPKcRspIvZtPWRCfVk7AbKqzMpM4uoKbJEYtNZXIKcwdpWc2q&s=10")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.8)', // Adjust the overlay opacity as needed
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust the overlay opacity as needed
     backgroundBlendMode: 'overlay',
   };
 

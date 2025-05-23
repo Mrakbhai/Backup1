@@ -5,7 +5,7 @@ export default function faqs() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
-      opacity: 0.7, 
+      opacity: 1, 
       y: 0,
       transition: { duration: 0.7 }
     }

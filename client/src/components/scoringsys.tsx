@@ -4,7 +4,7 @@ export default function Scoringsys() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
-      opacity: 0.7, 
+      opacity: 1, 
       y: 0,
       transition: { duration: 0.7 }
     }
@@ -19,7 +19,7 @@ export default function Scoringsys() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundBlendMode: "overlay",
-        backgroundColor: "rgba(10,10,10,0.8)"
+        backgroundColor: "rgba(10,10,10,0.5)"
       }}
     >
       <div className="container mx-auto px-4">

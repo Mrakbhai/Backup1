@@ -5,7 +5,7 @@ export default function AboutSection() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
-      opacity: 0.7, 
+      opacity: 1, 
       y: 0,
       transition: { duration: 0.7 }
     }
@@ -15,7 +15,7 @@ export default function AboutSection() {
     backgroundImage: 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGVPVPbGxKXkICbKdPcUtQxOFTsMbUcMvNMHlSjL44Kh1FfwRXD0BPnTrr&s=10")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.8)', // Optional: Darken the image
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Optional: Darken the image
     backgroundBlendMode: 'multiply',
   };
 

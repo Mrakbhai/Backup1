@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion';
-import { RectangleEllipsis, Headset, Clock, MessageSquare } from 'lucide-react';
 
 export default function faqs() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
-      opacity: 0.7, 
+      opacity: 1, 
       y: 0,
       transition: { duration: 0.7 }
     }
@@ -34,7 +33,7 @@ export default function faqs() {
     backgroundImage: 'url("https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/b256367962c4dd22384c89a73c6de3d5.jpg")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.8)', // Adjust the overlay opacity as needed
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust the overlay opacity as needed
     backgroundBlendMode: 'overlay',
   };
 
