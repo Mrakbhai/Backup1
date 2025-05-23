@@ -66,7 +66,7 @@ export default function Rewardex() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <h4 className="text-xl font-orbitron font-bold mb-4 text-secondary">PERFORMANCE-BASED REWARDS</h4>
-            <p className="text-foreground opacity-90 mb-8">
+            <p className="text-foreground opacity-150 mb-8">
               Our reward system encourages both strategic play and aggressive gameplay. The more eliminations you get and victories you secure, the higher your earnings will be!
             </p>
 

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { RectangleEllipsis, Headset, Clock, MessageSquare } from 'lucide-react';
 
-export default function faqs() {
+export default function ContactInfo() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -33,7 +33,7 @@ export default function faqs() {
     backgroundImage: 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgXrlw0Uce9jPaGAmZMh5BG6vdll09kqk0BLrJzHExjkWCeLR9UX4llRXd&s=10")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.8)', // Adjust the overlay opacity as needed
+    backgroundColor: 'rgba(0, 0, 0, 0.3)', // Adjust the overlay opacity as needed
     backgroundBlendMode: 'overlay',
   };
 

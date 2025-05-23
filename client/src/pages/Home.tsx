@@ -11,6 +11,7 @@ import Rewardex from "@/components/rewardex";
 import CommunitySection from "@/components/CommunitySection";
 import SupportSection from "@/components/SupportSection";
 import Faqs from "@/components/faq";
+import ContactInfo from "@/components/ContactInfo";
 import Footer from "@/components/Footer";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { Helmet } from "react-helmet";
@@ -70,6 +71,7 @@ export default function Home() {
           <CommunitySection />
           <SupportSection />
           <Faqs />
+          <ContactInfo />
         </main>
         <Footer />
       </div>
