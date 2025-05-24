@@ -66,22 +66,31 @@ export default function Footer() {
             <h4 className="text-lg font-orbitron font-bold mb-4 text-foreground">Quick Links</h4>
             <ul className="space-y-2">
               {[
-                { id: 'home', label: 'Home' },
-                { id: 'about', label: 'About the League' },
-                { id: 'register', label: 'Register' },
-                { id: 'rules', label: 'Rules & Format' },
-                { id: 'prizes', label: 'Prize Pool' },
-                { id: 'community', label: 'Community' },
-                { id: 'support', label: 'Support' }
+                { id: 'home', label: 'Home', path: '/' },
+                { id: 'about', label: 'About the League', path: '/' },
+                { id: 'register', label: 'Register', path: '/register' },
+                { id: 'rules', label: 'Rules & Format', path: '/rules' },
+                { id: 'prizes', label: 'Prize Pool', path: '/' },
+                { id: 'community', label: 'Community', path: '/' },
+                { id: 'support', label: 'Support', path: '/support' }
               ].map(item => (
                 <li key={item.id}>
-                  <a 
-                    href={`#${item.id}`}
-                    className="text-foreground opacity-80 hover:text-primary transition-colors duration-300"
-                    onClick={(e) => { e.preventDefault(); handleNavLinkClick(item.id); }}
-                  >
-                    {item.label}
-                  </a>
+                  {item.path === '/' ? (
+                    <a 
+                      href={`#${item.id}`}
+                      className="text-foreground opacity-80 hover:text-primary transition-colors duration-300"
+                      onClick={(e) => { e.preventDefault(); handleNavLinkClick(item.id); }}
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link 
+                      to={item.path}
+                      className="text-foreground opacity-80 hover:text-primary transition-colors duration-300"
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
