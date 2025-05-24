@@ -1,5 +1,6 @@
 import { scrollToElement } from '@/lib/utils';
 import { SiDiscord, SiInstagram, SiYoutube, SiTwitch } from 'react-icons/si';
+import { Link } from 'wouter';
 
 export default function Footer() {
   const handleNavLinkClick = (id: string) => {
@@ -89,11 +90,11 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-orbitron font-bold mb-4 text-foreground">Legal</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-foreground opacity-80 hover:text-primary transition-colors duration-300">License Information</a></li>
-              <li><a href="#" className="text-foreground opacity-80 hover:text-primary transition-colors duration-300">Terms of Service</a></li>
-              <li><a href="#" className="text-foreground opacity-80 hover:text-primary transition-colors duration-300">Privacy Policy</a></li>
-              <li><a href="#" className="text-foreground opacity-80 hover:text-primary transition-colors duration-300">Tournament Rules</a></li>
-              <li><a href="#" className="text-foreground opacity-80 hover:text-primary transition-colors duration-300">Eligibility Requirements</a></li>
+              <li><Link to="/license" className="text-foreground opacity-80 hover:text-primary transition-colors duration-300">License Information</Link></li>
+              <li><Link to="/terms" className="text-foreground opacity-80 hover:text-primary transition-colors duration-300">Terms of Service</Link></li>
+              <li><Link to="/privacy" className="text-foreground opacity-80 hover:text-primary transition-colors duration-300">Privacy Policy</Link></li>
+              <li><Link to="/rules" className="text-foreground opacity-80 hover:text-primary transition-colors duration-300">Tournament Rules</Link></li>
+              <li><Link to="/eligibility" className="text-foreground opacity-80 hover:text-primary transition-colors duration-300">Eligibility Requirements</Link></li>
             </ul>
           </div>
         </div>

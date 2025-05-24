@@ -1,17 +1,12 @@
 import { useEffect } from "react";
 import NavBar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import Highlights from "@/components/highlight";
-import RegistrationSection from "@/components/RegistrationSection";
-import RulesSection from "@/components/RulesSection";
-import Scoringsys from "@/components/scoringsys";
+import AboutSection from "@/components/sections/AboutSection";
+import LeaderboardSection from "@/components/sections/LeaderboardSection";
 import PrizesSection from "@/components/PrizesSection";
 import Rewardex from "@/components/rewardex";
 import CommunitySection from "@/components/CommunitySection";
-import SupportSection from "@/components/SupportSection";
-import Faqs from "@/components/faq";
-import ContactInfo from "@/components/ContactInfo";
+import SupportSectionHome from "@/components/SupportSectionHome";
 import Footer from "@/components/Footer";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { Helmet } from "react-helmet";
@@ -62,16 +57,11 @@ export default function Home() {
         <main>
           <HeroSection />
           <AboutSection />
-          <Highlights />
-          <RegistrationSection />
-          <RulesSection />
-          <Scoringsys />
           <PrizesSection />
           <Rewardex />
+          <LeaderboardSection />
           <CommunitySection />
-          <SupportSection />
-          <Faqs />
-          <ContactInfo />
+          <SupportSectionHome />
         </main>
         <Footer />
       </div>

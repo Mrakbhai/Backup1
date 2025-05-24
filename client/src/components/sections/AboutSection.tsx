@@ -1,7 +1,16 @@
+import { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Trophy, Users, Calendar } from 'lucide-react';
 
 export default function AboutSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  
+  useEffect(() => {
+    if (sectionRef.current) {
+      sectionRef.current.classList.add('revealed');
+    }
+  }, []);
+  
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -15,13 +24,13 @@ export default function AboutSection() {
     backgroundImage: 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGVPVPbGxKXkICbKdPcUtQxOFTsMbUcMvNMHlSjL44Kh1FfwRXD0BPnTrr&s=10")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Optional: Darken the image
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
     backgroundBlendMode: 'multiply',
   };
 
 
   return (
-    <section id="about" className="py-20 section-reveal" style={backgroundStyle}>
+    <section ref={sectionRef} id="about" className="py-20 section-reveal revealed" style={backgroundStyle}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-orbitron font-bold mb-4">
@@ -32,6 +41,23 @@ export default function AboutSection() {
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-foreground opacity-90">
             Join the most prestigious Free Fire tournament and compete against the best players from around the world.
           </p>
+        </div>
+
+        {/* Added Featured Image Section */}
+        <div className="mb-16">
+          <motion.div
+            className="overflow-hidden rounded-lg shadow-2xl border border-primary/20 max-w-4xl mx-auto"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <img 
+              src="https://news.ultimatebattle.in/wp-content/uploads/2022/01/Garena-Free-Fire-New.jpg" 
+              alt="Free Fire Tournament Action" 
+              className="w-full h-auto object-cover transform transition-all duration-1000 hover:scale-105"
+            />
+          </motion.div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">

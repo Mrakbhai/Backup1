@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
 import { scrollToElement } from '@/lib/utils';
-import videoPlaceholder from '@/assets/video-placeholder.svg';
 import { ChevronDown } from 'lucide-react';
 import { Volume2, VolumeX } from 'lucide-react';
 import bgVideoMp4 from '@/assets/bg1.mp4';
@@ -117,12 +116,13 @@ useEffect(() => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          <button 
-            className="bg-primary text-primary-foreground py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn text-lg"
-            onClick={() => scrollToElement('register')}
-          >
-            Join Tournament
-          </button>
+          <Link href="/register">
+            <button
+              className="bg-primary text-primary-foreground py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn text-lg"
+            >
+              Join Tournament
+            </button>
+          </Link>
           <Link href="/learn-more">
             <button 
               className="bg-transparent border-2 border-secondary text-secondary py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-secondary hover:bg-opacity-10 transition-all duration-300 glow-btn-cyan text-lg"

@@ -106,7 +106,7 @@ export default function RegistrationSection() {
               <li>Registration forms are open! Register Now</li>
               <li>Entry fee: <span className="text-primary font-semibold">30 rupees</span> per participant</li>
               <li>You can register as a solo player now, with duo and squad options coming soon</li>
-              <li>All participants must be at least 11 years old to register</li>
+              <li>All participants must be at least 13 years old to register</li>
             </ul>
           </div>
         </motion.div>
