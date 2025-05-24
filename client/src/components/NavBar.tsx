@@ -42,7 +42,7 @@ export default function NavBar() {
   };
 
 
-  
+
   const handleNavLinkClick = (id: string) => {
     setIsMenuOpen(false);
 
@@ -144,24 +144,34 @@ export default function NavBar() {
         >
           <div className="mt-16 flex flex-col space-y-6">
             {[
-              { id: 'home', label: 'Home' },
-              { id: 'register', label: 'Register' },
-              { id: 'about', label: 'About' },
-              { id: 'rules', label: 'Rules' },
-              { id: 'prizes', label: 'Prizes' },
-              { id: 'community', label: 'Community' },
-              { id: 'support', label: 'Support' }
+              { id: 'home', label: 'Home', path: '/' },
+              { id: 'register', label: 'Register', path: '/register' },
+              { id: 'about', label: 'About', path: '/' },
+              { id: 'rules', label: 'Rules', path: '/rules' },
+              { id: 'prizes', label: 'Prizes', path: '/' },
+              { id: 'community', label: 'Community', path: '/' },
+              { id: 'support', label: 'Support', path: '/support' }
             ].map(item => (
-              <a 
-                href={location === '/' ? `#${item.id}` : `/?scrollTo=${item.id}`}
-                className="nav-link text-foreground hover:text-primary transition-colors duration-300"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavLinkClick(item.id);
-                }}
-              >
-                {item.label}
-              </a>
+              item.path === '/' ? (
+                <a 
+                  href={`#${item.id}`}
+                  className="nav-link text-foreground hover:text-primary transition-colors duration-300"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavLinkClick(item.id);
+                  }}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link 
+                  href={item.path}
+                  className="nav-link text-foreground hover:text-primary transition-colors duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
 
 
