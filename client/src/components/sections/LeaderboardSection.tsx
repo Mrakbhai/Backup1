@@ -65,6 +65,16 @@ export default function LeaderboardSection() {
   return (
     <section id="leaderboard" className="py-20 section-reveal revealed" style={backgroundStyle} ref={sectionRef}>
       <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-orbitron font-bold mb-4">
+            <span className="text-primary">LEADER</span>{""}
+            <span className="text-secondary">BOARD</span>
+          </h2>
+          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto text-foreground opacity-90">
+            Kings of the battlefield, check out the top performers in the FF Max Pro League
+          </p>
+        </div>
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             variants={fadeInUp}
@@ -73,7 +83,7 @@ export default function LeaderboardSection() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <img 
-              src="https://news.ultimatebattle.in/wp-content/uploads/2022/01/Garena-Free-Fire-New.jpg" 
+              src="https://freefiremobile-a.akamaihd.net/common/web_event/official2.ff.garena.all/img/20228/27b1488da4b4e3ea559318f7e332ff20.jpg" 
               alt="Pro Gamer in Tournament" 
               className="rounded-lg shadow-2xl w-full transform transition-all duration-500 hover:scale-105"
             />
