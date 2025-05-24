@@ -41,8 +41,8 @@ export default function LeaderboardSection() {
 
   // Mock player data (empty for now, will be filled later)
   const players: PlayerData[] = [
-    { rank: 1, name: "", matches: 0, earnings: "₹0", kills: 0, booyahs: 0 },
-    { rank: 2, name: "", matches: 0, earnings: "₹0", kills: 0, booyahs: 0 },
+    { rank: 1, name: "Tornado", matches: 99, earnings: "₹4Cr", kills: 2547, booyahs: 856 },
+    { rank: 2, name: "MrAKBhai", matches: 99, earnings: "₹4Cr", kills: 2659, booyahs: 856 },
     { rank: 3, name: "", matches: 0, earnings: "₹0", kills: 0, booyahs: 0 },
     { rank: 4, name: "", matches: 0, earnings: "₹0", kills: 0, booyahs: 0 },
     { rank: 5, name: "", matches: 0, earnings: "₹0", kills: 0, booyahs: 0 },
@@ -50,17 +50,17 @@ export default function LeaderboardSection() {
 
   // Function to get rank styling
   const getRankStyles = (rank: number) => {
-    switch (rank) {
-      case 1:
-        return "text-amber-400 font-bold text-xl"; // Gold
-      case 2:
-        return "text-slate-400 font-bold text-lg"; // Silver
-      case 3:
-        return "text-amber-700 font-bold text-base"; // Bronze
-      default:
-        return "text-foreground"; // Default
-    }
-  };
+  switch (rank) {
+    case 1:
+      return "text-yellow-400 font-extrabold text-2xl tracking-wide drop-shadow-md"; // Gold
+    case 2:
+      return "text-gray-300 font-bold text-xl tracking-wide"; // Silver
+    case 3:
+      return "text-yellow-700 font-semibold text-lg italic"; // Bronze
+    default:
+      return "text-foreground text-base"; // Default for 4th and 5th
+  }
+};
 
   return (
     <section id="leaderboard" className="py-20 section-reveal revealed" style={backgroundStyle} ref={sectionRef}>
@@ -96,7 +96,7 @@ export default function LeaderboardSection() {
             viewport={{ once: true, margin: "-100px" }}
             className="relative"
           >
-            <h3 className="text-2xl md:text-3xl font-orbitron font-bold mb-6 text-primary">TOP PERFORMERS</h3>
+            {/*<h3 className="text-2xl md:text-3xl font-orbitron font-bold mb-6 text-primary">TOP PERFORMERS</h3>*/}
             
             {/* Leaderboard Table */}
             <div className="overflow-x-auto bg-background/20 backdrop-blur-sm rounded-lg border border-primary/30">
@@ -108,7 +108,7 @@ export default function LeaderboardSection() {
                     <th className="px-4 py-3 text-left text-secondary font-orbitron">Matches</th>
                     <th className="px-4 py-3 text-left text-secondary font-orbitron">Earnings</th>
                     <th className="px-4 py-3 text-left text-secondary font-orbitron">Kills</th>
-                    <th className="px-4 py-3 text-left text-secondary font-orbitron">Booyahs</th>
+                    <th className="px-4 py-3 text-left text-secondary font-orbitron">Booyah</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -128,7 +128,7 @@ export default function LeaderboardSection() {
             
             {/* Coming Soon Overlay */}
             {isComingSoon && (
-              <div className="absolute inset-0 flex items-center justify-center bg-background/80 backdrop-blur-sm rounded-lg">
+              <div className="absolute inset-0 flex items-center justify-center bg-background/40 backdrop-blur-sm rounded-lg">
                 <div className="text-center">
                   <h3 className="text-3xl font-orbitron font-bold text-primary mb-2">COMING SOON</h3>
                   <p className="text-foreground/80">Leaderboard will be available after tournaments begin</p>
