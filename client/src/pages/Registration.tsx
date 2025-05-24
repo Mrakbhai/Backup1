@@ -39,7 +39,7 @@ export default function Register() {
         <section 
           ref={sectionRef}
           id="register" 
-          className="py-20 bg-card section-reveal revealed" 
+          className="py-20 bg-card section-reveal revealed bg-fixed bg-cover bg-center bg-opacity-90" 
           style={backgroundStyle}
         >
           <div className="container mx-auto px-4">
