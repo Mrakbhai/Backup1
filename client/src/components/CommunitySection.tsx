@@ -19,7 +19,7 @@ export default function CommunitySection() {
       icon: <SiWhatsapp className="text-2xl text-green-500" />,
       buttonText: "Join Group",
       buttonClass: "bg-green-600 hover:bg-green-700",
-      link: "#"
+      link: "https://whatsapp.com/channel/0029VbAc0D82v1IvjhgviA2x"
     },
     {
       title: "Instagram",
@@ -37,7 +37,7 @@ export default function CommunitySection() {
       icon: <SiYoutube className="text-2xl text-red-600" />,
       buttonText: "Subscribe",
       buttonClass: "bg-red-600 hover:bg-red-700",
-      link: "#"
+      link: "https://youtube.com/@macrostrom?si=rtljS-G3zyMA-awv"
     },
     {
       title: "Discord",

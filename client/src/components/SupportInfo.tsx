@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { SiDiscord, SiInstagram, SiYoutube, SiTwitch } from 'react-icons/si';
+import { SiDiscord, SiInstagram, SiYoutube, SiWhatsapp } from 'react-icons/si';
 
 export default function SupportInfo() {
   const fadeInUp = {
@@ -32,7 +32,7 @@ export default function SupportInfo() {
           <p className="text-foreground opacity-80">You can reach us directly via:</p>
           <ul className="list-disc list-inside text-foreground opacity-80 space-y-2 mt-2">
             <li>Email: support@ffproleague.com</li>
-            <li>WhatsApp: +91 98765 43210</li>
+            <li>WhatsApp: +91 9876543210</li>
             <li>Discord: FFProLeague#2023</li>
           </ul>
         </div>
@@ -63,11 +63,11 @@ export default function SupportInfo() {
           <a href="#" className="text-foreground hover:text-primary transition-colors duration-300 text-2xl">
             <SiInstagram />
           </a>
-          <a href="#" className="text-foreground hover:text-primary transition-colors duration-300 text-2xl">
+          <a href="https://youtube.com/@macrostrom?si=rtljS-G3zyMA-awv" className="text-foreground hover:text-primary transition-colors duration-300 text-2xl">
             <SiYoutube />
           </a>
-          <a href="#" className="text-foreground hover:text-primary transition-colors duration-300 text-2xl">
-            <SiTwitch />
+          <a href="https://whatsapp.com/channel/0029VbAc0D82v1IvjhgviA2x" className="text-foreground hover:text-primary transition-colors duration-300 text-2xl">
+            <SiWhatsapp />
           </a>
         </div>
       </div>

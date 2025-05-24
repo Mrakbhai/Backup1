@@ -1,5 +1,5 @@
 import { scrollToElement } from '@/lib/utils';
-import { SiDiscord, SiInstagram, SiYoutube, SiTwitch } from 'react-icons/si';
+import { SiDiscord, SiInstagram, SiYoutube, SiWhatsapp } from 'react-icons/si';
 import { Link } from 'wouter';
 
 export default function Footer() {
@@ -53,11 +53,11 @@ export default function Footer() {
               <a href="#" className="text-foreground hover:text-primary transition-colors duration-300 text-xl">
                 <SiInstagram />
               </a>
-              <a href="#" className="text-foreground hover:text-primary transition-colors duration-300 text-xl">
+              <a href="https://youtube.com/@macrostrom?si=rtljS-G3zyMA-awv" className="text-foreground hover:text-primary transition-colors duration-300 text-xl">
                 <SiYoutube />
               </a>
-              <a href="#" className="text-foreground hover:text-primary transition-colors duration-300 text-xl">
-                <SiTwitch />
+              <a href="https://whatsapp.com/channel/0029VbAc0D82v1IvjhgviA2x" className="text-foreground hover:text-primary transition-colors duration-300 text-xl">
+                <SiWhatsapp />
               </a>
             </div>
           </div>
