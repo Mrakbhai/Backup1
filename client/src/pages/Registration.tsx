@@ -47,7 +47,7 @@ export default function Register() {
               className="max-w-3xl mx-auto bg-card bg-opacity-80 p-8 md:p-12 rounded-lg border border-primary border-opacity-30 backdrop-blur-sm shadow-2xl"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.7 }}
               viewport={{ once: true, margin: "-100px" }}
             >
               <div className="text-center mb-6">
