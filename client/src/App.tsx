@@ -16,6 +16,10 @@ import License from "./pages/Licence";
 import Register from "./pages/Registration";
 
 function Router() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [useLocation()[0]]);
+
   return (
     <Switch>
       {/* Add pages below */}
