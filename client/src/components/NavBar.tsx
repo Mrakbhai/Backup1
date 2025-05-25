@@ -175,12 +175,12 @@ export default function NavBar() {
 
             <motion.div 
               variants={{
-                hidden: { opacity: 0, y: 20 },
+                hidden: { opacity: 0 },
                 visible: {
                   opacity: 1,
-                  y: 0,
                   transition: {
-                    staggerChildren: 0.5
+                    staggerChildren: 0.1,
+                    delayChildren: 0.2
                   }
                 }
               }}
@@ -201,8 +201,15 @@ export default function NavBar() {
                 <motion.div
                   key={item.id}
                   variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 }
+                    hidden: { opacity: 0, x: 50 },
+                    visible: { 
+                      opacity: 1, 
+                      x: 0,
+                      transition: {
+                        duration: 0.4,
+                        ease: "easeOut"
+                      }
+                    }
                   }}
                 >
                   {item.path === '/' ? (
@@ -228,27 +235,56 @@ export default function NavBar() {
                 </motion.div>
               ))}
 
-              <Link
-                href="/learn-more"
-                className="text-xl font-orbitron text-foreground hover:text-secondary transition-colors duration-300 border-b border-muted pb-2"
-                onClick={() => setIsMenuOpen(false)}
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, x: 50 },
+                  visible: { 
+                    opacity: 1, 
+                    x: 0,
+                    transition: {
+                      duration: 0.4,
+                      ease: "easeOut"
+                    }
+                  }
+                }}
               >
-                Learn More
-              </Link>
+                <Link
+                  href="/learn-more"
+                  className="text-xl font-orbitron text-foreground hover:text-secondary transition-colors duration-300 border-b border-muted pb-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Learn More
+                </Link>
+              </motion.div>
 
-              <Link
-                href="/register"
-                className="mt-4 bg-primary text-primary-foreground py-3 px-6 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn text-center"
-                onClick={() => setIsMenuOpen(false)}
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, x: 50 },
+                  visible: { 
+                    opacity: 1, 
+                    x: 0,
+                    transition: {
+                      duration: 0.4,
+                      ease: "easeOut",
+                      delay: 0.2
+                    }
+                  }
+                }}
               >
-                Join Now
-              </Link>
+                <Link
+                  href="/register"
+                  className="mt-4 bg-primary text-primary-foreground py-3 px-6 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn text-center"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Join Now
+                </Link>
+              </motion.div>
             </motion.div>
 
             <motion.div 
-              initial={{ x: 50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.6 }}
               className="mt-auto"
             >
               <div className="flex items-center justify-start space-x-6 mt-8">
