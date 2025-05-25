@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 export default function Eligibility() {
   const sectionRef = useRef<HTMLElement>(null);
-  
+
   useEffect(() => {
     if (sectionRef.current) {
       sectionRef.current.classList.add('revealed');
@@ -65,7 +65,7 @@ export default function Eligibility() {
                     Participants must be 13 years or older. Players under 18 must have parental consent.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-orbitron font-bold mb-4 text-primary">2. Account Requirements</h3>
                   <ul className="list-disc list-inside text-foreground/90 space-y-2 ml-4">
@@ -73,21 +73,21 @@ export default function Eligibility() {
                     <li>Proper in-game name and UID provided</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-orbitron font-bold mb-4 text-primary">3. Device</h3>
                   <p className="text-foreground/90">
                     Players can use mobile or emulator. Emulator players must clearly mention it during registration.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-orbitron font-bold mb-4 text-primary">4. Behavior</h3>
                   <p className="text-foreground/90">
                     Toxic behavior, cheating, teaming, or use of third-party tools is strictly prohibited and may lead to permanent bans.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-orbitron font-bold mb-4 text-primary">5. Screenshot Submission</h3>
                   <p className="text-foreground/90">
@@ -96,7 +96,7 @@ export default function Eligibility() {
                 </div>
               </div>
             </motion.div>
-            
+
             <div className="text-center mt-12">
               <motion.div
                 variants={fadeInUp}
@@ -106,7 +106,7 @@ export default function Eligibility() {
               >
                 <Link 
                   to="/terms" 
-                  className="inline-flex items-center text-xl font-orbitron font-bold text-secondary hover:text-secondary/80 transition-all duration-300 mr-8"
+                  className="text-link"
                 >
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
