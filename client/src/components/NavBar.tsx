@@ -4,6 +4,7 @@ import { useScrollThreshold } from '@/hooks/use-scroll';
 import { scrollToElement } from '@/lib/utils';
 import { useLocation, useRoute } from 'wouter';
 import { Link } from 'wouter';
+import { SiDiscord, SiInstagram, SiYoutube, SiWhatsapp } from 'react-icons/si';
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -182,27 +183,27 @@ export default function NavBar() {
   Learn More
 </Link>
 
-            <button 
-              onClick={() => handleNavLinkClick('register')}
+            <Link
+              href="/register"
               className="mt-4 bg-primary text-primary-foreground py-3 px-6 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn"
             >
               Join Now
-            </button>
+            </Link>
           </div>
 
           <div className="mt-auto">
             <div className="flex items-center justify-start space-x-6 mt-8">
               <a href="#" className="text-foreground hover:text-primary text-2xl transition-colors duration-300">
-                <i className="fab fa-discord"></i>
+                <SiDiscord />
               </a>
               <a href="#" className="text-foreground hover:text-primary text-2xl transition-colors duration-300">
-                <i className="fab fa-instagram"></i>
+                <SiInstagram />
               </a>
-              <a href="#" className="text-foreground hover:text-primary text-2xl transition-colors duration-300">
-                <i className="fab fa-youtube"></i>
+              <a href="https://youtube.com/@macrostrom?si=rtljS-G3zyMA-awv" className="text-foreground hover:text-primary text-2xl transition-colors duration-300">
+                <SiYoutube />
               </a>
-              <a href="#" className="text-foreground hover:text-primary text-2xl transition-colors duration-300">
-                <i className="fab fa-whatsapp"></i>
+              <a href="https://whatsapp.com/channel/0029VbAc0D82v1IvjhgviA2x" className="text-foreground hover:text-primary text-2xl transition-colors duration-300">
+                <SiWhatsapp />
               </a>
             </div>
           </div>
