@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { useScrollThreshold } from '@/hooks/use-scroll';
@@ -168,13 +167,27 @@ export default function NavBar() {
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             </button>
-            
+
             <h2 className="text-2xl font-orbitron font-bold mb-8">
               <span className="text-primary">FF MAX</span>{" "}
               <span className="text-secondary">PRO LEAGUE</span>
             </h2>
 
-            <div className="mt-8 flex flex-col space-y-6">
+            <motion.div 
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    staggerChildren: 0.1
+                  }
+                }
+              }}
+              initial="hidden"
+              animate={isMenuOpen ? "visible" : "hidden"}
+              className="mt-8 flex flex-col space-y-6"
+            >
               {[
                 { id: 'home', label: 'Home', path: '/' },
                 { id: 'register', label: 'Register', path: '/register' },
@@ -187,9 +200,10 @@ export default function NavBar() {
               ].map((item, index) => (
                 <motion.div
                   key={item.id}
-                  initial={{ x: 50, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { opacity: 1, y: 0 }
+                  }}
                 >
                   {item.path === '/' ? (
                     <a 
@@ -229,7 +243,7 @@ export default function NavBar() {
               >
                 Join Now
               </Link>
-            </div>
+            </motion.div>
 
             <motion.div 
               initial={{ x: 50, opacity: 0 }}
