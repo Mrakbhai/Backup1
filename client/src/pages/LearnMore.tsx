@@ -266,10 +266,29 @@ export default function LearnMore() {
   ];
 
   return (
-    <>
+      <>
       <Helmet>
-        <title>Learn More About FF Max Pro League Tournaments</title>
-        <meta name="description" content="Discover everything you need to know about our Free Fire tournaments, including registration process, rewards system, and more." />
+        <title>FF Max Pro League - Learn More</title>
+        <meta
+          name="description"
+          content="Dive deeper into how the FF Max Pro League works, from registration to winning. Everything you need to know to get started."
+        />
+        <link rel="canonical" href="https://booyah.dailybyte.xyz/learn-more" />
+        <meta
+          name="keywords"
+          content="Learn more Free Fire tournament, FF Max Pro League info, Free Fire league guide, esports competition details"
+        />
+        <meta property="og:title" content="FF Max Pro League - Learn More" />
+        <meta
+          property="og:description"
+          content="Understand how the FF Max Pro League works — registration, gameplay, rewards, and everything in between."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://booyah.dailybyte.xyz/learn-more" />
+        <meta
+          property="og:image"
+          content="https://cdn.discordapp.com/attachments/1362394089378676847/1376225455266463896/Image.png?ex=68348d55&is=68333bd5&hm=a713cc89bb1ad34ca2f0b7e3dd640b2b4649a4d38dc7ca66a84f5087e00f7e28&"
+        />
       </Helmet>
 
       <div className="flex flex-col min-h-screen">

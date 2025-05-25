@@ -5,6 +5,7 @@ import { UsersIcon, UserIcon, Users2Icon } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
+import { Helmet } from "react-helmet";
 
 export default function Register() {
   const [activeTab, setActiveTab] = useState('battle-royale');
@@ -33,6 +34,18 @@ export default function Register() {
   };
 
   return (
+     <>
+      <Helmet>
+        <title>Register - Free Fire Tournament</title>
+        <meta name="description" content="Register now for the Booyah Free Fire tournament. Earn ₹15 per kill and ₹40 for Booyah. Limited slots available!" />
+        <link rel="canonical" href="https://booyah.dailybyte.xyz/register" />
+        <meta name="keywords" content="Free Fire tournament, Booyah registration, register Free Fire, earn per kill, solo Free Fire league, Free Fire India 2025" />
+        <meta property="og:title" content="Register - Free Fire Tournament" />
+        <meta property="og:description" content="Secure your entry in India's best Free Fire tournament. ₹15/kill + ₹40 Booyah." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://booyah.dailybyte.xyz/register" />
+        <meta property="og:image" content="https://cdn.discordapp.com/attachments/1362394089378676847/1376225455266463896/Image.png?ex=68348d55&is=68333bd5&hm=a713cc89bb1ad34ca2f0b7e3dd640b2b4649a4d38dc7ca66a84f5087e00f7e28&" />
+      </Helmet>
     <div className="min-h-screen flex flex-col bg-background">
       <NavBar />
       <main className="flex-1 pt-16">
@@ -231,5 +244,6 @@ export default function Register() {
       </main>
       <Footer />
     </div>
+     </>
   );
 }

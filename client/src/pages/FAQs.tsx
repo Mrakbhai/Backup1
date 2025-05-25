@@ -9,6 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger
 } from '../components/ui/accordion';
+import { Helmet } from "react-helmet";
 
 export default function FAQs() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -37,6 +38,33 @@ export default function FAQs() {
   };
 
   return (
+    <>
+      <Helmet>
+        <title>FF Max Pro League - Frequently Asked Questions</title>
+        <meta
+          name="description"
+          content="Find answers to common questions about the FF Max Pro League, including registration, rewards, rules, and match details."
+        />
+        <link rel="canonical" href="https://booyah.dailybyte.xyz/faqs" />
+        <meta
+          name="keywords"
+          content="Free Fire tournament FAQ, FF Max Pro League questions, registration help, prize info, match schedule, help center"
+        />
+        <meta
+          property="og:title"
+          content="FF Max Pro League - Frequently Asked Questions"
+        />
+        <meta
+          property="og:description"
+          content="Get clarity on how the FF Max Pro League works, what you can win, and how to participate effectively."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://booyah.dailybyte.xyz/faq" />
+        <meta
+          property="og:image"
+          content="https://cdn.discordapp.com/attachments/1362394089378676847/1376225455266463896/Image.png?ex=68348d55&is=68333bd5&hm=a713cc89bb1ad34ca2f0b7e3dd640b2b4649a4d38dc7ca66a84f5087e00f7e28&"
+        />
+      </Helmet>
     <div className="min-h-screen flex flex-col bg-background">
       <NavBar />
       <main className="flex-1 pt-16">
@@ -234,5 +262,6 @@ export default function FAQs() {
       </main>
       <Footer />
     </div>
+    </>
   );
 }
