@@ -98,7 +98,7 @@ export default function NavBar() {
             <a 
               key={item.id}
               href={location === '/' ? `#${item.id}` : `/?scrollTo=${item.id}`}
-              className="nav-link text-foreground hover:text-primary transition-colors duration-300"
+              className="nav-link text-foreground hover:text-primary transition-colors duration-300 px-5 py-2 text-center min-w-[400px] whitespace-nowrap"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavLinkClick(item.id);
