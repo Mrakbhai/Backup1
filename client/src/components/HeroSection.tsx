@@ -34,7 +34,7 @@ useEffect(() => {
 
   const timer = setTimeout(() => {
     setVideoLoaded(true);
-  }, 2000);
+  }, 3000);
 
   return () => clearTimeout(timer);
 }, []);

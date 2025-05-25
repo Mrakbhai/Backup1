@@ -31,9 +31,9 @@ export default function SupportInfo() {
           <h4 className="text-lg font-orbitron font-semibold mb-2 text-secondary">Contact Information</h4>
           <p className="text-foreground opacity-80">You can reach us directly via:</p>
           <ul className="list-disc list-inside text-foreground opacity-80 space-y-2 mt-2">
-            <li>Email: support@ffproleague.com</li>
-            <li>WhatsApp: +91 9876543210</li>
-            <li>Discord: FFProLeague#2023</li>
+            <li>Email: esportcentral.help@gmail.com</li>
+            {/*<li>WhatsApp: +91 9876543210</li>
+            <li>Discord: FFProLeague#2023</li>*/}
           </ul>
         </div>
         
