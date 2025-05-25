@@ -58,7 +58,7 @@ export default function Footer() {
                 { id: 'about', label: 'About the League', path: '/' },
                 { id: 'register', label: 'Register', path: '/register' },
                 { id: 'rules', label: 'Rules & Format', path: '/rules' },
-                { id: 'prizes', label: 'Prize Pool', path: '/' },
+                { id: 'prizes', label: 'Prizes', path: '/' },
                 { id: 'community', label: 'Community', path: '/' },
                 { id: 'support', label: 'Support', path: '/support' }
               ].map(item => (
