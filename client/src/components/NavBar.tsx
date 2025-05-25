@@ -84,43 +84,45 @@ export default function NavBar() {
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center space-x-8">
-          {[
-            { id: 'home', label: 'Home' },
-            { id: 'register', label: 'Register' },
-            { id: 'about', label: 'About' },
-            { id: 'rules', label: 'Rules' },
-            { id: 'prizes', label: 'Prizes' },
-            { id: 'leaderboard', label: 'Leaderboard' },
-            { id: 'community', label: 'Community' },
-            { id: 'support', label: 'Support' }
-          ].map(item => (
-            <a 
-              key={item.id}
-              href={location === '/' ? `#${item.id}` : `/?scrollTo=${item.id}`}
-              className="nav-link text-foreground hover:text-primary transition-colors duration-300"
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavLinkClick(item.id);
-              }}
+        <div className="hidden lg:flex items-center max-w-[calc(100vw-400px)] overflow-x-auto scrollbar-hide">
+          <div className="flex items-center space-x-8 px-2">
+            {[
+              { id: 'home', label: 'Home' },
+              { id: 'register', label: 'Register' },
+              { id: 'about', label: 'About' },
+              { id: 'rules', label: 'Rules' },
+              { id: 'prizes', label: 'Prizes' },
+              { id: 'leaderboard', label: 'Leaderboard' },
+              { id: 'community', label: 'Community' },
+              { id: 'support', label: 'Support' }
+            ].map(item => (
+              <a 
+                key={item.id}
+                href={location === '/' ? `#${item.id}` : `/?scrollTo=${item.id}`}
+                className="nav-link text-foreground hover:text-primary transition-colors duration-300 whitespace-nowrap"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavLinkClick(item.id);
+                }}
+              >
+                {item.label}
+              </a>
+            ))}
+
+            <Link 
+              href="/learn-more"
+              className="nav-link text-foreground hover:text-secondary transition-colors duration-300 whitespace-nowrap"
             >
-              {item.label}
-            </a>
-          ))}
+              Learn More
+            </Link>
 
-          <Link 
-            href="/learn-more"
-            className="nav-link text-foreground hover:text-secondary transition-colors duration-300"
-          >
-            Learn More
-          </Link>
-
-          <button 
-            onClick={() => handleNavLinkClick('register')}
-            className="bg-primary text-primary-foreground py-2 px-6 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn"
-          >
-            Join Now
-          </button>
+            <button 
+              onClick={() => handleNavLinkClick('register')}
+              className="bg-primary text-primary-foreground py-2 px-6 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn whitespace-nowrap ml-4"
+            >
+              Join Now
+            </button>
+          </div>
         </div>
 
         {/* Mobile Hamburger */}
