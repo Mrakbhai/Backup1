@@ -211,11 +211,12 @@ export default function NavBar() {
                       }
                     }
                   }}
+                  className="w-full"
                 >
                   {item.path === '/' ? (
                     <a 
                       href={`#${item.id}`}
-                      className="nav-link text-foreground hover:text-primary transition-colors duration-300"
+                      className="nav-link text-foreground hover:text-primary transition-colors duration-300 block w-full py-3 px-4 text-lg font-medium text-left min-h-[50px] flex items-center"
                       onClick={(e) => {
                         e.preventDefault();
                         handleNavLinkClick(item.id);
@@ -226,7 +227,7 @@ export default function NavBar() {
                   ) : (
                     <Link 
                       href={item.path}
-                      className="nav-link text-foreground hover:text-primary transition-colors duration-300"
+                      className="nav-link text-foreground hover:text-primary transition-colors duration-300 block w-full py-3 px-4 text-lg font-medium text-left min-h-[50px] flex items-center"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.label}
@@ -250,7 +251,7 @@ export default function NavBar() {
               >
                 <Link
                   href="/learn-more"
-                  className="text-xl font-orbitron text-foreground hover:text-secondary transition-colors duration-300 border-b border-muted pb-2"
+                  className="text-2xl font-orbitron text-foreground hover:text-secondary transition-colors duration-300 border-b border-muted pb-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Learn More
