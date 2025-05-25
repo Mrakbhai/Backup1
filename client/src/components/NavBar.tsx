@@ -92,6 +92,7 @@ export default function NavBar() {
             { id: 'about', label: 'About' },
             { id: 'rules', label: 'Rules' },
             { id: 'prizes', label: 'Prizes' },
+            { id: 'leaderboard', label: 'Leaderboard' },
             { id: 'community', label: 'Community' },
             { id: 'support', label: 'Support' }
           ].map(item => (

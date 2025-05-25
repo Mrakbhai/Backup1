@@ -31,6 +31,11 @@ export default function Home() {
             top: offsetPosition,
             behavior: "smooth",
           });
+
+          // Remove the hash from URL after scrolling
+          setTimeout(() => {
+            window.history.replaceState(null, '', window.location.pathname);
+          }, 800); // Wait for scroll animation to complete
         }
       }, 100);
     }
