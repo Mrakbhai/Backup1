@@ -74,7 +74,7 @@ export default function LearnMore() {
           <ul className="list-disc list-inside space-y-2">
             <li>Currently, we host Solo mode tournaments.</li>
             <li>Duo and Squad tournaments are coming soon!</li>
-            <li>Stay connected through our <a href="https://whatsapp.com/channel/0029VbAc0D82v1IvjhgviA2x">WhatsApp channel</a> for updates.</li>
+            <li>Stay connected through our <a href="https://whatsapp.com/channel/0029VbAc0D82v1IvjhgviA2x" className="text-link">WhatsApp channel</a> for updates.</li>
           </ul>
         </div>
       )
@@ -86,7 +86,7 @@ export default function LearnMore() {
           <p className="text-lg">Follow these steps to register for our tournaments:</p>
 
           <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
-            <h4 className="text-lg font-orbitron text-primary mb-3">1. Fill the <Link href="/register">Registration Form</Link></h4>
+            <h4 className="text-lg font-orbitron text-primary mb-3">1. Fill the <Link href="/register" className="text-link">Registration Form</Link></h4>
             <p className="mb-2">You'll be asked to provide:</p>
             <ul className="list-disc list-inside space-y-1 pl-2">
               <li>Full Name & In-Game Name</li>
@@ -124,7 +124,7 @@ export default function LearnMore() {
           </div>
 
           <p className="mt-4 text-secondary font-semibold text-center">
-            Ready to join? Click the <Link href="/register">"Join Tournament"</Link> button below to start the registration process!
+            Ready to join? Click the <Link href="/register" className="text-link">"Join Tournament"</Link> button below to start the registration process!
           </p>
         </div>
       )
@@ -136,7 +136,7 @@ export default function LearnMore() {
           <p className="text-lg">We use a transparent and fair evaluation system to determine winners.</p>
 
           <div className="bg-card bg-opacity-50 p-4 rounded-lg border border-primary border-opacity-20">
-            <h4 className="text-lg font-orbitron text-primary mb-3"><Link href="/rules">Rules & Expectations</Link></h4>
+            <h4 className="text-lg font-orbitron text-primary mb-3"><Link href="/rules" className="text-link">Rules & Expectations</Link></h4>
             <ul className="list-disc list-inside space-y-2 pl-2">
               <li>Only Solo mode for now (Duo and Squad coming soon!)</li>
               <li>Strictly no teaming, hacking, or unfair behavior</li>
@@ -333,7 +333,7 @@ export default function LearnMore() {
                   </button>
                 </Link>
                 <p className="text-lg text-foreground opacity-90 mb-8">
-                  Check out our <Link href="/rules">rules and format for more details.</Link>
+                  Check out our <Link href="/rules" className="text-link">rules and format</Link> for more details.
                 </p>
               </div>
             </div>
