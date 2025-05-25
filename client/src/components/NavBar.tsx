@@ -98,7 +98,7 @@ export default function NavBar() {
             <a 
               key={item.id}
               href={location === '/' ? `#${item.id}` : `/?scrollTo=${item.id}`}
-              className="nav-link text-foreground hover:text-primary transition-colors duration-300 px-5 py-2 text-center min-w-[400px] whitespace-nowrap"
+              className="nav-link text-foreground hover:text-primary transition-colors duration-300"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavLinkClick(item.id);
@@ -160,7 +160,7 @@ export default function NavBar() {
           >
             <button 
               onClick={() => setIsMenuOpen(false)}
-              className="absolute top-6 right-6 text-foreground hover:text-primary transition-colors duration-300"
+              className="absolute top-8 right-6 text-foreground hover:text-primary transition-colors duration-300"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -216,7 +216,7 @@ export default function NavBar() {
                   {item.path === '/' ? (
                     <a 
                       href={`#${item.id}`}
-                      className="nav-link text-foreground hover:text-primary transition-colors duration-300 block w-full py-3 px-4 text-lg font-medium text-left min-h-[50px] flex items-center"
+                      className="nav-link text-foreground hover:text-primary transition-colors duration-300 block w-full px-4 text-lg text-left font-medium items-center"
                       onClick={(e) => {
                         e.preventDefault();
                         handleNavLinkClick(item.id);
@@ -227,7 +227,7 @@ export default function NavBar() {
                   ) : (
                     <Link 
                       href={item.path}
-                      className="nav-link text-foreground hover:text-primary transition-colors duration-300 block w-full py-3 px-4 text-lg font-medium text-left min-h-[50px] flex items-center"
+                      className="nav-link text-foreground hover:text-primary transition-colors duration-300 block w-full px-4 text-lg text-left font-medium items-center"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.label}
@@ -251,7 +251,7 @@ export default function NavBar() {
               >
                 <Link
                   href="/learn-more"
-                  className="text-2xl font-orbitron text-foreground hover:text-secondary transition-colors duration-300 border-b border-muted pb-2"
+                  className="text-xl font-orbitron text-foreground hover:text-secondary transition-colors duration-300 border-b border-muted pb-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Learn More
