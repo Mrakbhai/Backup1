@@ -3,8 +3,24 @@ import { SiDiscord, SiInstagram, SiYoutube, SiWhatsapp } from 'react-icons/si';
 import { Link } from 'wouter';
 
 export default function Footer() {
+  const [location, setLocation] = useLocation();
+
   const handleNavLinkClick = (id: string) => {
-    scrollToElement(id);
+    if (location !== '/') {
+      setLocation(`/#${id}`);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        const offset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
   };
 
   return (
