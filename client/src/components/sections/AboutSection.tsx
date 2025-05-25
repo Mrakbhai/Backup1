@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Trophy, Users, Calendar } from 'lucide-react';
+import { Link } from 'wouter'
 
 export default function AboutSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -64,8 +65,8 @@ export default function AboutSection() {
           {[
             {
               icon: <Trophy className="w-8 h-8" />,
-              title: "PRIZE POOL",
-              description: "Register and compete to win 15 rupees per kill you do and win additional 40 rupees for booyah."
+              title: "PRIZES",
+              description: <><Link href="/register" className="text-link hover:underline">Register</Link> and compete to win 15 rupees per kill you do and win additional 40 rupees for booyah.</>
             },
             {
               icon: <Users className="w-8 h-8" />,
