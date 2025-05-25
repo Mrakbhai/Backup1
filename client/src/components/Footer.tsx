@@ -14,27 +14,15 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center gap-8 mb-12">
           <div className="flex flex-col items-center">
             <div className="w-24 h-24 bg-muted rounded-lg flex items-center justify-center mb-2">
-              <span className="text-primary font-orbitron text-lg font-bold">FF LEAGUES</span>
+              <span className="text-primary font-orbitron text-lg font-bold">MRAKBHAI</span>
             </div>
             <span className="text-foreground opacity-60 text-xs">Official Partner</span>
           </div>
           <div className="flex flex-col items-center">
             <div className="w-24 h-24 bg-muted rounded-lg flex items-center justify-center mb-2">
-              <span className="text-secondary font-orbitron text-lg font-bold">XGAMING</span>
+              <span className="text-secondary font-orbitron text-lg font-bold">TORNADO</span>
             </div>
             <span className="text-foreground opacity-60 text-xs">Tournament Host</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="w-24 h-24 bg-muted rounded-lg flex items-center justify-center mb-2">
-              <span className="text-accent font-orbitron text-lg font-bold">PRO TECH</span>
-            </div>
-            <span className="text-foreground opacity-60 text-xs">Tech Sponsor</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="w-24 h-24 bg-muted rounded-lg flex items-center justify-center mb-2">
-              <span className="text-primary font-orbitron text-lg font-bold">GFUEL</span>
-            </div>
-            <span className="text-foreground opacity-60 text-xs">Energy Sponsor</span>
           </div>
         </div>
 

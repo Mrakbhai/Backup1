@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'wouter'
 
 export default function Rewardex() {
   const fadeInUp = {
@@ -70,9 +71,9 @@ export default function Rewardex() {
               Our reward system encourages both strategic play and aggressive gameplay. The more eliminations you get and victories you secure, the higher your earnings will be!
             </p>
 
-            <a href="#register" className="inline-block bg-primary text-primary-foreground py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn">
+            <Link href="/register" className="inline-block bg-primary text-primary-foreground py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn">
               Join Tournament
-            </a>
+            </Link>
           </motion.div>
         </div>
       </div>

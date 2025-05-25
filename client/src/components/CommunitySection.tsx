@@ -3,21 +3,21 @@ import { SiDiscord, SiInstagram, SiYoutube, SiWhatsapp } from 'react-icons/si';
 
 export default function CommunitySection() {
   const fadeInUp = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 30 },
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.7 }
+      transition: { duration: 0.9 }
     }
   };
 
   const socialTiles = [
     {
       title: "WhatsApp",
-      description: "Join our WhatsApp group for instant updates and team coordination",
+      description: "Join our WhatsApp channel for instant updates and match schedules",
       image: "https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
       icon: <SiWhatsapp className="text-2xl text-green-500" />,
-      buttonText: "Join Group",
+      buttonText: "Join Channel",
       buttonClass: "bg-green-600 hover:bg-green-700",
       link: "https://whatsapp.com/channel/0029VbAc0D82v1IvjhgviA2x"
     },

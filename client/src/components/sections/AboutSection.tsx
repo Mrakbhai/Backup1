@@ -39,7 +39,7 @@ export default function AboutSection() {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-foreground opacity-90">
-            Join the most prestigious Free Fire tournament and compete against the best players from around the world.
+            Join the most prestigious Free Fire tournament and compete for honors, glory, and money.
           </p>
         </div>
 
@@ -75,7 +75,7 @@ export default function AboutSection() {
             {
               icon: <Calendar className="w-8 h-8" />,
               title: "SCHEDULE",
-              description: "Date and time of the tournament will be announced soon on WhatsApp channel and will also be sent personally to the participant's email or WhatsApp. Stay tuned for updates."
+              description: "Join Whatsapp channel for match schedules. Matches will be held on Sundays."
             }
           ].map((card, index) => (
             <motion.div 
