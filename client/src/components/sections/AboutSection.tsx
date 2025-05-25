@@ -75,7 +75,7 @@ export default function AboutSection() {
             {
               icon: <Calendar className="w-8 h-8" />,
               title: "SCHEDULE",
-              description: "Join Whatsapp channel for match schedules. Matches will be held on Sundays."
+              description: <>Join our <a href="https://whatsapp.com/channel/0029VbAc0D82v1IvjhgviA2x" className="text-link hover:underline">WhatsApp channel</a> for match schedules. Matches will be held on Sundays.</>
             }
           ].map((card, index) => (
             <motion.div 
