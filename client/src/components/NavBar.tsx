@@ -155,7 +155,7 @@ export default function NavBar() {
           <motion.div 
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.7 }}
             className="flex flex-col"
           >
             <button 
@@ -180,7 +180,7 @@ export default function NavBar() {
                   opacity: 1,
                   y: 0,
                   transition: {
-                    staggerChildren: 0.1
+                    staggerChildren: 0.7
                   }
                 }
               }}
@@ -248,7 +248,7 @@ export default function NavBar() {
             <motion.div 
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.3, delay: 0.8 }}
+              transition={{ duration: 0.7, delay: 0.8 }}
               className="mt-auto"
             >
               <div className="flex items-center justify-start space-x-6 mt-8">
