@@ -152,7 +152,27 @@ export default function NavBar() {
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
-          <div className="mt-16 flex flex-col space-y-6">
+          <button 
+            onClick={() => setIsMenuOpen(false)}
+            className="absolute top-6 right-6 text-foreground hover:text-primary transition-colors duration-300"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          
+          <motion.h2 
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            className="text-2xl font-orbitron font-bold mb-8"
+          >
+            <span className="text-primary">FF MAX</span>{" "}
+            <span className="text-secondary">PRO LEAGUE</span>
+          </motion.h2>
+
+          <div className="mt-8 flex flex-col space-y-6">
             {[
               { id: 'home', label: 'Home', path: '/' },
               { id: 'register', label: 'Register', path: '/register' },
@@ -164,7 +184,10 @@ export default function NavBar() {
               { id: 'support', label: 'Support', path: '/support' }
             ].map(item => (
               item.path === '/' ? (
-                <a 
+                <motion.a 
+                  initial={{ x: 50, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
                   href={`#${item.id}`}
                   className="nav-link text-foreground hover:text-primary transition-colors duration-300"
                   onClick={(e) => {
@@ -173,15 +196,21 @@ export default function NavBar() {
                   }}
                 >
                   {item.label}
-                </a>
+                </motion.a>
               ) : (
-                <Link 
-                  href={item.path}
-                  className="nav-link text-foreground hover:text-primary transition-colors duration-300"
-                  onClick={() => setIsMenuOpen(false)}
+                <motion.div
+                  initial={{ x: 50, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
                 >
-                  {item.label}
-                </Link>
+                  <Link 
+                    href={item.path}
+                    className="nav-link text-foreground hover:text-primary transition-colors duration-300"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </motion.div>
               )
             ))}
 
@@ -202,7 +231,12 @@ export default function NavBar() {
           </div>
 
           <div className="mt-auto">
-            <div className="flex items-center justify-start space-x-6 mt-8">
+            <motion.div 
+              initial={{ x: 50, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.3, delay: 0.8 }}
+              className="flex items-center justify-start space-x-6 mt-8"
+            >
               {/*<a href="#" className="text-foreground hover:text-primary text-2xl transition-colors duration-300">
                 <SiDiscord />
               </a>
