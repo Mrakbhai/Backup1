@@ -17,11 +17,21 @@ export default function Home() {
   const [location] = useLocation();
 
   useEffect(() => {
-    const hash = location.split("#")[1];
+    const hash = window.location.hash.slice(1);
     if (hash) {
       // Delay ensures the DOM is rendered
       setTimeout(() => {
-        scrollToElement(hash);
+        const element = document.getElementById(hash);
+        if (element) {
+          const offset = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.scrollY - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
       }, 100);
     }
   }, [location]);
