@@ -270,10 +270,11 @@ export default function NavBar() {
                     }
                   }
                 }}
+                className="w-full"
               >
                 <Link
                   href="/register"
-                  className="mt-4 bg-primary text-primary-foreground py-3 px-6 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn text-center"
+                  className="mt-4 bg-primary text-primary-foreground py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn text-center block w-full"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Join Now
@@ -282,9 +283,20 @@ export default function NavBar() {
             </motion.div>
 
             <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.6 }}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { 
+                  opacity: 1, 
+                  y: 0,
+                  transition: {
+                    duration: 0.4,
+                    ease: "easeOut",
+                    delay: 0.3
+                  }
+                }
+              }}
+              initial="hidden"
+              animate={isMenuOpen ? "visible" : "hidden"}
               className="mt-auto"
             >
               <div className="flex items-center justify-start space-x-6 mt-8">
