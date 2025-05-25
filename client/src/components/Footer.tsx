@@ -35,12 +35,12 @@ export default function Footer() {
               The ultimate Free Fire tournament experience bringing together the best players from around the world in an epic battle for glory and prizes.
             </p>
             <div className="flex items-center space-x-4">
-              <a href="#" className="text-foreground hover:text-primary transition-colors duration-300 text-xl">
+              {/*<a href="#" className="text-foreground hover:text-primary transition-colors duration-300 text-xl">
                 <SiDiscord />
               </a>
               <a href="#" className="text-foreground hover:text-primary transition-colors duration-300 text-xl">
                 <SiInstagram />
-              </a>
+              </a>*/}
               <a href="https://youtube.com/@macrostrom?si=rtljS-G3zyMA-awv" className="text-foreground hover:text-primary transition-colors duration-300 text-xl">
                 <SiYoutube />
               </a>

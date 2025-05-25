@@ -57,12 +57,12 @@ export default function SupportInfo() {
       <div className="mt-8 pt-6 border-t border-primary border-opacity-20">
         <h4 className="text-lg font-orbitron font-semibold mb-4 text-secondary">FOLLOW US</h4>
         <div className="flex space-x-6">
-          <a href="#" className="text-foreground hover:text-primary transition-colors duration-300 text-2xl">
+          {/*<a href="#" className="text-foreground hover:text-primary transition-colors duration-300 text-2xl">
             <SiDiscord />
           </a>
           <a href="#" className="text-foreground hover:text-primary transition-colors duration-300 text-2xl">
             <SiInstagram />
-          </a>
+          </a>*/}
           <a href="https://youtube.com/@macrostrom?si=rtljS-G3zyMA-awv" className="text-foreground hover:text-primary transition-colors duration-300 text-2xl">
             <SiYoutube />
           </a>

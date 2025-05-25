@@ -159,6 +159,7 @@ export default function NavBar() {
               { id: 'about', label: 'About', path: '/' },
               { id: 'rules', label: 'Rules', path: '/rules' },
               { id: 'prizes', label: 'Prizes', path: '/' },
+              { id: 'leaderboard', label: 'Leaderboard', path: '/' },
               { id: 'community', label: 'Community', path: '/' },
               { id: 'support', label: 'Support', path: '/support' }
             ].map(item => (
@@ -202,12 +203,12 @@ export default function NavBar() {
 
           <div className="mt-auto">
             <div className="flex items-center justify-start space-x-6 mt-8">
-              <a href="#" className="text-foreground hover:text-primary text-2xl transition-colors duration-300">
+              {/*<a href="#" className="text-foreground hover:text-primary text-2xl transition-colors duration-300">
                 <SiDiscord />
               </a>
               <a href="#" className="text-foreground hover:text-primary text-2xl transition-colors duration-300">
                 <SiInstagram />
-              </a>
+              </a>*/}
               <a href="https://youtube.com/@macrostrom?si=rtljS-G3zyMA-awv" className="text-foreground hover:text-primary text-2xl transition-colors duration-300">
                 <SiYoutube />
               </a>
