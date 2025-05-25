@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'wouter';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
+import { Helmet } from "react-helmet";
 
 export default function Privacy() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -31,6 +32,30 @@ export default function Privacy() {
   };
 
   return (
+    <>
+      <Helmet>
+  <title>FF Max Pro League - Privacy Policy</title>
+  <meta
+    name="description"
+    content="Read our Privacy Policy to understand how we handle user data during tournament participation."
+  />
+  <meta
+    name="keywords"
+    content="FF Max Privacy, data policy, user privacy Free Fire, FF tournament privacy, esports data protection"
+  />
+  <meta property="og:title" content="FF Max Pro League - Privacy Policy" />
+  <meta
+    property="og:description"
+    content="Our commitment to your privacy in FF Max Pro League. Learn what data we collect and how we use it."
+  />
+  <link rel="canonical" href="https://booyah.dailybyte.xyz/privacy" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://booyah.dailybyte.xyz/privacy" />
+  <meta
+    property="og:image"
+    content="https://cdn.discordapp.com/attachments/1362394089378676847/1376225455266463896/Image.png?ex=68348d55&is=68333bd5&hm=a713cc89bb1ad34ca2f0b7e3dd640b2b4649a4d38dc7ca66a84f5087e00f7e28&"
+  />
+</Helmet>
     <div className="min-h-screen flex flex-col bg-background">
       <NavBar />
       <main className="flex-1 pt-16">
@@ -159,5 +184,6 @@ export default function Privacy() {
       </main>
       <Footer />
     </div>
+    </>
   );
 }

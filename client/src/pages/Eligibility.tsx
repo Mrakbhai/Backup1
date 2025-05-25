@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'wouter';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
+import { Helmet } from "react-helmet";
 
 export default function Eligibility() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -31,6 +32,30 @@ export default function Eligibility() {
   };
 
   return (
+    <>
+      <Helmet>
+  <title>FF Max Pro League - Eligibility Criteria</title>
+  <meta
+    name="description"
+    content="Check the eligibility criteria for joining the FF Max Pro League. Age, region, and account requirements explained."
+  />
+  <meta
+    name="keywords"
+    content="FF Max eligibility, who can join FF tournament, Free Fire player rules, esports age limit, eligibility for rewards"
+  />
+  <meta property="og:title" content="FF Max Pro League - Eligibility Criteria" />
+  <meta
+    property="og:description"
+    content="Make sure you meet all criteria before registering for the tournament."
+  />
+  <link rel="canonical" href="https://booyah.dailybyte.xyz/eligibility" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://booyah.dailybyte.xyz/eligibility" />
+  <meta
+    property="og:image"
+    content="https://cdn.discordapp.com/attachments/1362394089378676847/1376225455266463896/Image.png?ex=68348d55&is=68333bd5&hm=a713cc89bb1ad34ca2f0b7e3dd640b2b4649a4d38dc7ca66a84f5087e00f7e28&"
+  />
+</Helmet>
     <div className="min-h-screen flex flex-col bg-background">
       <NavBar />
       <main className="flex-1 pt-16">
@@ -141,5 +166,6 @@ export default function Eligibility() {
       </main>
       <Footer />
     </div>
+    </>
   );
 }

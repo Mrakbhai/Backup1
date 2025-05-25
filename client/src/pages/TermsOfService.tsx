@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'wouter';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
+import { Helmet } from "react-helmet";
 
 export default function TermsOfService() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -31,6 +32,30 @@ export default function TermsOfService() {
   };
 
   return (
+    <>
+      <Helmet>
+  <title>FF Max Pro League - Terms of Service</title>
+  <meta
+    name="description"
+    content="Review our Terms of Service to know the rules, conditions, and responsibilities for participating in FF Max Pro League."
+  />
+  <meta
+    name="keywords"
+    content="FF Max Terms, Free Fire tournament rules, player agreement, tournament conditions, esports terms of service"
+  />
+  <meta property="og:title" content="FF Max Pro League - Terms of Service" />
+  <meta
+    property="og:description"
+    content="Understand your rights and responsibilities when joining our Free Fire tournament."
+  />
+  <link rel="canonical" href="https://booyah.dailybyte.xyz/terms" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://booyah.dailybyte.xyz/terms" />
+  <meta
+    property="og:image"
+    content="https://cdn.discordapp.com/attachments/1362394089378676847/1376225455266463896/Image.png?ex=68348d55&is=68333bd5&hm=a713cc89bb1ad34ca2f0b7e3dd640b2b4649a4d38dc7ca66a84f5087e00f7e28&"
+  />
+</Helmet>
     <div className="min-h-screen flex flex-col bg-background">
       <NavBar />
       <main className="flex-1 pt-16">
@@ -161,5 +186,6 @@ export default function TermsOfService() {
       </main>
       <Footer />
     </div>
+    </>
   );
 }
