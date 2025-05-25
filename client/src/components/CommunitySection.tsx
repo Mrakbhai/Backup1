@@ -21,15 +21,6 @@ export default function CommunitySection() {
       buttonClass: "bg-green-600 hover:bg-green-700",
       link: "https://whatsapp.com/channel/0029VbAc0D82v1IvjhgviA2x"
     },
-    {/*{
-      title: "Instagram",
-      description: "Follow our Instagram for highlights, player spotlights, and behind-the-scenes content",
-      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
-      icon: <SiInstagram className="text-2xl text-pink-500" />,
-      buttonText: "Follow",
-      buttonClass: "bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600",
-      link: "#"
-    },*/},
     {
       title: "YouTube",
       description: "Subscribe to our channel for match replays, tutorials, and tournament highlights",
@@ -38,8 +29,22 @@ export default function CommunitySection() {
       buttonText: "Subscribe",
       buttonClass: "bg-red-600 hover:bg-red-700",
       link: "https://youtube.com/@macrostrom?si=rtljS-G3zyMA-awv"
-    },
-    {/*{
+    }
+    // Instagram card commented for later use
+    /*
+    {
+      title: "Instagram",
+      description: "Follow our Instagram for highlights, player spotlights, and behind-the-scenes content",
+      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
+      icon: <SiInstagram className="text-2xl text-pink-500" />,
+      buttonText: "Follow",
+      buttonClass: "bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600",
+      link: "#"
+    }
+    */
+    // Discord card commented for later use
+    /*
+    {
       title: "Discord",
       description: "Join our Discord server to chat with other players, find teammates, and participate in community events",
       image: "https://images.unsplash.com/photo-1627856013091-fed6e4e30025?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
@@ -47,7 +52,8 @@ export default function CommunitySection() {
       buttonText: "Join Server",
       buttonClass: "bg-indigo-600 hover:bg-indigo-700",
       link: "#"
-    }*/}
+    }
+    */
   ];
 
     const backgroundStyle = {
