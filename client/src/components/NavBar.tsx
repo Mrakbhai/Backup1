@@ -46,13 +46,7 @@ export default function NavBar() {
 
   const handleNavLinkClick = (id: string) => {
     setIsMenuOpen(false);
-
-    // If we're not on the home page, navigate to home page with query parameter
-    if (location !== '/') {
-      setLocation(`/?scrollTo=${id}`);
-    } else {
-      scrollToElement(id);
-    }
+    setLocation(`/#${id}`);
   };
 
   const navigateToLearnMore = () => {
