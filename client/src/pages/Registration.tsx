@@ -64,15 +64,14 @@ export default function Register() {
                 </p>
               </div>
 
-              <Tabs 
+              <TabsList
                 defaultValue="battle-royale" 
                 value={activeTab}
                 onValueChange={handleTabChange}
                 className="w-full mt-8"
               >
                 <div className="overflow-x-auto">
-  <TabsList className="w-full min-w-[300px] grid grid-cols-2 mb-8 bg-background/30">
-</div>
+  <TabsList className="w-full min-w-[300px] grid grid-cols-2 mb-8 bg-background/30"></TabsList></div>
                   <TabsTrigger 
                     value="battle-royale" 
                     className={`py-3 font-orbitron text-sm md:text-base ${activeTab === 'battle-royale' ? 'text-secondary' : 'text-foreground/70'}`}
