@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 export default function Register() {
   const [activeTab, setActiveTab] = useState('battle-royale');
   const sectionRef = useRef<HTMLElement>(null);
-  
+
   useEffect(() => {
     if (sectionRef.current) {
       sectionRef.current.classList.add('revealed');
@@ -64,28 +64,29 @@ export default function Register() {
                 </p>
               </div>
 
-              <TabsList
+              <Tabs
                 defaultValue="battle-royale" 
                 value={activeTab}
                 onValueChange={handleTabChange}
                 className="w-full mt-8"
               >
                 <div className="overflow-x-auto">
-  <TabsList className="w-full min-w-[300px] grid grid-cols-2 mb-8 bg-background/30"></TabsList></div>
-                  <TabsTrigger 
-                    value="battle-royale" 
-                    className={`py-3 font-orbitron text-sm md:text-base ${activeTab === 'battle-royale' ? 'text-secondary' : 'text-foreground/70'}`}
-                  >
-                    BATTLE ROYALE
-                  </TabsTrigger>
-                  <TabsTrigger 
-                    value="clash-squad" 
-                    className={`py-3 font-orbitron text-sm md:text-base ${activeTab === 'clash-squad' ? 'text-secondary' : 'text-foreground/70'}`}
-                  >
-                    CLASH SQUAD
-                  </TabsTrigger>
-                </TabsList>
-                
+                  <TabsList className="w-full min-w-[300px] grid grid-cols-2 mb-8 bg-background/30">
+                    <TabsTrigger 
+                      value="battle-royale" 
+                      className={`py-3 font-orbitron text-sm md:text-base ${activeTab === 'battle-royale' ? 'text-secondary' : 'text-foreground/70'}`}
+                    >
+                      BATTLE ROYALE
+                    </TabsTrigger>
+                    <TabsTrigger 
+                      value="clash-squad" 
+                      className={`py-3 font-orbitron text-sm md:text-base ${activeTab === 'clash-squad' ? 'text-secondary' : 'text-foreground/70'}`}
+                    >
+                      CLASH SQUAD
+                    </TabsTrigger>
+                  </TabsList>
+                </div>
+
                 <TabsContent value="battle-royale" className="mt-0 animate-in fade-in-50 duration-300">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
                     {/* Solo Registration Option */}
