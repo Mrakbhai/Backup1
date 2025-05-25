@@ -11,12 +11,6 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID || ""
 };
 
-console.log("Initializing Firebase with config:", {
-  apiKey: firebaseConfig.apiKey ? "CONFIGURED" : "MISSING",
-  authDomain: firebaseConfig.authDomain ? "CONFIGURED" : "MISSING",
-  projectId: firebaseConfig.projectId ? "CONFIGURED" : "MISSING",
-});
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);

@@ -1,6 +1,6 @@
 import { scrollToElement } from '@/lib/utils';
 import { SiDiscord, SiInstagram, SiYoutube, SiWhatsapp } from 'react-icons/si';
-import { Link } from 'wouter';
+import { Link, useLocation } from 'wouter';
 
 export default function Footer() {
   const [location, setLocation] = useLocation();
@@ -75,6 +75,7 @@ export default function Footer() {
                 { id: 'register', label: 'Register', path: '/register' },
                 { id: 'rules', label: 'Rules & Format', path: '/rules' },
                 { id: 'prizes', label: 'Prizes', path: '/' },
+                { id: 'leaderboard', label: 'Leaderboard', path: '/'},
                 { id: 'community', label: 'Community', path: '/' },
                 { id: 'support', label: 'Support', path: '/support' }
               ].map(item => (
