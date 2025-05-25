@@ -316,10 +316,10 @@ export default function LearnMore() {
                 ))}
               </motion.div>
 
-              <div className="mt-10 text-center">
+              <div className="mt-10 text-center flex flex-col sm:flex-row justify-center gap-4">
                 <Link href="/">
                   <button
-                    className="inline-block bg-primary text-primary-foreground py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn mr-4"
+                    className="w-full sm:w-auto bg-primary text-primary-foreground py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all duration-300 glow-btn"
                   >
                     Back to Home
                   </button>
@@ -327,7 +327,7 @@ export default function LearnMore() {
 
                 <Link href="/?scrollTo=register">
                   <button
-                    className="inline-block bg-transparent border-2 border-secondary text-secondary py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-secondary hover:bg-opacity-10 transition-all duration-300 glow-btn-cyan"
+                    className="w-full sm:w-auto bg-transparent border-2 border-secondary text-secondary py-3 px-8 rounded font-orbitron font-bold uppercase tracking-wider hover:bg-secondary hover:bg-opacity-10 transition-all duration-300 glow-btn-cyan"
                   >
                     Register Now
                   </button>
