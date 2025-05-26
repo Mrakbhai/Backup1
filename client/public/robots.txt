@@ -1,0 +1,6 @@
+# robots.txt for https://booyah.dailybyte.xyz
+
+User-agent: *
+Allow: /
+
+Sitemap: https://booyah.dailybyte.xyz/sitemap.xml
