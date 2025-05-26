@@ -58,6 +58,7 @@ export default function Home() {
       <Helmet>
         <title>Pro Booyah League - Win Money in Free Fire Tournaments</title>
         <meta name="description" content="Join Free Fire tournaments and win ₹15 per kill and ₹40 for Booyah. Register now and get notified on WhatsApp!" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="canonical" href="https://booyah.dailybyte.xyz/" />
         <meta property="og:title" content="Pro Booyah League - Win ₹15 per Kill & ₹40 Booyah" />
         <meta property="og:description" content="Join Free Fire solo tournaments and get rewarded instantly. ₹15 per kill and ₹40 Booyah prize!" />
