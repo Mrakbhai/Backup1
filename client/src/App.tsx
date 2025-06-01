@@ -4,6 +4,7 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "./components/ui/toaster";
 import { TooltipProvider } from "./components/ui/tooltip";
+import DisclaimerModal from "./components/DisclaimerModal";
 import NotFound from "./pages/not-found";
 import Support from "./pages/Support";
 import FAQs from "./pages/FAQs";
@@ -45,6 +46,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
+        <DisclaimerModal />
         <Router />
       </TooltipProvider>
     </QueryClientProvider>
