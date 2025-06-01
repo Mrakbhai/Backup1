@@ -79,36 +79,49 @@ const DisclaimerModal: React.FC = () => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <Dialog open={isOpen} onOpenChange={() => {}}>
-          <DialogContent 
-            className="max-w-lg mx-auto p-0 border-0 bg-transparent shadow-none" 
-            onPointerDownOutside={(e) => e.preventDefault()}
-            onEscapeKeyDown={(e) => e.preventDefault()}
-          >
+        <>
+          {/* Backdrop overlay with fade-in */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50"
+          />
+          
+          <Dialog open={isOpen} onOpenChange={() => {}}>
+            <DialogContent 
+              className="max-w-lg mx-auto p-0 border-0 bg-transparent shadow-none z-50" 
+              onPointerDownOutside={(e) => e.preventDefault()}
+              onEscapeKeyDown={(e) => e.preventDefault()}
+            >
             <motion.div
               variants={modalVariants}
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="bg-card border border-primary border-opacity-30 rounded-lg p-8 backdrop-blur-sm relative overflow-hidden"
+              className="bg-background border-2 border-primary border-opacity-40 rounded-lg p-8 backdrop-blur-sm relative overflow-hidden shadow-2xl"
               style={{
-                background: 'linear-gradient(145deg, rgba(240, 10, 3.9, 0.95), rgba(240, 3.7, 15.9, 0.98))',
-                boxShadow: '0 0 30px rgba(255, 105, 0, 0.3), 0 0 60px rgba(0, 191, 255, 0.2)',
+                background: 'linear-gradient(145deg, rgba(10, 10, 10, 0.98), rgba(15, 15, 15, 0.95))',
+                boxShadow: '0 0 40px rgba(255, 105, 0, 0.4), 0 0 80px rgba(0, 191, 255, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.5)',
               }}
             >
               {/* Animated background gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 rounded-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-transparent to-secondary/15 rounded-lg"></div>
+              
+              {/* Subtle animated border glow */}
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 opacity-50 animate-pulse-slow"></div>
               
               <motion.div variants={contentVariants} initial="hidden" animate="visible" className="relative z-10">
                 <DialogHeader className="text-center mb-6">
-                  <DialogTitle className="text-2xl md:text-3xl font-orbitron font-bold mb-4 text-primary">
+                  <DialogTitle className="text-2xl md:text-3xl font-orbitron font-bold mb-4">
                     <motion.span
                       variants={itemVariants}
                       className="inline-block mr-3 text-3xl"
                     >
                       📢
                     </motion.span>
-                    <motion.span variants={itemVariants} className="text-shadow">
+                    <motion.span variants={itemVariants} className="text-primary glow-text">
                       DISCLAIMER
                     </motion.span>
                   </DialogTitle>
@@ -119,24 +132,24 @@ const DisclaimerModal: React.FC = () => {
                   ></motion.div>
                 </DialogHeader>
 
-                <DialogDescription className="text-base font-rajdhani text-foreground space-y-4 leading-relaxed">
-                  <motion.p variants={itemVariants} className="text-foreground opacity-90">
-                    We are <strong className="text-primary font-semibold">not</strong> affiliated with Garena or Free Fire in any official capacity.
+                <DialogDescription className="text-base font-rajdhani space-y-4 leading-relaxed">
+                  <motion.p variants={itemVariants} className="text-foreground/95">
+                    We are <strong className="text-primary font-semibold glow-text">not</strong> affiliated with Garena or Free Fire in any official capacity.
                   </motion.p>
                   
-                  <motion.p variants={itemVariants} className="text-foreground opacity-90">
+                  <motion.p variants={itemVariants} className="text-foreground/95">
                     All rights to the game, characters, names, and visual assets belong to their respective owners, including Garena.
                   </motion.p>
                   
-                  <motion.p variants={itemVariants} className="text-foreground opacity-90">
-                    We host <strong className="text-secondary font-semibold">unofficial local Free Fire tournaments</strong> for fun and community participation.
+                  <motion.p variants={itemVariants} className="text-foreground/95">
+                    We host <strong className="text-secondary font-semibold glow-text">unofficial local Free Fire tournaments</strong> for fun and community participation.
                   </motion.p>
                   
-                  <motion.p variants={itemVariants} className="text-foreground opacity-90">
+                  <motion.p variants={itemVariants} className="text-foreground/95">
                     Images used on this site are sourced from Free Fire's official site and used for illustrative purposes only.
                   </motion.p>
                   
-                  <motion.p variants={itemVariants} className="text-foreground opacity-90 font-medium">
+                  <motion.p variants={itemVariants} className="text-foreground font-medium">
                     By continuing, you acknowledge that you understand this and agree to proceed.
                   </motion.p>
                 </DialogDescription>
@@ -156,7 +169,8 @@ const DisclaimerModal: React.FC = () => {
               </motion.div>
             </motion.div>
           </DialogContent>
-        </Dialog>
+          </Dialog>
+        </>
       )}
     </AnimatePresence>
   );
