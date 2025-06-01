@@ -45,7 +45,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
-              <span className="text-primary font-orbitron text-2xl font-bold tracking-wider">FF MAX <span className="text-secondary">PRO LEAGUE</span></span>
+              <span className="text-primary font-orbitron text-2xl font-bold tracking-wider">PRO BOOYAH <span className="text-secondary">LEAGUE</span></span>
             </div>
             <p className="text-foreground opacity-80 mb-6 max-w-md">
               The ultimate Free Fire tournament experience bringing together the best players from around the world in an epic battle for glory and prizes.
@@ -115,7 +115,7 @@ export default function Footer() {
         
         <div className="mt-10 pt-6 border-t border-gray-800 text-center">
           <p className="text-foreground opacity-60 text-sm mb-2">
-            &copy; {new Date().getFullYear()} FF Max Pro League. All rights reserved. Free Fire is a registered trademark of Garena.
+            &copy; {new Date().getFullYear()} PRO BOOYAH LEAGUE. All rights reserved. Free Fire is a registered trademark of Garena.
           </p>
           <p className="text-foreground opacity-50 text-xs">
             This website is not affiliated with, endorsed by, or related to Garena or Free Fire. All game content, logos, and trademarks are the property of their respective owners.

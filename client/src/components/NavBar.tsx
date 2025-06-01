@@ -79,7 +79,7 @@ export default function NavBar() {
           onClick={(e) => { e.preventDefault(); handleNavLinkClick('home'); }}
         >
           <span className="text-primary font-orbitron text-xl md:text-2xl font-bold tracking-wider">
-            PRO BOOYAH<span className="text-secondary">LEAGUE</span>
+            PRO BOOYAH <span className="text-secondary">LEAGUE</span>
           </span>
         </a>
 
