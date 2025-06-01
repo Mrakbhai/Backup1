@@ -13,7 +13,7 @@ import { Helmet } from "react-helmet";
 
 export default function FAQs() {
   const sectionRef = useRef<HTMLElement>(null);
-  
+
   useEffect(() => {
     if (sectionRef.current) {
       sectionRef.current.classList.add('revealed');
@@ -64,6 +64,10 @@ export default function FAQs() {
           property="og:image"
           content="https://cdn.discordapp.com/attachments/1362394089378676847/1376225455266463896/Image.png?ex=68348d55&is=68333bd5&hm=a713cc89bb1ad34ca2f0b7e3dd640b2b4649a4d38dc7ca66a84f5087e00f7e28&"
         />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
       </Helmet>
     <div className="min-h-screen flex flex-col bg-background">
       <NavBar />
@@ -103,7 +107,7 @@ export default function FAQs() {
                     </p>
                   </AccordionContent>
                 </AccordionItem>
-                
+
                 <AccordionItem value="item-2" className="border-b border-primary/30">
                   <AccordionTrigger className="text-lg font-orbitron text-secondary hover:text-secondary/90 py-4 no-underline hover:no-underline">
                     What happens after I register?
@@ -114,7 +118,7 @@ export default function FAQs() {
                     </p>
                   </AccordionContent>
                 </AccordionItem>
-                
+
                 <AccordionItem value="item-3" className="border-b border-primary/30">
                   <AccordionTrigger className="text-lg font-orbitron text-secondary hover:text-secondary/90 py-4">
                     When are tournaments held?
@@ -125,7 +129,7 @@ export default function FAQs() {
                     </p>
                   </AccordionContent>
                 </AccordionItem>
-                
+
                 <AccordionItem value="item-4" className="border-b border-primary/30">
                   <AccordionTrigger className="text-lg font-orbitron text-secondary hover:text-secondary/90 py-4">
                     How will I receive the room code?
@@ -136,7 +140,7 @@ export default function FAQs() {
                     </p>
                   </AccordionContent>
                 </AccordionItem>
-                
+
                 <AccordionItem value="item-5" className="border-b border-primary/30">
                   <AccordionTrigger className="text-lg font-orbitron text-secondary hover:text-secondary/90 py-4">
                     How do you verify match performance?
@@ -147,7 +151,7 @@ export default function FAQs() {
                     </p>
                   </AccordionContent>
                 </AccordionItem>
-                
+
                 <AccordionItem value="item-6" className="border-b border-primary/30">
                   <AccordionTrigger className="text-lg font-orbitron text-secondary hover:text-secondary/90 py-4">
                     Can I join multiple tournaments?
@@ -158,7 +162,7 @@ export default function FAQs() {
                     </p>
                   </AccordionContent>
                 </AccordionItem>
-                
+
                 <AccordionItem value="item-7" className="border-b border-primary/30">
                   <AccordionTrigger className="text-lg font-orbitron text-secondary hover:text-secondary/90 py-4">
                     How do I receive my reward?
@@ -169,7 +173,7 @@ export default function FAQs() {
                     </p>
                   </AccordionContent>
                 </AccordionItem>
-                
+
                 <AccordionItem value="item-8" className="border-b border-primary/30">
                   <AccordionTrigger className="text-lg font-orbitron text-secondary hover:text-secondary/90 py-4">
                     What if my gift card doesn't work?
@@ -180,7 +184,7 @@ export default function FAQs() {
                     </p>
                   </AccordionContent>
                 </AccordionItem>
-                
+
                 <AccordionItem value="item-9" className="border-b border-primary/30">
                   <AccordionTrigger className="text-lg font-orbitron text-secondary hover:text-secondary/90 py-4">
                     Can I pay offline?
@@ -191,7 +195,7 @@ export default function FAQs() {
                     </p>
                   </AccordionContent>
                 </AccordionItem>
-                
+
                 <AccordionItem value="item-10" className="border-b border-primary/30">
                   <AccordionTrigger className="text-lg font-orbitron text-secondary hover:text-secondary/90 py-4">
                     What if I provide wrong information during registration?
@@ -202,7 +206,7 @@ export default function FAQs() {
                     </p>
                   </AccordionContent>
                 </AccordionItem>
-                
+
                 <AccordionItem value="item-11" className="border-b border-primary/30">
                   <AccordionTrigger className="text-lg font-orbitron text-secondary hover:text-secondary/90 py-4">
                     Will there be duo and squad tournaments?
@@ -213,7 +217,7 @@ export default function FAQs() {
                     </p>
                   </AccordionContent>
                 </AccordionItem>
-                
+
                 <AccordionItem value="item-12" className="border-b border-primary/30">
                   <AccordionTrigger className="text-lg font-orbitron text-secondary hover:text-secondary/90 py-4">
                     Where can I see the rules?
@@ -232,7 +236,7 @@ export default function FAQs() {
                 </AccordionItem>
               </Accordion>
             </motion.div>
-            
+
             <div className="text-center mt-12">
               <motion.div
                 variants={fadeInUp}

@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet";
 export default function Rules() {
   const sectionRef = useRef<HTMLElement>(null);
   const [activeTab, setActiveTab] = useState('registration');
-  
+
   useEffect(() => {
     if (sectionRef.current) {
       sectionRef.current.classList.add('revealed');
@@ -49,6 +49,10 @@ export default function Rules() {
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://booyah.dailybyte.xyz/rules" />
       <meta property="og:image" content="https://cdn.discordapp.com/attachments/1362394089378676847/1376225455266463896/Image.png?ex=68348d55&is=68333bd5&hm=a713cc89bb1ad34ca2f0b7e3dd640b2b4649a4d38dc7ca66a84f5087e00f7e28&" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
     </Helmet>
     <div className="min-h-screen flex flex-col bg-background">
       <NavBar />
@@ -103,13 +107,13 @@ export default function Rules() {
                     Rewards
                   </TabsTrigger>
                 </TabsList>
-                
+
                 <div className="p-8">
                   <TabsContent value="registration" className="mt-0 animate-in slide-in-from-left-10 duration-300">
                     <div className="space-y-6">
                       <div>
                         <h3 className="text-xl md:text-2xl font-orbitron font-bold mb-4 text-primary">Registration & Approval Process</h3>
-                        
+
                         <div className="space-y-4">
                           <div>
                             <h4 className="text-lg font-orbitron text-secondary mb-2">Overview:</h4>
@@ -120,7 +124,7 @@ export default function Rules() {
                               <li>Entry fee: ₹30 per participant.</li>
                             </ul>
                           </div>
-                          
+
                           <div>
                             <h4 className="text-lg font-orbitron text-secondary mb-2">Approval Process:</h4>
                             <ul className="list-disc list-inside text-foreground/90 space-y-2 ml-4">
@@ -129,7 +133,7 @@ export default function Rules() {
                               <li>Upon approval, we will notify you via WhatsApp or email with further details.</li>
                             </ul>
                           </div>
-                          
+
                           <div>
                             <h4 className="text-lg font-orbitron text-secondary mb-2">Important Notes:</h4>
                             <ul className="list-disc list-inside text-foreground/90 space-y-2 ml-4">
@@ -141,12 +145,12 @@ export default function Rules() {
                       </div>
                     </div>
                   </TabsContent>
-                  
+
                   <TabsContent value="evaluation" className="mt-0 animate-in slide-in-from-left-10 duration-300">
                     <div className="space-y-6">
                       <div>
                         <h3 className="text-xl md:text-2xl font-orbitron font-bold mb-4 text-primary">In-Game Rules & Evaluation</h3>
-                        
+
                         <div className="space-y-4">
                           <div>
                             <h4 className="text-lg font-orbitron text-secondary mb-2">Match Instructions:</h4>
@@ -155,7 +159,7 @@ export default function Rules() {
                               <li>Players must enter the room on time. Late entries will not be allowed.</li>
                             </ul>
                           </div>
-                          
+
                           <div>
                             <h4 className="text-lg font-orbitron text-secondary mb-2">Gameplay Rules:</h4>
                             <ul className="list-disc list-inside text-foreground/90 space-y-2 ml-4">
@@ -164,7 +168,7 @@ export default function Rules() {
                               <li>Respect other players and follow Free Fire's Code of Conduct.</li>
                             </ul>
                           </div>
-                          
+
                           <div>
                             <h4 className="text-lg font-orbitron text-secondary mb-2">Post-Game Evaluation:</h4>
                             <ul className="list-disc list-inside text-foreground/90 space-y-2 ml-4">
@@ -177,12 +181,12 @@ export default function Rules() {
                       </div>
                     </div>
                   </TabsContent>
-                  
+
                   <TabsContent value="rewards" className="mt-0 animate-in slide-in-from-left-10 duration-300">
                     <div className="space-y-6">
                       <div>
                         <h3 className="text-xl md:text-2xl font-orbitron font-bold mb-4 text-primary">Reward System</h3>
-                        
+
                         <div className="space-y-4">
                           <div>
                             <h4 className="text-lg font-orbitron text-secondary mb-2">Payout Breakdown:</h4>
@@ -192,7 +196,7 @@ export default function Rules() {
                               <li>Rewards will be summed and paid post-verification.</li>
                             </ul>
                           </div>
-                          
+
                           <div>
                             <h4 className="text-lg font-orbitron text-secondary mb-2">Reward Modes:</h4>
                             <ul className="list-disc list-inside text-foreground/90 space-y-2 ml-4">
@@ -200,7 +204,7 @@ export default function Rules() {
                               <li>Gift cards must be redeemed immediately after receiving. Delays are not our responsibility.</li>
                             </ul>
                           </div>
-                          
+
                           <div>
                             <h4 className="text-lg font-orbitron text-secondary mb-2">Disqualification Clauses:</h4>
                             <ul className="list-disc list-inside text-foreground/90 space-y-2 ml-4">
@@ -209,7 +213,7 @@ export default function Rules() {
                               <li>Abusive behavior or false claims = Ban from future tournaments.</li>
                             </ul>
                           </div>
-                          
+
                           <div>
                             <h4 className="text-lg font-orbitron text-secondary mb-2">Additional Notes:</h4>
                             <ul className="list-disc list-inside text-foreground/90 space-y-2 ml-4">
@@ -224,7 +228,7 @@ export default function Rules() {
                 </div>
               </Tabs>
             </motion.div>
-            
+
             <div className="text-center mt-12">
               <motion.div
                 variants={fadeInUp}
