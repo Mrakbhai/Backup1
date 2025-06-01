@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import {
   Dialog,
@@ -26,61 +25,11 @@ const DisclaimerModal: React.FC = () => {
     setIsOpen(false);
   };
 
-  const modalVariants = {
-    hidden: { 
-      opacity: 0, 
-      scale: 0.8,
-      y: 50
-    },
-    visible: { 
-      opacity: 1, 
-      scale: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-        type: "spring",
-        stiffness: 100
-      }
-    },
-    exit: {
-      opacity: 0,
-      scale: 0.8,
-      y: 50,
-      transition: {
-        duration: 0.3,
-        ease: "easeIn"
-      }
-    }
-  };
-
-  const contentVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: {
-        delay: 0.3,
-        duration: 0.5,
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: { 
-      opacity: 1, 
-      x: 0,
-      transition: { duration: 0.4 }
-    }
-  };
-
   return (
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Backdrop overlay with fade-in */}
+          {/* Backdrop overlay */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -96,77 +45,51 @@ const DisclaimerModal: React.FC = () => {
               onEscapeKeyDown={(e) => e.preventDefault()}
             >
             <motion.div
-              variants={modalVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
               className="bg-background border-2 border-primary border-opacity-40 rounded-lg p-8 backdrop-blur-sm relative overflow-hidden shadow-2xl"
               style={{
                 background: 'linear-gradient(145deg, rgba(10, 10, 10, 0.98), rgba(15, 15, 15, 0.95))',
                 boxShadow: '0 0 40px rgba(255, 105, 0, 0.4), 0 0 80px rgba(0, 191, 255, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.5)',
               }}
             >
-              {/* Animated background gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-transparent to-secondary/15 rounded-lg"></div>
-              
-              {/* Subtle animated border glow */}
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 opacity-50 animate-pulse-slow"></div>
-              
-              <motion.div variants={contentVariants} initial="hidden" animate="visible" className="relative z-10">
-                <DialogHeader className="text-center mb-6">
-                  <DialogTitle className="text-2xl md:text-3xl font-orbitron font-bold mb-4">
-                    <motion.span
-                      variants={itemVariants}
-                      className="inline-block mr-3 text-3xl"
-                    >
-                      📢
-                    </motion.span>
-                    <motion.span variants={itemVariants} className="text-primary glow-text">
-                      DISCLAIMER
-                    </motion.span>
-                  </DialogTitle>
-                  
-                  <motion.div 
-                    variants={itemVariants}
-                    className="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"
-                  ></motion.div>
-                </DialogHeader>
+              <DialogHeader className="text-center mb-6">
+                <DialogTitle className="text-2xl md:text-3xl font-orbitron font-bold mb-4">
+                  📢 Disclaimer
+                </DialogTitle>
 
-                <DialogDescription className="text-base font-rajdhani space-y-4 leading-relaxed">
-                  <motion.p variants={itemVariants} className="text-foreground/95">
-                    We are <strong className="text-primary font-semibold glow-text">not</strong> affiliated with Garena or Free Fire in any official capacity.
-                  </motion.p>
-                  
-                  <motion.p variants={itemVariants} className="text-foreground/95">
-                    All rights to the game, characters, names, and visual assets belong to their respective owners, including Garena.
-                  </motion.p>
-                  
-                  <motion.p variants={itemVariants} className="text-foreground/95">
-                    We host <strong className="text-secondary font-semibold glow-text">unofficial local Free Fire tournaments</strong> for fun and community participation.
-                  </motion.p>
-                  
-                  <motion.p variants={itemVariants} className="text-foreground/95">
-                    Images used on this site are sourced from Free Fire's official site and used for illustrative purposes only.
-                  </motion.p>
-                  
-                  <motion.p variants={itemVariants} className="text-foreground font-medium">
-                    By continuing, you acknowledge that you understand this and agree to proceed.
-                  </motion.p>
-                </DialogDescription>
+                <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
+              </DialogHeader>
 
-                <motion.div 
-                  variants={itemVariants}
-                  className="flex justify-center mt-8"
+              <DialogDescription className="text-base font-rajdhani space-y-4 leading-relaxed">
+                <p className="text-foreground/95">
+                  We are <strong className="text-primary font-semibold glow-text">not</strong> affiliated with Garena or Free Fire in any official capacity.
+                </p>
+                
+                <p className="text-foreground/95">
+                  All rights to the game, characters, names, and visual assets belong to their respective owners, including Garena.
+                </p>
+
+                <p className="text-foreground/95">
+                  We host <strong className="text-secondary font-semibold glow-text">unofficial local Free Fire tournaments</strong> for fun and community participation.
+                </p>
+
+                <p className="text-foreground/95">
+                  Images used on this site are sourced from Free Fire's official site and used for illustrative purposes only.
+                </p>
+
+                <p className="text-foreground font-medium">
+                  By continuing, you acknowledge that you understand this and agree to proceed.
+                </p>
+              </DialogDescription>
+
+              <div className="flex justify-center mt-8">
+                <Button 
+                  onClick={handleAccept}
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-md font-orbitron font-bold uppercase tracking-wider text-lg glow-btn transition-all duration-300 transform hover:scale-105"
                 >
-                  <Button 
-                    onClick={handleAccept}
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-md font-orbitron font-bold uppercase tracking-wider text-lg glow-btn transition-all duration-300 transform hover:scale-105"
-                  >
-                    <span className="mr-2">✓</span>
-                    I Understand, Continue
-                  </Button>
-                </motion.div>
-              </motion.div>
+                  <span className="mr-2">✓</span>
+                  I Understand, Continue
+                </Button>
+              </div>
             </motion.div>
           </DialogContent>
           </Dialog>
