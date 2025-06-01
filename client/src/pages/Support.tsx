@@ -7,20 +7,20 @@ export default function Support() {
   return (
     <>
       <Helmet>
-        <title>Contact & Support - FF Max Pro League</title>
+        <title>Contact & Support - Pro Booyah League</title>
         <meta
           name="description"
-          content="Need help or have questions? Reach out to our FF Max Pro League support team. We're here to assist you with tournament issues, registration, and rewards."
+          content="Need help or have questions? Reach out to our Pro Booyah League support team. We're here to assist you with tournament issues, registration, and rewards."
         />
         <link rel="canonical" href="https://booyah.dailybyte.xyz/support" />
         <meta
           name="keywords"
           content="FF Max support, Free Fire help, contact FF Max League, tournament support, customer service, Free Fire query"
         />
-        <meta property="og:title" content="Contact & Support - FF Max Pro League" />
+        <meta property="og:title" content="Contact & Support - Pro Booyah League" />
         <meta
           property="og:description"
-          content="Need help with FF Max Pro League? Contact our team for support on rules, registration, or tournament issues."
+          content="Need help with Pro Booyah League? Contact our team for support on rules, registration, or tournament issues."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://booyah.dailybyte.xyz/support" />

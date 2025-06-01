@@ -34,7 +34,7 @@ export default function RegistrationSection() {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
             <p className="text-lg text-foreground opacity-90">
-              Choose how you want to participate in the FF Max Pro League and begin your journey to glory
+              Choose how you want to participate in the Pro Booyah League and begin your journey to glory
             </p>
           </div>
 

@@ -15,7 +15,7 @@ export default function LeaderboardSection() {
   // Flag to show/hide the leaderboard (set to true to show "Coming Soon")
   const [isComingSoon, setIsComingSoon] = useState(true);
   const sectionRef = useRef<HTMLElement>(null);
-  
+
   useEffect(() => {
     if (sectionRef.current) {
       sectionRef.current.classList.add('revealed');
@@ -97,7 +97,7 @@ export default function LeaderboardSection() {
             className="relative"
           >
             {/*<h3 className="text-2xl md:text-3xl font-orbitron font-bold mb-6 text-primary">TOP PERFORMERS</h3>*/}
-            
+
             {/* Leaderboard Table */}
             <div className="overflow-x-auto bg-background/20 backdrop-blur-sm rounded-lg border border-primary/30">
               <table className="w-full min-w-full table-auto">
@@ -125,7 +125,7 @@ export default function LeaderboardSection() {
                 </tbody>
               </table>
             </div>
-            
+
             {/* Coming Soon Overlay */}
             {isComingSoon && (
               <div className="absolute inset-0 flex items-center justify-center bg-background/40 backdrop-blur-sm rounded-lg">

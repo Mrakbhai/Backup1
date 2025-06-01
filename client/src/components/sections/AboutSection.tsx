@@ -5,13 +5,13 @@ import { Link } from 'wouter'
 
 export default function AboutSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  
+
   useEffect(() => {
     if (sectionRef.current) {
       sectionRef.current.classList.add('revealed');
     }
   }, []);
-  
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 

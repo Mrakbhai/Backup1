@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 
 export default function TermsOfService() {
   const sectionRef = useRef<HTMLElement>(null);
-  
+
   useEffect(() => {
     if (sectionRef.current) {
       sectionRef.current.classList.add('revealed');
@@ -34,16 +34,16 @@ export default function TermsOfService() {
   return (
     <>
       <Helmet>
-  <title>FF Max Pro League - Terms of Service</title>
+  <title>Pro Booyah League - Terms of Service</title>
   <meta
     name="description"
-    content="Review our Terms of Service to know the rules, conditions, and responsibilities for participating in FF Max Pro League."
+    content="Review our Terms of Service to know the rules, conditions, and responsibilities for participating in Pro Booyah League."
   />
   <meta
     name="keywords"
     content="FF Max Terms, Free Fire tournament rules, player agreement, tournament conditions, esports terms of service"
   />
-  <meta property="og:title" content="FF Max Pro League - Terms of Service" />
+  <meta property="og:title" content="Pro Booyah League - Terms of Service" />
   <meta
     property="og:description"
     content="Understand your rights and responsibilities when joining our Free Fire tournament."
@@ -90,49 +90,49 @@ export default function TermsOfService() {
                     By registering on the Free Fire Pro Max League website and participating in our tournaments, you agree to be bound by these Terms of Service and all applicable laws and regulations.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-orbitron font-bold mb-4 text-primary">2. Eligibility</h3>
                   <p className="text-foreground/90">
                     Participation is open to all Free Fire players who meet the <Link to="/eligibility" className="text-secondary hover:text-secondary/80 transition-all duration-300">eligibility requirements</Link>.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-orbitron font-bold mb-4 text-primary">3. Registration & Approval</h3>
                   <p className="text-foreground/90">
                     To join a tournament, you must fill out the registration form and pay the entry fee. Approval is based on verification of your details and payment proof.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-orbitron font-bold mb-4 text-primary">4. Game Rules</h3>
                   <p className="text-foreground/90">
                     All matches must be played fairly and according to the in-game rules. Use of hacks, third-party software, or abusive behavior may result in disqualification.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-orbitron font-bold mb-4 text-primary">5. Rewards</h3>
                   <p className="text-foreground/90">
                     Players are rewarded based on their in-game performance (kills, Booyah). Reward distribution is done after verifying match stats shared via screenshot.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-orbitron font-bold mb-4 text-primary">6. Changes to Tournaments</h3>
                   <p className="text-foreground/90">
                     We reserve the right to modify, postpone, or cancel any tournament at our discretion due to unforeseen issues or lack of participants.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-orbitron font-bold mb-4 text-primary">7. Limitation of Liability</h3>
                   <p className="text-foreground/90">
                     We are not affiliated with Garena or Free Fire. We do not guarantee constant availability or error-free performance of this website or tournament services.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-orbitron font-bold mb-4 text-primary">8. Contact</h3>
                   <p className="text-foreground/90">
@@ -141,7 +141,7 @@ export default function TermsOfService() {
                 </div>
               </div>
             </motion.div>
-            
+
             <div className="text-center mt-12">
               <motion.div
                 variants={fadeInUp}

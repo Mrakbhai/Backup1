@@ -163,7 +163,7 @@ export default function Register() {
                     </motion.div>
                   </div>
                 </TabsContent>
-                
+
                 <TabsContent value="clash-squad" className="mt-0 animate-in fade-in-50 duration-300">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
                     {/* Solo Registration Option (Coming Soon) */}

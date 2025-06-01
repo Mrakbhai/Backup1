@@ -64,7 +64,7 @@ export default function SupportSectionHome() {
             </Link>
           </motion.div>
         </div>
-        
+
         <div className="text-center mt-12">
           <motion.div
             variants={fadeInUp}

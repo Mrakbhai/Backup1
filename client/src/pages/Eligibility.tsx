@@ -34,16 +34,16 @@ export default function Eligibility() {
   return (
     <>
       <Helmet>
-  <title>FF Max Pro League - Eligibility Criteria</title>
+  <title>Pro Booyah League - Eligibility Criteria</title>
   <meta
     name="description"
-    content="Check the eligibility criteria for joining the FF Max Pro League. Age, region, and account requirements explained."
+    content="Check the eligibility criteria for joining the Pro Booyah League. Age, region, and account requirements explained."
   />
   <meta
     name="keywords"
     content="FF Max eligibility, who can join FF tournament, Free Fire player rules, esports age limit, eligibility for rewards"
   />
-  <meta property="og:title" content="FF Max Pro League - Eligibility Criteria" />
+  <meta property="og:title" content="Pro Booyah League - Eligibility Criteria" />
   <meta
     property="og:description"
     content="Make sure you meet all criteria before registering for the tournament."

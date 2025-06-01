@@ -27,7 +27,7 @@ export default function SupportSection() {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   // Make section visible immediately
   useEffect(() => {
     if (sectionRef.current) {
@@ -46,7 +46,7 @@ export default function SupportSection() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validate form
     if (!contactForm.name || !contactForm.email || !contactForm.uid || !contactForm.subject || !contactForm.message) {
       toast({
@@ -72,13 +72,13 @@ export default function SupportSection() {
       console.log("Attempting to submit form:", contactForm);
       const messagesCollection = collection(db, "supportMessages");
       console.log("Collection reference created:", messagesCollection.id);
-      
+
       const docRef = await addDoc(messagesCollection, {
         ...contactForm,
         timestamp: serverTimestamp(),
         createdAt: new Date().toISOString() // Fallback timestamp
       });
-      
+
       console.log("Document written with ID:", docRef.id);
       toast({
         title: "Success!",
@@ -102,7 +102,7 @@ export default function SupportSection() {
       setIsSubmitting(false);
     }
   };
-  
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -233,7 +233,7 @@ export default function SupportSection() {
 
           <SupportInfo />
         </div>
-        
+
         <div className="text-center mt-12">
           <motion.div
             variants={fadeInUp}

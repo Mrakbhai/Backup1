@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 
 export default function Privacy() {
   const sectionRef = useRef<HTMLElement>(null);
-  
+
   useEffect(() => {
     if (sectionRef.current) {
       sectionRef.current.classList.add('revealed');
@@ -34,7 +34,7 @@ export default function Privacy() {
   return (
     <>
       <Helmet>
-  <title>FF Max Pro League - Privacy Policy</title>
+  <title>Pro Booyah League - Privacy Policy</title>
   <meta
     name="description"
     content="Read our Privacy Policy to understand how we handle user data during tournament participation."
@@ -43,10 +43,10 @@ export default function Privacy() {
     name="keywords"
     content="FF Max Privacy, data policy, user privacy Free Fire, FF tournament privacy, esports data protection"
   />
-  <meta property="og:title" content="FF Max Pro League - Privacy Policy" />
+  <meta property="og:title" content="Pro Booyah League - Privacy Policy" />
   <meta
     property="og:description"
-    content="Our commitment to your privacy in FF Max Pro League. Learn what data we collect and how we use it."
+    content="Our commitment to your privacy in Pro Booyah League. Learn what data we collect and how we use it."
   />
   <link rel="canonical" href="https://booyah.dailybyte.xyz/privacy" />
   <meta property="og:type" content="website" />
@@ -96,7 +96,7 @@ export default function Privacy() {
                     <li>Game profile screenshot</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-orbitron font-bold mb-4 text-primary">2. Use of Data</h3>
                   <p className="text-foreground/90">
@@ -109,28 +109,28 @@ export default function Privacy() {
                     <li>Improving our service</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-orbitron font-bold mb-4 text-primary">3. Data Storage</h3>
                   <p className="text-foreground/90">
                     All collected data is securely stored using Google Firebase and Google Forms. We do not sell or share your information with third parties.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-orbitron font-bold mb-4 text-primary">4. Communication</h3>
                   <p className="text-foreground/90">
                     You agree to receive WhatsApp and/or email notifications regarding tournament announcements, rules, and room codes.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-orbitron font-bold mb-4 text-primary">5. Cookies & Logs</h3>
                   <p className="text-foreground/90">
                     Our site may use cookies or logging tools to improve your experience.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-orbitron font-bold mb-4 text-primary">6. Third-Party Services</h3>
                   <p className="text-foreground/90">
@@ -139,7 +139,7 @@ export default function Privacy() {
                 </div>
               </div>
             </motion.div>
-            
+
             <div className="text-center mt-12">
               <motion.div
                 variants={fadeInUp}

@@ -33,7 +33,7 @@ export default function RulesSection() {
             Familiarize yourself with our comprehensive tournament rules and guidelines
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-10">
           <motion.div 
             className="bg-card bg-opacity-80 rounded-lg p-8 backdrop-blur-sm border border-primary border-opacity-20"
@@ -43,7 +43,7 @@ export default function RulesSection() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">GENERAL RULES</h3>
-            
+
             <div className="space-y-6">
               <div>
                 <h4 className="text-lg font-orbitron text-secondary mb-2">Participation Options</h4>
@@ -51,21 +51,21 @@ export default function RulesSection() {
                   Players can participate as solo contestants. All participants must be at least 11 years of age at the time of registration. Duo and squad options will be available soon.
                 </p>
               </div>
-              
+
               <div>
                 <h4 className="text-lg font-orbitron text-secondary mb-2">Fair Play</h4>
                 <p className="text-foreground opacity-90">
                   Any form of cheating, hacking, or exploiting game bugs will result in immediate disqualification. Tournaments will be monitored by our anti-cheat system.
                 </p>
               </div>
-              
+
               <div>
                 <h4 className="text-lg font-orbitron text-secondary mb-2">Match Schedule</h4>
                 <p className="text-foreground opacity-90">
                   Teams must be ready to play at given scheduled time. A 15-minute grace period will be given, after which penalties or disqualification may occur.
                 </p>
               </div>
-              
+
               <div>
                 <h4 className="text-lg font-orbitron text-secondary mb-2">Device Requirements</h4>
                 <p className="text-foreground opacity-90">

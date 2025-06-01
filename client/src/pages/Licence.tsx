@@ -34,16 +34,16 @@ export default function License() {
   return (
     <>
       <Helmet>
-  <title>FF Max Pro League - License Information</title>
+  <title>Pro Booyah League - License Information</title>
   <meta
     name="description"
-    content="View licensing and attribution information for assets used in FF Max Pro League."
+    content="View licensing and attribution information for assets used in Pro Booyah League."
   />
   <meta
     name="keywords"
     content="FF Max license, open source credits, asset license info, tournament copyright"
   />
-  <meta property="og:title" content="FF Max Pro League - License Information" />
+  <meta property="og:title" content="Pro Booyah League - License Information" />
   <meta
     property="og:description"
     content="Details about licenses and attributions for third-party assets used on this site."

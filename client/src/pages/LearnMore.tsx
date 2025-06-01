@@ -268,20 +268,20 @@ export default function LearnMore() {
   return (
       <>
       <Helmet>
-        <title>FF Max Pro League - Learn More</title>
+        <title>Pro Booyah League - Learn More</title>
         <meta
           name="description"
-          content="Dive deeper into how the FF Max Pro League works, from registration to winning. Everything you need to know to get started."
+          content="Dive deeper into how the Pro Booyah League works, from registration to winning. Everything you need to know to get started."
         />
         <link rel="canonical" href="https://booyah.dailybyte.xyz/learn-more" />
         <meta
           name="keywords"
-          content="Learn more Free Fire tournament, FF Max Pro League info, Free Fire league guide, esports competition details"
+          content="Learn more Free Fire tournament, Pro Booyah League info, Free Fire league guide, esports competition details"
         />
-        <meta property="og:title" content="FF Max Pro League - Learn More" />
+        <meta property="og:title" content="Pro Booyah League - Learn More" />
         <meta
           property="og:description"
-          content="Understand how the FF Max Pro League works — registration, gameplay, rewards, and everything in between."
+          content="Understand how the Pro Booyah League works — registration, gameplay, rewards, and everything in between."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://booyah.dailybyte.xyz/learn-more" />
