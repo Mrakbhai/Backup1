@@ -40,12 +40,12 @@ export default function Rules() {
   return (
     <>
     <Helmet>
-      <title>FF Max Pro League - Rules & Guidelines</title>
-      <meta name="description" content="Read the official rules and guidelines of the FF Max Pro League to ensure fair play and eligibility for rewards." />
+      <title>Pro Booyah League - Rules & Guidelines</title>
+      <meta name="description" content="Read the official rules and guidelines of the Pro Booyah League to ensure fair play and eligibility for rewards." />
       <link rel="canonical" href="https://booyah.dailybyte.xyz/rules" />
-      <meta name="keywords" content="Free Fire tournament rules, FF Max Pro League rules, Free Fire competition guidelines, game rules, esports rules, FF rules" />
-      <meta property="og:title" content="FF Max Pro League - Rules & Guidelines" />
-      <meta property="og:description" content="Ensure fair gameplay by understanding all the rules and conditions of the FF Max Pro League." />
+      <meta name="keywords" content="Free Fire tournament rules, Pro Booyah League rules, Free Fire competition guidelines, game rules, esports rules, FF rules" />
+      <meta property="og:title" content="Pro Booyah League - Rules & Guidelines" />
+      <meta property="og:description" content="Ensure fair gameplay by understanding all the rules and conditions of the Pro Booyah League." />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://booyah.dailybyte.xyz/rules" />
       <meta property="og:image" content="https://cdn.discordapp.com/attachments/1362394089378676847/1376225455266463896/Image.png?ex=68348d55&is=68333bd5&hm=a713cc89bb1ad34ca2f0b7e3dd640b2b4649a4d38dc7ca66a84f5087e00f7e28&" />
@@ -66,7 +66,7 @@ export default function Rules() {
               </h2>
               <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
               <p className="text-lg md:text-xl max-w-3xl mx-auto text-foreground opacity-90">
-                Official guidelines for Free Fire Pro Max League tournaments
+                Official guidelines for Pro Booyah League tournaments
               </p>
             </div>
 

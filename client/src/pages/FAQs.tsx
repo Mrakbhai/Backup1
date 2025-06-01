@@ -40,23 +40,23 @@ export default function FAQs() {
   return (
     <>
       <Helmet>
-        <title>FF Max Pro League - Frequently Asked Questions</title>
+        <title>Pro Booyah League - Frequently Asked Questions</title>
         <meta
           name="description"
-          content="Find answers to common questions about the FF Max Pro League, including registration, rewards, rules, and match details."
+          content="Find answers to common questions about the Pro Booyah League, including registration, rewards, rules, and match details."
         />
         <link rel="canonical" href="https://booyah.dailybyte.xyz/faqs" />
         <meta
           name="keywords"
-          content="Free Fire tournament FAQ, FF Max Pro League questions, registration help, prize info, match schedule, help center"
+          content="Free Fire tournament FAQ, Pro Booyah League questions, registration help, prize info, match schedule, help center"
         />
         <meta
           property="og:title"
-          content="FF Max Pro League - Frequently Asked Questions"
+          content="Pro Booyah League - Frequently Asked Questions"
         />
         <meta
           property="og:description"
-          content="Get clarity on how the FF Max Pro League works, what you can win, and how to participate effectively."
+          content="Get clarity on how the Pro Booyah League works, what you can win, and how to participate effectively."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://booyah.dailybyte.xyz/faq" />
@@ -81,7 +81,7 @@ export default function FAQs() {
               </h2>
               <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
               <p className="text-lg md:text-xl max-w-3xl mx-auto text-foreground opacity-90">
-                Find answers to the most common questions about Free Fire Pro Max League
+                Find answers to the most common questions about Pro Booyah League
               </p>
             </div>
 
@@ -95,11 +95,11 @@ export default function FAQs() {
               <Accordion type="single" collapsible className="space-y-4">
                 <AccordionItem value="item-1" className="border-b border-primary/30">
                   <AccordionTrigger className="text-lg font-orbitron text-secondary hover:text-secondary/90 py-4 no-underline hover:no-underline">
-                    What is the Free Fire Pro Max League?
+                    What is the Pro Booyah League?
                   </AccordionTrigger>
                   <AccordionContent className="text-foreground/90 max-h-[200px] overflow-y-auto custom-scrollbar">
                     <p className="pb-4">
-                      The Free Fire Pro Max League is an online tournament platform where Free Fire players can compete in solo matches (duo and squad coming soon) for real cash rewards based on kills and victories.
+                      The Pro Booyah League is an online tournament platform where Free Fire players can compete in solo matches (duo and squad coming soon) for real cash rewards based on kills and victories.
                     </p>
                   </AccordionContent>
                 </AccordionItem>

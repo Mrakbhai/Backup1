@@ -52,7 +52,7 @@ useEffect(() => {
         {/* Thumbnail image as fallback before video loads */}
         <img 
           src={randomBgImage}
-          alt="FF Max Pro League Tournament" 
+          alt="Pro Booyah League Tournament" 
           className="w-full h-full object-cover transition-opacity duration-500"
           style={{opacity: videoLoaded ? 0 : 1}}
         />
