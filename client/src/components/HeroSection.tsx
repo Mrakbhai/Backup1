@@ -102,8 +102,8 @@ useEffect(() => {
           transition={{ duration: 1.5, delay: 0.5 }}
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-orbitron font-bold text-foreground mb-4">
-            <span className="text-primary text-shadow">FF MAX</span>{" "}
-            <span className="text-secondary text-shadow-cyan">PRO LEAGUE</span>
+            <span className="text-primary text-shadow">PRO BOOYAH</span>{" "}
+            <span className="text-secondary text-shadow-cyan">LEAGUE</span>
           </h1>
           <p className="text-xl md:text-2xl lg:text-3xl font-rajdhani text-foreground mb-8 max-w-2xl mx-auto">
             The Ultimate Free Fire Tournament for Professional Gamers

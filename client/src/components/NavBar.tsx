@@ -79,7 +79,7 @@ export default function NavBar() {
           onClick={(e) => { e.preventDefault(); handleNavLinkClick('home'); }}
         >
           <span className="text-primary font-orbitron text-xl md:text-2xl font-bold tracking-wider">
-            FF MAX <span className="text-secondary">PRO LEAGUE</span>
+            PRO BOOYAH<span className="text-secondary">LEAGUE</span>
           </span>
         </a>
 
@@ -171,8 +171,8 @@ export default function NavBar() {
             </button>
 
             <h2 className="text-2xl font-orbitron font-bold mb-8">
-              <span className="text-primary">FF MAX</span>{" "}
-              <span className="text-secondary">PRO LEAGUE</span>
+              <span className="text-primary">PRO BOOYAH</span>{" "}
+              <span className="text-secondary">LEAGUE</span>
             </h2>
 
             <motion.div 

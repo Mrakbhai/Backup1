@@ -72,7 +72,7 @@ export default function LeaderboardSection() {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-foreground opacity-90">
-            Kings of the battlefield, check out the top performers in the FF Max Pro League
+            Kings of the battlefield, check out the top performers in the Pro Booyah League
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
